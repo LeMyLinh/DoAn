@@ -1,0 +1,5 @@
+﻿- Resource: 
+http://www.spriters-resource.com/nes/cv/
+http://www.nesmaps.com/maps/Castlevania/Castlevania.html
+
+- Group trao đổi về môn game của các anh chị khóa trước: fb.com/groups/introducetogameprogramminguit/

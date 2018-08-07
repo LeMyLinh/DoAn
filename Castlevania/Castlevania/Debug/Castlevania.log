@@ -1,0 +1,597 @@
+﻿  Bat.cpp
+e:\hockyhe\doan\castlevania\castlevania\box.h(49): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(50): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(51): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(52): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hockyhe\doan\castlevania\castlevania\bat.cpp(20): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\bat.cpp(44): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\bat.cpp(65): warning C4305: '+=': truncation from 'double' to 'float'
+e:\hockyhe\doan\castlevania\castlevania\bat.cpp(70): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  BigCandel.cpp
+e:\hockyhe\doan\castlevania\castlevania\box.h(49): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(50): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(51): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(52): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+  BlackBoard.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hockyhe\doan\castlevania\castlevania\box.h(49): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(50): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(51): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(52): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\blackboard.cpp(73): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\blackboard.cpp(74): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\blackboard.cpp(105): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\blackboard.cpp(109): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\blackboard.cpp(120): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\blackboard.cpp(124): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  BonePillar.cpp
+e:\hockyhe\doan\castlevania\castlevania\box.h(49): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(50): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(51): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(52): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hockyhe\doan\castlevania\castlevania\bonepillar.cpp(45): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\bonepillar.cpp(46): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\bonepillar.cpp(47): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\bonepillar.cpp(56): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\bonepillar.cpp(67): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\bonepillar.cpp(98): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\bonepillar.cpp(107): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\bonepillar.cpp(129): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  BossLv2.cpp
+e:\hockyhe\doan\castlevania\castlevania\box.h(49): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(50): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(51): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(52): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hockyhe\doan\castlevania\castlevania\bosslv2.cpp(24): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\bosslv2.cpp(31): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\bosslv2.cpp(37): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\bosslv2.cpp(46): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\bosslv2.cpp(109): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\bosslv2.cpp(119): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\bosslv2.cpp(122): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\bosslv2.cpp(144): warning C4305: '+=': truncation from 'double' to 'float'
+e:\hockyhe\doan\castlevania\castlevania\bosslv2.cpp(149): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\bosslv2.cpp(162): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\bosslv2.cpp(197): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\bosslv2.cpp(203): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\bosslv2.cpp(204): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\bosslv2.cpp(228): warning C4305: '=': truncation from 'double' to 'float'
+e:\hockyhe\doan\castlevania\castlevania\bosslv2.cpp(254): warning C4244: '-=': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\bosslv2.cpp(256): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\bosslv2.cpp(262): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\bosslv2.cpp(265): warning C4244: '-=': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\bosslv2.cpp(267): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\bosslv2.cpp(273): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\bosslv2.cpp(276): warning C4244: '-=': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\bosslv2.cpp(278): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  Bosslv3.cpp
+e:\hockyhe\doan\castlevania\castlevania\box.h(49): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(50): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(51): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(52): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hockyhe\doan\castlevania\castlevania\bosslv3.cpp(24): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\bosslv3.cpp(46): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\bosslv3.cpp(96): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\bosslv3.cpp(119): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\bosslv3.cpp(132): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\bosslv3.cpp(133): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\bosslv3.cpp(142): warning C4305: '+=': truncation from 'double' to 'float'
+e:\hockyhe\doan\castlevania\castlevania\bosslv3.cpp(147): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\bosslv3.cpp(158): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\bosslv3.cpp(162): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\bosslv3.cpp(177): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\bosslv3.cpp(186): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\bosslv3.cpp(191): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\bosslv3.cpp(192): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\bosslv3.cpp(193): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\bosslv3.cpp(207): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\bosslv3.cpp(226): warning C4018: '<': signed/unsigned mismatch
+  Box.cpp
+e:\hockyhe\doan\castlevania\castlevania\box.h(49): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(50): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(51): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(52): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+  Collision.cpp
+e:\hockyhe\doan\castlevania\castlevania\box.h(49): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(50): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(51): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(52): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+  CText.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hockyhe\doan\castlevania\castlevania\ctext.cpp(10): warning C4244: '=': conversion from 'float' to 'LONG', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\ctext.cpp(11): warning C4244: '=': conversion from 'float' to 'LONG', possible loss of data
+  Effect.cpp
+e:\hockyhe\doan\castlevania\castlevania\box.h(49): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(50): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(51): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(52): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\effect.cpp(35): warning C4018: '<': signed/unsigned mismatch
+  Enemy.cpp
+e:\hockyhe\doan\castlevania\castlevania\box.h(49): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(50): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(51): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(52): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hockyhe\doan\castlevania\castlevania\enemy.cpp(54): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  EnemyRender.cpp
+e:\hockyhe\doan\castlevania\castlevania\enemyrender.cpp(84): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\enemyrender.cpp(90): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\enemyrender.cpp(96): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\enemyrender.cpp(102): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\enemyrender.cpp(120): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\enemyrender.cpp(126): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\enemyrender.cpp(137): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\enemyrender.cpp(143): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\enemyrender.cpp(149): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\enemyrender.cpp(155): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\enemyrender.cpp(166): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
+  Font.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  Game.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  Gate.cpp
+e:\hockyhe\doan\castlevania\castlevania\box.h(49): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(50): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(51): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(52): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+  GCamera.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hockyhe\doan\castlevania\castlevania\box.h(49): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(50): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(51): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(52): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\gcamera.cpp(16): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\gcamera.cpp(18): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\gcamera.cpp(19): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\gcamera.cpp(68): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\gcamera.cpp(69): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\gcamera.cpp(80): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\gcamera.cpp(81): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\gcamera.cpp(171): warning C4244: 'argument': conversion from 'double' to 'FLOAT', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\gcamera.cpp(169): warning C4244: 'argument': conversion from 'double' to 'FLOAT', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\gcamera.cpp(168): warning C4244: 'argument': conversion from 'double' to 'FLOAT', possible loss of data
+  Ghost.cpp
+e:\hockyhe\doan\castlevania\castlevania\box.h(49): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(50): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(51): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(52): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hockyhe\doan\castlevania\castlevania\ghost.cpp(19): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\ghost.cpp(35): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\ghost.cpp(52): warning C4305: '=': truncation from 'double' to 'float'
+e:\hockyhe\doan\castlevania\castlevania\ghost.cpp(56): warning C4305: '=': truncation from 'double' to 'float'
+e:\hockyhe\doan\castlevania\castlevania\ghost.cpp(70): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\ghost.cpp(78): warning C4305: '+=': truncation from 'double' to 'float'
+e:\hockyhe\doan\castlevania\castlevania\ghost.cpp(83): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\ghost.cpp(90): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  Global.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  GSprite.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  GSurface.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  Generating Code...
+  Compiling...
+  GTexture.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hockyhe\doan\castlevania\castlevania\gtexture.cpp(71): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\gtexture.cpp(79): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
+  Item.cpp
+e:\hockyhe\doan\castlevania\castlevania\box.h(49): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(50): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(51): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(52): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\item.cpp(72): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\item.cpp(90): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\item.cpp(136): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\item.cpp(139): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\item.cpp(161): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\item.cpp(172): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\item.cpp(181): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\item.cpp(184): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\item.cpp(187): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\item.cpp(192): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\item.cpp(195): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\item.cpp(198): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\item.cpp(201): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\item.cpp(204): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\item.cpp(207): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\item.cpp(210): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\item.cpp(213): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\item.cpp(216): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\item.cpp(219): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\item.cpp(222): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\item.cpp(225): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\item.cpp(233): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\item.cpp(264): warning C4018: '<': signed/unsigned mismatch
+  KeyBoard.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  Level2.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hockyhe\doan\castlevania\castlevania\box.h(49): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(50): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(51): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(52): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(89): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(117): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(139): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(207): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(233): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(235): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(255): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(257): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(263): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(281): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(205): warning C4101: 'j': unreferenced local variable
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(206): warning C4101: '_type': unreferenced local variable
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(341): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(353): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(378): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(437): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(503): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(516): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(564): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(605): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(612): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(624): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\level2.cpp(65): warning C4101: 'str': unreferenced local variable
+  Level3.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hockyhe\doan\castlevania\castlevania\box.h(49): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(50): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(51): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(52): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(89): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(117): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(139): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(207): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(233): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(235): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(255): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(257): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(263): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(281): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(205): warning C4101: 'j': unreferenced local variable
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(206): warning C4101: '_type': unreferenced local variable
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(341): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(353): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(378): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(437): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(503): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(516): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(564): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(605): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(612): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(624): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\level3.cpp(34): warning C4101: 'str': unreferenced local variable
+  MadusaHead.cpp
+e:\hockyhe\doan\castlevania\castlevania\box.h(49): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(50): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(51): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(52): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hockyhe\doan\castlevania\castlevania\madusahead.cpp(22): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\madusahead.cpp(48): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\madusahead.cpp(72): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\madusahead.cpp(76): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\madusahead.cpp(76): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\madusahead.cpp(85): warning C4305: '+=': truncation from 'double' to 'float'
+e:\hockyhe\doan\castlevania\castlevania\madusahead.cpp(90): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  Map.cpp
+e:\hockyhe\doan\castlevania\castlevania\map.cpp(42): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\map.cpp(74): warning C4018: '<': signed/unsigned mismatch
+  BaseObject.cpp
+e:\hockyhe\doan\castlevania\castlevania\box.h(49): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(50): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(51): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(52): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+  MovePlatform.cpp
+e:\hockyhe\doan\castlevania\castlevania\box.h(49): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(50): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(51): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(52): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hockyhe\doan\castlevania\castlevania\moveplatform.cpp(12): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\moveplatform.cpp(14): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\moveplatform.cpp(34): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  Object.cpp
+e:\hockyhe\doan\castlevania\castlevania\box.h(49): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(50): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(51): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(52): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\object.cpp(32): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\object.cpp(33): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\object.cpp(47): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\object.cpp(48): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\object.cpp(73): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\object.cpp(78): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\object.cpp(88): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\object.cpp(93): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\object.cpp(122): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\object.cpp(123): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  ObjManager.cpp
+  Player.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hockyhe\doan\castlevania\castlevania\player.cpp(71): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
+  Pleaman.cpp
+e:\hockyhe\doan\castlevania\castlevania\box.h(49): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(50): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(51): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(52): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hockyhe\doan\castlevania\castlevania\pleaman.cpp(20): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\pleaman.cpp(21): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\pleaman.cpp(27): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\pleaman.cpp(84): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\pleaman.cpp(97): warning C4305: '+=': truncation from 'double' to 'float'
+e:\hockyhe\doan\castlevania\castlevania\pleaman.cpp(102): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\pleaman.cpp(108): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\pleaman.cpp(121): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\pleaman.cpp(135): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\pleaman.cpp(158): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\pleaman.cpp(160): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\pleaman.cpp(182): warning C4305: '*=': truncation from 'double' to 'float'
+e:\hockyhe\doan\castlevania\castlevania\pleaman.cpp(189): warning C4305: '*=': truncation from 'double' to 'float'
+e:\hockyhe\doan\castlevania\castlevania\pleaman.cpp(199): warning C4305: '*=': truncation from 'double' to 'float'
+  QuadNode.cpp
+  QuadTree.cpp
+e:\hockyhe\doan\castlevania\castlevania\box.h(49): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(50): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(51): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(52): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\quadtree.cpp(40): warning C4018: '<': signed/unsigned mismatch
+  Raven.cpp
+e:\hockyhe\doan\castlevania\castlevania\box.h(49): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(50): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(51): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(52): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hockyhe\doan\castlevania\castlevania\raven.cpp(21): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\raven.cpp(69): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\raven.cpp(72): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\raven.cpp(80): warning C4305: '+=': truncation from 'double' to 'float'
+e:\hockyhe\doan\castlevania\castlevania\raven.cpp(85): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\raven.cpp(91): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  SceneMain.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hockyhe\doan\castlevania\castlevania\box.h(49): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(50): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(51): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(52): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(89): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(117): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(139): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(207): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(233): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(235): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(255): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(257): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(263): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(281): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(205): warning C4101: 'j': unreferenced local variable
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(206): warning C4101: '_type': unreferenced local variable
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(341): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(353): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(378): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(437): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(503): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(516): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(564): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(605): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(612): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(624): warning C4018: '<': signed/unsigned mismatch
+  SceneMenu.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hockyhe\doan\castlevania\castlevania\scenemenu.cpp(19): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Simon.cpp
+e:\hockyhe\doan\castlevania\castlevania\box.h(49): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(50): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(51): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(52): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(89): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(117): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(139): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(207): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(233): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(235): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(255): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(257): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(263): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(281): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(205): warning C4101: 'j': unreferenced local variable
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(206): warning C4101: '_type': unreferenced local variable
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(341): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(353): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(378): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(437): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(503): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(516): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(564): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(605): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(612): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(624): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\simon.cpp(22): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\simon.cpp(23): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\simon.cpp(70): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\simon.cpp(222): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\simon.cpp(262): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\simon.cpp(286): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\simon.cpp(296): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\simon.cpp(370): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\simon.cpp(482): warning C4244: '-=': conversion from 'double' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\simon.cpp(488): warning C4244: '-=': conversion from 'double' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\simon.cpp(547): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\simon.cpp(573): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\simon.cpp(580): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\simon.cpp(589): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\simon.cpp(598): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\simon.cpp(620): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\simon.cpp(630): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\simon.cpp(638): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\simon.cpp(645): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\simon.cpp(651): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\simon.cpp(658): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\simon.cpp(713): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\simon.cpp(788): warning C4305: '*=': truncation from 'double' to 'float'
+e:\hockyhe\doan\castlevania\castlevania\simon.cpp(801): warning C4305: '*=': truncation from 'double' to 'float'
+e:\hockyhe\doan\castlevania\castlevania\simon.cpp(849): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\simon.cpp(863): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\simon.cpp(869): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\simon.cpp(872): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\simon.cpp(887): warning C4101: 'str': unreferenced local variable
+e:\hockyhe\doan\castlevania\castlevania\simon.cpp(909): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\simon.cpp(911): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\simon.cpp(913): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\simon.cpp(914): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\simon.cpp(1024): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\simon.cpp(1077): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\simon.cpp(1164): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\simon.cpp(1185): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\simon.cpp(1201): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\simon.cpp(1239): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\simon.cpp(1262): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\simon.cpp(1289): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\simon.cpp(1297): warning C4018: '<': signed/unsigned mismatch
+  Skeleton.cpp
+e:\hockyhe\doan\castlevania\castlevania\box.h(49): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(50): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(51): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(52): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hockyhe\doan\castlevania\castlevania\skeleton.cpp(23): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\skeleton.cpp(55): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\skeleton.cpp(69): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\skeleton.cpp(91): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\skeleton.cpp(95): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\skeleton.cpp(115): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\skeleton.cpp(116): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\skeleton.cpp(127): warning C4305: '+=': truncation from 'double' to 'float'
+e:\hockyhe\doan\castlevania\castlevania\skeleton.cpp(132): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\skeleton.cpp(138): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\skeleton.cpp(142): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\skeleton.cpp(151): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\skeleton.cpp(155): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\skeleton.cpp(167): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\skeleton.cpp(169): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\skeleton.cpp(183): warning C4305: '*=': truncation from 'double' to 'float'
+e:\hockyhe\doan\castlevania\castlevania\skeleton.cpp(192): warning C4305: '*=': truncation from 'double' to 'float'
+e:\hockyhe\doan\castlevania\castlevania\skeleton.cpp(220): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\skeleton.cpp(222): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\skeleton.cpp(232): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\skeleton.cpp(239): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\skeleton.cpp(240): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\skeleton.cpp(249): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\skeleton.cpp(265): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+  Compiling...
+  SmallCandle.cpp
+e:\hockyhe\doan\castlevania\castlevania\box.h(49): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(50): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(51): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(52): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+  SpearGuard.cpp
+e:\hockyhe\doan\castlevania\castlevania\box.h(49): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(50): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(51): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(52): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hockyhe\doan\castlevania\castlevania\spearguard.cpp(20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\spearguard.cpp(21): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\spearguard.cpp(26): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\spearguard.cpp(43): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\spearguard.cpp(57): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\spearguard.cpp(68): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\spearguard.cpp(75): warning C4305: '+=': truncation from 'double' to 'float'
+e:\hockyhe\doan\castlevania\castlevania\spearguard.cpp(80): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  Stair.cpp
+e:\hockyhe\doan\castlevania\castlevania\box.h(49): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(50): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(51): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(52): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+  Tile.cpp
+e:\hockyhe\doan\castlevania\castlevania\box.h(49): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(50): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(51): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(52): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+  TopStair.cpp
+e:\hockyhe\doan\castlevania\castlevania\box.h(49): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(50): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(51): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(52): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+  Trap.cpp
+e:\hockyhe\doan\castlevania\castlevania\box.h(49): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(50): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(51): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(52): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hockyhe\doan\castlevania\castlevania\trap.cpp(21): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\trap.cpp(22): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\trap.cpp(48): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\trap.cpp(50): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\trap.cpp(52): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  Weapon.cpp
+e:\hockyhe\doan\castlevania\castlevania\box.h(49): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(50): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(51): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(52): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hockyhe\doan\castlevania\castlevania\weapon.cpp(123): warning C4244: '=': conversion from 'int' to 'FLOAT', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\weapon.cpp(126): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\weapon.cpp(131): warning C4244: '=': conversion from 'int' to 'FLOAT', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\weapon.cpp(134): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\weapon.cpp(176): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\weapon.cpp(185): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\weapon.cpp(192): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\weapon.cpp(194): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\weapon.cpp(200): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\weapon.cpp(222): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\weapon.cpp(230): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\weapon.cpp(238): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\weapon.cpp(248): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\weapon.cpp(256): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\weapon.cpp(268): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\weapon.cpp(280): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\weapon.cpp(282): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\weapon.cpp(289): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\weapon.cpp(319): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\weapon.cpp(340): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\weapon.cpp(345): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\weapon.cpp(346): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\weapon.cpp(349): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\weapon.cpp(352): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\weapon.cpp(359): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  winMain.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hockyhe\doan\castlevania\castlevania\box.h(49): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(50): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(51): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(52): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(89): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(117): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(139): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(207): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(233): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(235): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(255): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(257): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(263): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(281): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(205): warning C4101: 'j': unreferenced local variable
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(206): warning C4101: '_type': unreferenced local variable
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(341): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(353): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(378): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(437): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(503): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(516): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(564): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(605): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(612): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(624): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+  Castlevania.vcxproj -> E:\HocKyHe\DoAn\Castlevania\Debug\Castlevania.exe

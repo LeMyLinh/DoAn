@@ -1,0 +1,24 @@
+﻿CText.obj : error LNK2019: unresolved external symbol D3DXCreateFontIndirectW referenced in function "public: void __cdecl CText::Init(void)" (?Init@CText@@QEAAXXZ)
+Font.obj : error LNK2019: unresolved external symbol D3DXCreateFontA referenced in function "public: void __cdecl Font::Innit(void)" (?Innit@Font@@QEAAXXZ)
+Game.obj : error LNK2019: unresolved external symbol Direct3DCreate9 referenced in function "protected: bool __cdecl CGame::InitD3D9(void)" (?InitD3D9@CGame@@IEAA_NXZ)
+Game.obj : error LNK2019: unresolved external symbol DirectInput8Create referenced in function "protected: void __cdecl CGame::InitKeyboard(void)" (?InitKeyboard@CGame@@IEAAXXZ)
+KeyBoard.obj : error LNK2001: unresolved external symbol DirectInput8Create
+Game.obj : error LNK2019: unresolved external symbol D3DXCreateSprite referenced in function "protected: bool __cdecl CGame::InitD3D9(void)" (?InitD3D9@CGame@@IEAA_NXZ)
+Game.obj : error LNK2001: unresolved external symbol IID_IDirectInput8W
+KeyBoard.obj : error LNK2001: unresolved external symbol IID_IDirectInput8W
+Game.obj : error LNK2001: unresolved external symbol GUID_SysKeyboard
+KeyBoard.obj : error LNK2001: unresolved external symbol GUID_SysKeyboard
+Game.obj : error LNK2001: unresolved external symbol c_dfDIKeyboard
+KeyBoard.obj : error LNK2001: unresolved external symbol c_dfDIKeyboard
+GCamera.obj : error LNK2019: unresolved external symbol D3DXMatrixOrthoLH referenced in function "public: __cdecl GCamera::GCamera(int,int,float,struct D3DXVECTOR3,int,int,int)" (??0GCamera@@QEAA@HHMUD3DXVECTOR3@@HHH@Z)
+GSurface.obj : error LNK2019: unresolved external symbol D3DXGetImageInfoFromFileA referenced in function "public: int __cdecl GSurface::LoadSurfaceFromFile(char *)" (?LoadSurfaceFromFile@GSurface@@QEAAHPEAD@Z)
+GSurface.obj : error LNK2019: unresolved external symbol D3DXLoadSurfaceFromFileA referenced in function "public: int __cdecl GSurface::LoadSurfaceFromFile(char *)" (?LoadSurfaceFromFile@GSurface@@QEAAHPEAD@Z)
+GTexture.obj : error LNK2019: unresolved external symbol D3DXMatrixMultiply referenced in function "public: struct D3DXMATRIX __cdecl D3DXMATRIX::operator*(struct D3DXMATRIX const &)const " (??DD3DXMATRIX@@QEBA?AU0@AEBU0@@Z)
+GTexture.obj : error LNK2019: unresolved external symbol D3DXMatrixTransformation2D referenced in function "public: void __cdecl GTexture::RenderTexture(int,int)" (?RenderTexture@GTexture@@QEAAXHH@Z)
+GTexture.obj : error LNK2019: unresolved external symbol D3DXGetImageInfoFromFileW referenced in function "public: void __cdecl GTexture::loadTextTureFromFile(wchar_t const *,struct D3DXCOLOR)" (?loadTextTureFromFile@GTexture@@QEAAXPEB_WUD3DXCOLOR@@@Z)
+GTexture.obj : error LNK2019: unresolved external symbol D3DXCreateTextureFromFileExW referenced in function "public: void __cdecl GTexture::loadTextTureFromFile(wchar_t const *,struct D3DXCOLOR)" (?loadTextTureFromFile@GTexture@@QEAAXPEB_WUD3DXCOLOR@@@Z)
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Lib\x86\d3d9.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Lib\x86\d3dx9.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Lib\x86\dinput8.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Lib\x86\dxguid.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+E:\HocKyHe\thamkhao\Castlevania\x64\Debug\Castlevania.exe : fatal error LNK1120: 15 unresolved externals

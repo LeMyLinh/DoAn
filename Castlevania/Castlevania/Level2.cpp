@@ -1,0 +1,118 @@
+#include "Level2.h"
+Level2::Level2()
+{
+	
+	LoadResources();
+}
+Level2::~Level2()
+{
+	/*if (map != NULL) delete map;
+	if (simon != NULL) delete simon;
+	if (camera != NULL) delete camera;
+	if (objManager != NULL) delete objManager;
+	if (blackBoard != NULL) delete blackBoard;*/
+}
+void Level2::LoadResources()
+{
+	//
+	Scene_Index = 1;
+	map = new Map();
+	simon = new Simon(lv2_Layer4.left * 2 + 200, lv2_Layer4.bottom * 2 - 150,4);
+	objManager = new ObjManager();
+	blackBoard = new BlackBoard();
+
+
+	//
+	KeyBoard::GetKey()->InitKeyboard();
+	GTexture* texture = new GTexture();
+	texture->loadTextTureFromFile(L"caveman.bmp", D3DCOLOR_XRGB(255, 0, 255));
+	camera = new GCamera(G_ScreenWidth, G_ScreenHeight, 0, D3DXVECTOR3(1.0f, 1.0f, 1.0f),lv2_Layer4.left * 2 + 200, lv2_Layer4.bottom * 2 - 150, 4);
+	map->Init(L"Data/lv1.png", "Data/lv1-MAP.txt", "Data/lv1-MAP-quadtree.txt",9,5);
+	GTexture* t = new GTexture();
+	t->loadTextTureFromFile(L"lv1.png", D3DCOLOR_XRGB(255, 0, 255));
+	simon->LoadResource(L"Resources/simon.png", 8, 3, 0);
+	Font::GetFont()->Innit();
+	objManager->Init("Data/lv1-GameObj.txt", "Data/lv1-GameObj-Quadtree.txt");
+	Tile::GetStaticObj()->Init();
+	BigCandel::GetStaticObj()->Init();
+	SmallCandle::GetStaticObj()->Init();
+	Stair::GetStaticObj()->Init();
+	TopStair::GetStaticObj()->Init();
+	Effect::GetStaticObj()->Init();
+	EnemyRender::GetStaticObj()->Init();
+	Item::GetStaticObj()->Init();
+	CGate::GetStaticObj()->Init();
+	Weapon::GetStaticObj()->Init();
+}
+void Level2::RenderFrame(int Delta)
+{
+	if (G_lpDirect3DDevice->BeginScene())
+	{
+		G_lpDirect3DDevice->ColorFill(G_BackBuffer, NULL, D3DCOLOR_XRGB(0, 0, 0));
+
+
+
+		G_SpriteHandler->Begin(D3DXSPRITE_ALPHABLEND);
+		camera->SetTransForm();
+		map->DrawMap();
+
+		objManager->Draw();
+		Effect::GetStaticObj()->Draw();
+		Weapon::GetStaticObj()->Draw();
+		simon->Draw(Delta);
+		Item::GetStaticObj()->Draw(Delta);
+		
+		char str[100];
+		blackBoard->RenderFrame(Delta,camera->GetRectCamera().left, camera->GetRectCamera().top,simon->GetHP());
+		G_SpriteHandler->End();
+
+		G_lpDirect3DDevice->EndScene();
+	}
+	G_lpDirect3DDevice->Present(NULL, NULL, NULL, NULL);
+	
+}
+void Level2::UpdateGame(int Delta)
+{
+	KeyBoard::GetKey()->ProcessKeyBoard();
+	camera->Update(simon->GetX(), simon->GetY(), simon->GetLayerMap(), simon->IsNextStage, simon->IsAutoRun, Delta);
+	map->SelectScene(camera->GetRectCamera());
+
+	objManager->UpDate(camera->GetRectCamera(), Item::GetStaticObj()->GetListItem(),Delta,simon->GetBox());
+	simon->Update(objManager->GetListObj(), objManager->GetListInfo(), blackBoard, objManager->GetlistEnemy(), Delta, camera,objManager);
+	Item::GetStaticObj()->Update(Delta);
+	Weapon::GetStaticObj()->Update(camera->GetRectCamera(),blackBoard,simon->GetBox(),Delta);
+	if (NextLevel)
+	{
+		NextLevel = false;
+		IsEnd = true;
+	}
+		
+}
+void Level2::ProcessInput(int Delta)
+{
+
+}
+
+
+void Level2::ProcessInput_UP(int Delta)
+{
+	
+}
+void Level2::ProcessInput_DOWN(int Delta)
+{
+	
+}
+void Level2::ProcessInput_RIGHT(int Delta)
+{
+	
+}
+void Level2::ProcessInput_LEFT(int Delta)
+{
+	
+}
+
+void Level2::OnKeyDown(int KeyCode)
+{
+	/*if (KeyCode == DIK_Z)
+		simon->SetStateFight();*/
+}
