@@ -14,15 +14,15 @@ private:
 	int row; // so hang cua ma tran
 	int** Mattrix; //Ma tran load map obj
 	GSprite* BackGround; //Sprite chua hinh nen
-	QuadTree* quadTree;
-	list<int> listObj;
+	//QuadTree* quadTree;
+	//list<int> listObj;
 
 public:
 	Map();
-	void Init(LPCWSTR fileTileMap, char* fileMattrix, char*fileQuadTree, int col, int row);
+	void Init(LPCWSTR fileTileMap, char* fileMattrix/*, char*fileQuadTree*/, int col, int row);
 	void LoadMattrixFromFile(char * FileName);
-	void SelectScene(RECT rectCamera);
-	int GetIndexFromTile(int idTile);
+	//void SelectScene(RECT rectCamera);
+	//int GetIndexFromTile(int idTile);
 	void DrawMap();
 
 	~Map();

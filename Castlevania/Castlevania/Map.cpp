@@ -11,16 +11,16 @@ using namespace std;
 
 Map::Map()
 {
-	quadTree = new QuadTree();
+	//quadTree = new QuadTree();
 }
 
-void Map::Init(LPCWSTR fileTileMap, char * fileMattrix, char * fileQuadTree, int col,int row)
+void Map::Init(LPCWSTR fileTileMap, char * fileMattrix/*, char * fileQuadTree*/, int col,int row)
 {
 	GTexture* texture = new GTexture();
 	texture->loadTextTureFromFile(fileTileMap);
 	BackGround = new GSprite(texture, col, row, 0);	
 	LoadMattrixFromFile(fileMattrix);
-	quadTree->GetQuadTreeFromFile(fileQuadTree);
+	//quadTree->GetQuadTreeFromFile(fileQuadTree);
 }
 
 bool IsNumber(char c)
@@ -88,37 +88,41 @@ void Map::LoadMattrixFromFile(char * FileName)
 	
 }
 
-void Map::SelectScene(RECT rectCamera)
-{
-	rectCamera.top /= 2;
-	rectCamera.left /= 2;
-	rectCamera.bottom /= 2;
-	rectCamera.right /= 2;
-	listObj.clear();
-	quadTree->GetlistObj(quadTree->Root, rectCamera, listObj);	
-}
+//void Map::SelectScene(RECT rectCamera)
+//{
+//	rectCamera.top /= 2;
+//	rectCamera.left /= 2;
+//	rectCamera.bottom /= 2;
+//	rectCamera.right /= 2;
+//	/*listObj.clear();
+//	quadTree->GetlistObj(quadTree->Root, rectCamera, listObj);*/	
+//}
 
-int Map::GetIndexFromTile(int idTile)
-{
-	int i, j;
-	i = (int)idTile / col;
-	j = idTile%col;
-	int result= Mattrix[i][j];
-	return result;
-}
+//int Map::GetIndexFromTile(int idTile)
+//{
+//	int i, j;
+//	i = (int)idTile / col;
+//	j = idTile%col;
+//	int result= Mattrix[i][j];
+//	return result;
+//}
 
 void Map::DrawMap()
 {
-	std::list<int>::iterator it;
-	//zoom x2
+	//std::list<int>::iterator it;
+	////zoom x2
 	BackGround->SetFormat(D3DXVECTOR2(2, 2), 0, 1);
-	//duyet list obj
-	for (it = listObj.begin(); it != listObj.end(); it++)
-	{
-		//detection position
-		
-		BackGround->Draw(((int)(*it % col) + 1)* 64 - 32 ,((*it / col) + 1) * 64 -32, GetIndexFromTile(*it));
-	}
+	////duyet list obj
+	//for (it = listObj.begin(); it != listObj.end(); it++)
+	//{
+	//	//detection position
+	//	
+	//	BackGround->Draw(((int)(*it % col) + 1)* 64 - 32 ,((*it / col) + 1) * 64 -32, GetIndexFromTile(*it));
+	//}
+
+	for (int i= 0; i < row; i++)
+		for (int j = 0; j <col; j++)
+			BackGround->Draw(((int)((j + i * col) % col) + 1) * 64 - 32, (((j + i * col) / col) + 1) * 64 - 32, Mattrix[i][j]);
 }
 
 

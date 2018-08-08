@@ -45,11 +45,11 @@ class ObjManager
 private:
 	vector<int*> InfoObj; //
 	vector<int*> InfoObjTemp;
-	QuadTree* quadTree;
-	list<int> listID;
+	//QuadTree* quadTree;
+	//list<int> listID;
 	vector<Object*> listObj;
 	vector<Enemy*> listEnemy;
-	int idsize = 0;
+	//int idsize = 0;
 	RECT rect;
 	ifstream f;
 public:
@@ -57,7 +57,7 @@ public:
 	int Frozen;
 	ObjManager() 
 	{
-		quadTree = new QuadTree();
+		//quadTree = new QuadTree();
 		Isclear = false;
 		Frozen = 120;
 	}
@@ -109,10 +109,10 @@ public:
 		}
 	}
 	
-	void Init(char* fileGameObj, char* fileQuadTree)
+	void Init(char* fileGameObj/*, char* fileQuadTree*/)
 	{
 		LoadFileInfo(fileGameObj);
-		quadTree->GetQuadTreeFromFile(fileQuadTree);
+		//quadTree->GetQuadTreeFromFile(fileQuadTree);
 		int* t;
 		for (int i = 0; i < InfoObj.size(); i++)
 		{
@@ -122,17 +122,17 @@ public:
 				t[j] = InfoObj[i][j];
 			}
 			InfoObjTemp.push_back(t);
-		}
-	}
-	
-	void GetListIDFromquadTree(RECT rectCamera)
-	{
-		rect = rectCamera;
-		listID.clear();
-		quadTree->GetlistObj(quadTree->Root, rectCamera, listID);
-		idsize = listID.size();		
+		}	
 
 	}
+	
+	//void GetListIDFromquadTree(RECT rectCamera)
+	//{
+	//	rect = rectCamera;
+	//	listID.clear();
+	//	//quadTree->GetlistObj(quadTree->Root, rectCamera, listID);
+	//	idsize = listID.size();
+	//}
 	
 	void AddListAnemy(vector<int> tempEnemy, int* t)
 	{
@@ -195,66 +195,61 @@ public:
 		}
 	}
 	
-	void GetListObjFromQuadTree()
-	{
-		//get list obj game
-		//bien phu
+	void AddListObj()
+	{		
+		//Lưu thông tin object vs enemy
 		vector<int> tempEnemy;
-		std::list<int>::iterator it;
 		int *t = new int[7];
-		int j;
-		Type _type;
+
 		for (int i = 0; i < listObj.size(); i++)
 		{
 			delete listObj[i];
 		}
 		listObj.clear();
-		for (it = listID.begin(); it != listID.end(); it++)
+		for (int i = 0; i < InfoObj.size(); i++)
 		{
-			t = InfoObj[*it];
+			t = InfoObj[i];
 			RECT check{ t[2],t[3], t[2] + t[4],t[3] + t[5] };
 			if (Collision::CheckCollison(rect, check))
 			{
-				if (t[1] >= 600 && t[1] != 615 && t[1] !=611)
+				if (t[1] >= 600 && t[1] != 615 && t[1] != 611)
 				{
-					Object* obj = new Object(t[0], t[1], t[2], t[3], t[4], t[5]);
+					Object* obj = new Object(t[0], t[1], t[2] , t[3] , t[4], t[5]);
 					listObj.push_back(obj);
 				}
 				else
 				{
 					//Load id enemy
-					tempEnemy.push_back(*it);
+					tempEnemy.push_back(InfoObj[i][0]);
 				}
 			}
 		}
+		////loai bo pt trung
+		//if (!tempEnemy.empty())
+		//	for (int i = 0; i < tempEnemy.size() - 1; i++)
+		//	{
+		//		for (int j = i + 1; j < tempEnemy.size(); j++)
+		//		{
+		//			if (tempEnemy[i] == tempEnemy[j])
+		//			{
+		//				tempEnemy.erase(tempEnemy.begin() + j);
+		//				j--;
+		//			}
 
-		//loai bo pt trung
-		if(!tempEnemy.empty())
-			for (int i = 0; i < tempEnemy.size() - 1; i++)
-			{
-				for (int j = i + 1; j < tempEnemy.size(); j++)
-				{
-					if (tempEnemy[i] == tempEnemy[j])
-					{
-						tempEnemy.erase(tempEnemy.begin() + j);
-						j--;
-					}
-									
-				}
-				//if (!tempEnemy.empty())
-					
-			}
+		//		}
+		//		//if (!tempEnemy.empty())
 
+		//	}
 		//load list enemy
 		if (listEnemy.empty())
 		{
-			AddListAnemy(tempEnemy, t);		
+			AddListAnemy(tempEnemy, t);
 		}
 		else
 		{
 			for (int i = 0; i < listEnemy.size(); i++)
-			{				
-				for (int r = i+1; r < listEnemy.size(); r++)
+			{
+				for (int r = i + 1; r < listEnemy.size(); r++)
 				{
 					if (listEnemy[i]->GetID() == listEnemy[r]->GetID())
 						listEnemy.erase(listEnemy.begin() + r);
@@ -267,12 +262,12 @@ public:
 						tempEnemy.erase(tempEnemy.begin() + j);
 						check = true;
 						break;
-					}					
+					}
 				}
-				if (check == false && Collision::AABBCheck(listEnemy[i]->GetBox(),Box::ConvertRECT(rect)) == false)
-				{				
-						delete listEnemy[i];
-						listEnemy.erase(listEnemy.begin() + i);					
+				if (check == false && Collision::AABBCheck(listEnemy[i]->GetBox(), Box::ConvertRECT(rect)) == false)
+				{
+					delete listEnemy[i];
+					listEnemy.erase(listEnemy.begin() + i);
 				}
 			}
 			//add
@@ -283,54 +278,144 @@ public:
 				AddListAnemy(tempEnemy, t);
 			}
 		}
-
-
-		//else
-		//{
-		//	for (int i = 0; i < listObj.size(); i++)
-		//	{
-		//		int j = 0;
-		//		int size = listID.size();
-		//		for (it = listID.begin(); it != listID.end(); it++)
-		//		{
-		//			j++;
-		//			if (*it == listObj[i]->GetID())
-		//			{
-		//				//delete &it;
-		//				listID.erase(it);
-		//				break;
-		//			}				
-		//		}				
-		//		if (j==size)
-		//		{
-		//			delete listObj[i];
-		//			listObj.erase(listObj.begin() + i);
-		//		}
-		//	}
-		//	for (it = listID.begin(); it != listID.end(); it++)
-		//	{
-		//		for (int i = 0; i < InfoObj.size(); i++)
-		//		{
-		//			t = InfoObj[i];
-		//			if (*it == t[0])
-		//			{
-		//				RECT check{ t[2],t[3], t[2] + t[4],t[3] + t[5] };
-		//				if (Collision::CheckCollison(rect, check))
-		//				{
-		//					Object* obj = new Object(t[0], t[1], t[2], t[3], t[4], t[5]);
-		//					listObj.push_back(obj);
-		//				}
-		//			}
-		//		}
-		//	}
-		//}
-				
 	}
+	//void GetListObjFromQuadTree()
+	//{
+	//	//get list obj game
+	//	//bien phu
+	//	vector<int> tempEnemy;
+	//	std::list<int>::iterator it;
+	//	int *t = new int[7];
+	//	int j;
+	//	Type _type;
+	//	for (int i = 0; i < listObj.size(); i++)
+	//	{
+	//		delete listObj[i];
+	//	}
+	//	listObj.clear();
+	//	for (it = listID.begin(); it != listID.end(); it++)
+	//	{
+	//		t = InfoObj[*it];
+	//		RECT check{ t[2],t[3], t[2] + t[4],t[3] + t[5] };
+	//		if (Collision::CheckCollison(rect, check))
+	//		{
+	//			if (t[1] >= 600 && t[1] != 615 && t[1] !=611)
+	//			{
+	//				Object* obj = new Object(t[0], t[1], t[2], t[3], t[4], t[5]);
+	//				listObj.push_back(obj);
+	//			}
+	//			else
+	//			{
+	//				//Load id enemy
+	//				tempEnemy.push_back(*it);
+	//			}
+	//		}
+	//	}
+
+	//	//loai bo pt trung
+	//	if(!tempEnemy.empty())
+	//		for (int i = 0; i < tempEnemy.size() - 1; i++)
+	//		{
+	//			for (int j = i + 1; j < tempEnemy.size(); j++)
+	//			{
+	//				if (tempEnemy[i] == tempEnemy[j])
+	//				{
+	//					tempEnemy.erase(tempEnemy.begin() + j);
+	//					j--;
+	//				}
+	//								
+	//			}
+	//			//if (!tempEnemy.empty())
+	//				
+	//		}
+
+	//	//load list enemy
+	//	if (listEnemy.empty())
+	//	{
+	//		AddListAnemy(tempEnemy, t);		
+	//	}
+	//	else
+	//	{
+	//		for (int i = 0; i < listEnemy.size(); i++)
+	//		{				
+	//			for (int r = i+1; r < listEnemy.size(); r++)
+	//			{
+	//				if (listEnemy[i]->GetID() == listEnemy[r]->GetID())
+	//					listEnemy.erase(listEnemy.begin() + r);
+	//			}
+	//			bool check = false;
+	//			for (int j = 0; j < tempEnemy.size(); j++)
+	//			{
+	//				if (listEnemy[i]->GetID() == tempEnemy[j])
+	//				{
+	//					tempEnemy.erase(tempEnemy.begin() + j);
+	//					check = true;
+	//					break;
+	//				}					
+	//			}
+	//			if (check == false && Collision::AABBCheck(listEnemy[i]->GetBox(),Box::ConvertRECT(rect)) == false)
+	//			{				
+	//					delete listEnemy[i];
+	//					listEnemy.erase(listEnemy.begin() + i);					
+	//			}
+	//		}
+	//		//add
+	//		if (tempEnemy.empty())
+	//			return;
+	//		for (int i = 0; i < tempEnemy.size(); i++)
+	//		{
+	//			AddListAnemy(tempEnemy, t);
+	//		}
+	//	}
+
+
+	//	//else
+	//	//{
+	//	//	for (int i = 0; i < listObj.size(); i++)
+	//	//	{
+	//	//		int j = 0;
+	//	//		int size = listID.size();
+	//	//		for (it = listID.begin(); it != listID.end(); it++)
+	//	//		{
+	//	//			j++;
+	//	//			if (*it == listObj[i]->GetID())
+	//	//			{
+	//	//				//delete &it;
+	//	//				listID.erase(it);
+	//	//				break;
+	//	//			}				
+	//	//		}				
+	//	//		if (j==size)
+	//	//		{
+	//	//			delete listObj[i];
+	//	//			listObj.erase(listObj.begin() + i);
+	//	//		}
+	//	//	}
+	//	//	for (it = listID.begin(); it != listID.end(); it++)
+	//	//	{
+	//	//		for (int i = 0; i < InfoObj.size(); i++)
+	//	//		{
+	//	//			t = InfoObj[i];
+	//	//			if (*it == t[0])
+	//	//			{
+	//	//				RECT check{ t[2],t[3], t[2] + t[4],t[3] + t[5] };
+	//	//				if (Collision::CheckCollison(rect, check))
+	//	//				{
+	//	//					Object* obj = new Object(t[0], t[1], t[2], t[3], t[4], t[5]);
+	//	//					listObj.push_back(obj);
+	//	//				}
+	//	//			}
+	//	//		}
+	//	//	}
+	//	//}
+	//			
+	//}
 
 	void UpDate(RECT rectCamera, vector<Object> &listItem,int DeltaTime,Box simon)
 	{
-		GetListIDFromquadTree(rectCamera);
-		GetListObjFromQuadTree();
+		rect = rectCamera;
+
+		AddListObj();
 		if (Frozen < 120)
 		{
 			Isclear = true;
@@ -386,6 +471,7 @@ public:
 			case GroundBigLightRod:
 				break;
 			case GroundBigLightDagger:
+
 				break;
 			case GroundBigLight:
 				break;				

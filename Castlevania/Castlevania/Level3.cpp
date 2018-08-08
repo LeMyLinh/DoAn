@@ -64,7 +64,7 @@ void Level3::UpdateGame(int Delta)
 {
 	KeyBoard::GetKey()->ProcessKeyBoard();
 	camera->Update(simon->GetX(), G_ScreenHeight / 2, simon->GetLayerMap(), simon->IsNextStage, simon->IsAutoRun, Delta);
-	map->SelectScene(camera->GetRectCamera());
+	//map->SelectScene(camera->GetRectCamera());
 
 	objManager->UpDate(camera->GetRectCamera(), Item::GetStaticObj()->GetListItem(), Delta, simon->GetBox());
 	simon->Update(objManager->GetListObj(), objManager->GetListInfo(), blackBoard, objManager->GetlistEnemy(), Delta, camera, objManager);
@@ -97,8 +97,8 @@ void Level3::LoadResources()
 	t->loadTextTureFromFile(L"Data/lv2.png", D3DCOLOR_XRGB(255, 0, 255));
 	simon->LoadResource(L"Resources/simon.png", 8, 3, 0);
 	Font::GetFont()->Innit();
-	objManager->Init("Data/lv2-GameObj.txt", "Data/lv2-GameObj-Quadtree.txt");
-	map->Init(L"Data/lv2.png", "Data/lv2-MAP.txt", "Data/lv2-MAP-quadtree.txt",10,6);
+	objManager->Init("Data/lv2-GameObj.txt"/*, "Data/lv2-GameObj-Quadtree.txt"*/);
+	map->Init(L"Data/lv2.png", "Data/lv2-MAP.txt", /*"Data/lv2-MAP-quadtree.txt",*/10,6);
 
 	Tile::GetStaticObj()->Init();
 	BigCandel::GetStaticObj()->Init();
