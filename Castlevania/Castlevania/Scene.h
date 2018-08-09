@@ -7,6 +7,7 @@ public:
 	int Scene_Index;
 	bool IsEnd,Is_NextScene;
 	int Localtime;
+
 	Scene()
 	{
 		IsEnd=false;

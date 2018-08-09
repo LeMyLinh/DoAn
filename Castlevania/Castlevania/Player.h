@@ -1,5 +1,6 @@
 #ifndef _PLAYER_H_
 #define _PLAYER_H_
+
 #include <d3d9.h>
 #include <d3dx9.h>
 #include "GSprite.h"
@@ -7,6 +8,7 @@
 #define TURN_LEFT -1
 #define TURN_RIGHT 1
 #define GROUND_Y 350
+
 enum States { STANDs, RUN, JUMP, SIT };
 
 class Player

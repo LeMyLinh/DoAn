@@ -4,7 +4,6 @@
 #include <cstdlib> 
 #include <ctime> 
 #include <dinput.h>
-
 #include "Scene.h"
 #include <d3d9.h>
 #include <dinput.h>
@@ -31,6 +30,7 @@
 #include "Item.h"
 #include "Gate.h"
 #include "Weapon.h"
+
 class Level3: public Scene
 {	
 	GCamera* camera;

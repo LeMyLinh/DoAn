@@ -6,11 +6,6 @@ Level2::Level2()
 }
 Level2::~Level2()
 {
-	/*if (map != NULL) delete map;
-	if (simon != NULL) delete simon;
-	if (camera != NULL) delete camera;
-	if (objManager != NULL) delete objManager;
-	if (blackBoard != NULL) delete blackBoard;*/
 }
 void Level2::LoadResources()
 {

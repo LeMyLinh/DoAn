@@ -3,15 +3,6 @@
 #include <d3d9.h>
 #include <dinput.h>
 #include "Global.h"
-//#include "GTexture.h"
-//#include "GSprite.h"
-//#include "Player.h"
-//#include "GCamera.h"
-//#include "Map.h"
-//#include "Simon.h"
-//#include "ObjManager.h"
-//#include "BlackBoard.h"
-
 
 class CGame
 {

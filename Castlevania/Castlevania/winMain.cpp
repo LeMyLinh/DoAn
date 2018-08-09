@@ -5,6 +5,7 @@
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd)
 {
 	CGame* game= new SceneMain(nShowCmd);
+
 	game->GameInit();
 	game->GameRun();
 	game->GameEnd();

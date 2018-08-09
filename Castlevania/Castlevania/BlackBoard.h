@@ -18,7 +18,7 @@ public:
 	void PickUpItem(int itemID);
 private:
 	CText *LabelScore, *LabelPlayer, *LabelEnemy, *LabelTime, *LabelStage;
-	CText *LabelHeart, *PValue;//, *Score, *Time;
+	CText *LabelHeart, *PValue;
 	GTexture* blackboard, *T_Heal;
 	GSprite* S_Heal;
 	int Localtime;

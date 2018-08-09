@@ -160,6 +160,8 @@ void GSprite::Draw(int x, int y)
 
 void GSprite::Draw(int x, int y, int index)
 {
+	if (index == -1)
+		return;
 	this->SelectIndex(index);
 	this->Draw(x, y);
 }

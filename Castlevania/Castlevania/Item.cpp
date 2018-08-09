@@ -6,7 +6,6 @@
 #include <math.h>
 using namespace std;
 
-
 Item* Item::pStaticObj = 0;
 
 Item::Item()

@@ -33,6 +33,12 @@ extern RECT lv2_Layer1;
 extern RECT lv2_Layer2;
 extern RECT lv2_Layer3;
 extern RECT lv2_Layer4;
+
+extern RECT LV5_STAGE1;
+extern RECT LV5_STAGE2;
+extern RECT LV5_STAGE3;
+extern RECT LV5_STAGE4;
+
 extern int G_Stage;
 extern bool Islockcamera;
 extern int G_bossHP;

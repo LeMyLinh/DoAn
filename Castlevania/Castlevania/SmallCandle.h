@@ -1,5 +1,6 @@
 #pragma once
 #include "BaseObject.h"
+
 class SmallCandle :public BaseObject
 {
 	static SmallCandle* pStaticObj;

@@ -1,11 +1,12 @@
 #pragma once
+
 #include "Enemy.h"
 #include <iostream> 
 #include <cstdlib> 
 #include <ctime> 
 using namespace std;
 
-class SpearGuard:public Enemy
+class SpearGuard : public Enemy
 {
 protected:
 	int bound;

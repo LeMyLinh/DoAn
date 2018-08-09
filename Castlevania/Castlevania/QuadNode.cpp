@@ -1,7 +1,5 @@
 #include "QuadNode.h"
 
-
-
 QuadNode::QuadNode()
 {
 	this->id = 0;

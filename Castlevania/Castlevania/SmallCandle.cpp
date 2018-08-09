@@ -1,6 +1,5 @@
 #include "SmallCandle.h"
 
-
 SmallCandle* SmallCandle::pStaticObj = 0;
 
 

@@ -5,6 +5,7 @@
 #include <d3dx9.h>
 
 #include "GTexture.h"
+
 enum MODE
 {
 	REPEAT,

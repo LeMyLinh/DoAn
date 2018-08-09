@@ -33,7 +33,6 @@ public:
 	~GTexture();
 };
 
-
 #endif // _GTEXTTURE_H_
 
 

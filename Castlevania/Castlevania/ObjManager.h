@@ -43,13 +43,10 @@ using namespace std;
 class ObjManager
 {
 private:
-	vector<int*> InfoObj; //
+	vector<int*> InfoObj;
 	vector<int*> InfoObjTemp;
-	//QuadTree* quadTree;
-	//list<int> listID;
 	vector<Object*> listObj;
 	vector<Enemy*> listEnemy;
-	//int idsize = 0;
 	RECT rect;
 	ifstream f;
 public:
@@ -57,7 +54,6 @@ public:
 	int Frozen;
 	ObjManager() 
 	{
-		//quadTree = new QuadTree();
 		Isclear = false;
 		Frozen = 120;
 	}
@@ -103,16 +99,20 @@ public:
 				if (n == line.length() - 1)
 					lTemp[i] = atoi(strTemp.c_str());
 			}
+			lTemp[2] *= 2;
+			lTemp[3] *= 2;
+			lTemp[4] *= 2;
+			lTemp[5] *= 2;
 			lTemp[6] = 0;
 			//add info object	
 			InfoObj.push_back(lTemp);
 		}
 	}
 	
-	void Init(char* fileGameObj/*, char* fileQuadTree*/)
+	void Init(char* fileGameObj)
 	{
 		LoadFileInfo(fileGameObj);
-		//quadTree->GetQuadTreeFromFile(fileQuadTree);
+
 		int* t;
 		for (int i = 0; i < InfoObj.size(); i++)
 		{
@@ -125,14 +125,6 @@ public:
 		}	
 
 	}
-	
-	//void GetListIDFromquadTree(RECT rectCamera)
-	//{
-	//	rect = rectCamera;
-	//	listID.clear();
-	//	//quadTree->GetlistObj(quadTree->Root, rectCamera, listID);
-	//	idsize = listID.size();
-	//}
 	
 	void AddListAnemy(vector<int> tempEnemy, int* t)
 	{
@@ -187,6 +179,15 @@ public:
 			case EnemyPleaman:
 				obj = new Pleaman(t[0], t[1], t[2], t[3], t[4], t[5]);
 				break;
+			case WHITESKELETON:
+				obj = new Skeleton(t[0], t[1], t[2], t[3], t[4], t[5]);
+				break;
+			case PLEAMAN:
+				obj = new Pleaman(t[0], t[1], t[2], t[3], t[4], t[5]);
+				break;
+			case AXEKNIGHT:
+				obj = new SpearGuard(t[0], t[1], t[2], t[3], t[4], t[5]);
+				break;
 			default:
 				break;
 			}			
@@ -217,6 +218,11 @@ public:
 					Object* obj = new Object(t[0], t[1], t[2] , t[3] , t[4], t[5]);
 					listObj.push_back(obj);
 				}
+				else if (t[1] >= 1 && t[1] <= 13)
+				{
+					Object* obj = new Object(t[0], t[1], t[2], t[3], t[4], t[5]);
+					listObj.push_back(obj);
+				}
 				else
 				{
 					//Load id enemy
@@ -224,22 +230,7 @@ public:
 				}
 			}
 		}
-		////loai bo pt trung
-		//if (!tempEnemy.empty())
-		//	for (int i = 0; i < tempEnemy.size() - 1; i++)
-		//	{
-		//		for (int j = i + 1; j < tempEnemy.size(); j++)
-		//		{
-		//			if (tempEnemy[i] == tempEnemy[j])
-		//			{
-		//				tempEnemy.erase(tempEnemy.begin() + j);
-		//				j--;
-		//			}
 
-		//		}
-		//		//if (!tempEnemy.empty())
-
-		//	}
 		//load list enemy
 		if (listEnemy.empty())
 		{
@@ -279,138 +270,7 @@ public:
 			}
 		}
 	}
-	//void GetListObjFromQuadTree()
-	//{
-	//	//get list obj game
-	//	//bien phu
-	//	vector<int> tempEnemy;
-	//	std::list<int>::iterator it;
-	//	int *t = new int[7];
-	//	int j;
-	//	Type _type;
-	//	for (int i = 0; i < listObj.size(); i++)
-	//	{
-	//		delete listObj[i];
-	//	}
-	//	listObj.clear();
-	//	for (it = listID.begin(); it != listID.end(); it++)
-	//	{
-	//		t = InfoObj[*it];
-	//		RECT check{ t[2],t[3], t[2] + t[4],t[3] + t[5] };
-	//		if (Collision::CheckCollison(rect, check))
-	//		{
-	//			if (t[1] >= 600 && t[1] != 615 && t[1] !=611)
-	//			{
-	//				Object* obj = new Object(t[0], t[1], t[2], t[3], t[4], t[5]);
-	//				listObj.push_back(obj);
-	//			}
-	//			else
-	//			{
-	//				//Load id enemy
-	//				tempEnemy.push_back(*it);
-	//			}
-	//		}
-	//	}
-
-	//	//loai bo pt trung
-	//	if(!tempEnemy.empty())
-	//		for (int i = 0; i < tempEnemy.size() - 1; i++)
-	//		{
-	//			for (int j = i + 1; j < tempEnemy.size(); j++)
-	//			{
-	//				if (tempEnemy[i] == tempEnemy[j])
-	//				{
-	//					tempEnemy.erase(tempEnemy.begin() + j);
-	//					j--;
-	//				}
-	//								
-	//			}
-	//			//if (!tempEnemy.empty())
-	//				
-	//		}
-
-	//	//load list enemy
-	//	if (listEnemy.empty())
-	//	{
-	//		AddListAnemy(tempEnemy, t);		
-	//	}
-	//	else
-	//	{
-	//		for (int i = 0; i < listEnemy.size(); i++)
-	//		{				
-	//			for (int r = i+1; r < listEnemy.size(); r++)
-	//			{
-	//				if (listEnemy[i]->GetID() == listEnemy[r]->GetID())
-	//					listEnemy.erase(listEnemy.begin() + r);
-	//			}
-	//			bool check = false;
-	//			for (int j = 0; j < tempEnemy.size(); j++)
-	//			{
-	//				if (listEnemy[i]->GetID() == tempEnemy[j])
-	//				{
-	//					tempEnemy.erase(tempEnemy.begin() + j);
-	//					check = true;
-	//					break;
-	//				}					
-	//			}
-	//			if (check == false && Collision::AABBCheck(listEnemy[i]->GetBox(),Box::ConvertRECT(rect)) == false)
-	//			{				
-	//					delete listEnemy[i];
-	//					listEnemy.erase(listEnemy.begin() + i);					
-	//			}
-	//		}
-	//		//add
-	//		if (tempEnemy.empty())
-	//			return;
-	//		for (int i = 0; i < tempEnemy.size(); i++)
-	//		{
-	//			AddListAnemy(tempEnemy, t);
-	//		}
-	//	}
-
-
-	//	//else
-	//	//{
-	//	//	for (int i = 0; i < listObj.size(); i++)
-	//	//	{
-	//	//		int j = 0;
-	//	//		int size = listID.size();
-	//	//		for (it = listID.begin(); it != listID.end(); it++)
-	//	//		{
-	//	//			j++;
-	//	//			if (*it == listObj[i]->GetID())
-	//	//			{
-	//	//				//delete &it;
-	//	//				listID.erase(it);
-	//	//				break;
-	//	//			}				
-	//	//		}				
-	//	//		if (j==size)
-	//	//		{
-	//	//			delete listObj[i];
-	//	//			listObj.erase(listObj.begin() + i);
-	//	//		}
-	//	//	}
-	//	//	for (it = listID.begin(); it != listID.end(); it++)
-	//	//	{
-	//	//		for (int i = 0; i < InfoObj.size(); i++)
-	//	//		{
-	//	//			t = InfoObj[i];
-	//	//			if (*it == t[0])
-	//	//			{
-	//	//				RECT check{ t[2],t[3], t[2] + t[4],t[3] + t[5] };
-	//	//				if (Collision::CheckCollison(rect, check))
-	//	//				{
-	//	//					Object* obj = new Object(t[0], t[1], t[2], t[3], t[4], t[5]);
-	//	//					listObj.push_back(obj);
-	//	//				}
-	//	//			}
-	//	//		}
-	//	//	}
-	//	//}
-	//			
-	//}
-
+	
 	void UpDate(RECT rectCamera, vector<Object> &listItem,int DeltaTime,Box simon)
 	{
 		rect = rectCamera;
@@ -468,30 +328,13 @@ public:
 			case GroundBigLightHeart:
 				BigCandel::GetStaticObj()->Draw(listObj[i]->GetX(), listObj[i]->GetY());
 				break;
-			case GroundBigLightRod:
-				break;
-			case GroundBigLightDagger:
-
-				break;
-			case GroundBigLight:
-				break;				
-			case GroundStair:
-				break;
-			case GroundUnknow:
-				break;
-			case ground:
-				break;			
 			case Gate:
 				break;
 			case Ground2:
-				//Tile::GetStaticObj()->Draw(listObj[i]->GetX(), listObj[i]->GetY(), 0);
 				break;
-			case GroundStair2:
-				//Stair::GetStaticObj()->Draw(listObj[i]->GetX(), listObj[i]->GetY());
-				
+			case GroundStair2:				
 				break;
 			case GroundStiar3:
-				//TopStair::GetStaticObj()->Draw(listObj[i]->GetX(), listObj[i]->GetY());
 				break;
 			case ItemRoast:
 				if (InfoObj[listObj[i]->GetID()][6] == 1)
@@ -510,6 +353,18 @@ public:
 					Item::GetStaticObj()->DrawBreakWall(listObj[i]);
 				break;
 			case ItemCrown:
+				if (InfoObj[listObj[i]->GetID()][6] == 1)
+					Item::GetStaticObj()->DrawBreakWall(listObj[i]);
+				break;
+			case GROUND:
+			case DOOR:
+			case STAIR:
+				break;
+			case DOUBLESHOT:
+				if (InfoObj[listObj[i]->GetID()][6] == 1)
+					Item::GetStaticObj()->DrawBreakWall(listObj[i]);
+				break;
+			case TRIPLESHOT:
 				if (InfoObj[listObj[i]->GetID()][6] == 1)
 					Item::GetStaticObj()->DrawBreakWall(listObj[i]);
 				break;
@@ -563,6 +418,15 @@ public:
 			case EnemyPleaman:
 				listEnemy[i]->Draw();
 				break;
+			case WHITESKELETON:
+				listEnemy[i]->Draw();
+				break;
+			case PLEAMAN:
+				listEnemy[i]->Draw();
+				break;
+			case AXEKNIGHT:
+				EnemyRender::GetStaticObj()->DrawSpearGuard(listEnemy[i]->GetX(), listEnemy[i]->GetY(), listEnemy[i]->GetIndex(), listEnemy[i]->GetDirect());
+				break;
 			default:
 				break;
 			}
@@ -589,7 +453,7 @@ public:
 		for (int i = 0; i < listObj.size(); i++)
 		{
 			//xu ly va cham voi mat dat
-			if (listObj[i]->GetType() == 616)
+			if (listObj[i]->GetType() == GROUND ||listObj[i]->GetType() == 616)
 			{
 				//item
 				Item::GetStaticObj()->CollisionHandle(listObj[i]);
@@ -633,6 +497,7 @@ public:
 						break;
 					case EnemyDragonSkullCannon:
 						break;
+					case AXEKNIGHT:
 					case EnemyBlackNight:
 						if (Collision::HitTheWall(listEnemy[j]->GetBox(), listObj[i]->GetBox()))
 						{
@@ -664,9 +529,11 @@ public:
 							listEnemy[j]->turn *= -1;
 						}
 						break;
+					case WHITESKELETON:
 					case EnemyWhiteSkeleton:
 						listEnemy[j]->CollisionWithObj(listObj[i]);
 						break;
+					case PLEAMAN:
 					case EnemyPleaman:
 						listEnemy[j]->CollisionWithObj(listObj[i]);
 						break;

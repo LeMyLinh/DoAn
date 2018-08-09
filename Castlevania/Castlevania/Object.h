@@ -6,37 +6,37 @@
 enum Type
 {
 	//ground
-	GroundBigLightHeart = 601,
-	GroundBigLightRod = 602,
-	GroundBigLightDagger = 603,
-	GroundBigLight = 604,
-	GroundSmallLightAxe = 605,
+	GroundBigLightHeart = 601, //k
+	GroundBigLightRod = 602, //k
+	GroundBigLightDagger = 603, //k
+	GroundBigLight = 604, //k
+	GroundSmallLightAxe = 605, //k
 	GroundSmallLightBoomerang = 606,
 	GroundSmallLightCross = 607,
-	GroundSmallLightDoubleShot = 609,
-	GroundSmallLightFireBomb = 608,
+	GroundSmallLightDoubleShot = 609, //k
+	GroundSmallLightFireBomb = 608, //k
 	GroundSmallLightRandom = 610,
-	GroundSmallLightHeart = 620,
-	GroundSmallLightSmallHeart = 600,
-	GroundSmallLightRod = 621,
+	GroundSmallLightHeart = 620, //tim to
+	GroundSmallLightSmallHeart = 600, 
+	GroundSmallLightRod = 621, //k
 	GroundSmallLightKnife = 622,
 	GroundSmallLightBag1000 = 623,
 	GroundSmallLightBag700 = 624,
 	GroundSmallLightBag400 = 625,
-	GroundTrident = 611,
-	GroundStair = 612,
-	GroundUnknow = 613,
-	ground = 614,
-	GroundMovingPlatform = 615,
+	GroundTrident = 611, //cái T ngược
+	GroundStair = 612, //k
+	GroundUnknow = 613, //k
+	ground = 614, //k
+	GroundMovingPlatform = 615, //cái nền đi chuyển
 	Gate = 659,
 	Ground2 = 616,
 	GroundStair2 = 617,
-	GroundStiar3 = 618,
+	GroundStiar3 = 618, //đầu cầu thang
 	//hidden item
-	ItemRoast = 626,
+	ItemRoast = 626, //
 	ItemDoubleShot = 627,
-	ItemTripbleShot = 628,
-	ItemHidden = 629,
+	ItemTripbleShot = 628, //k
+	ItemHidden = 629, //chỗ gạch vỡ đc
 	ItemCrown = 630,
 
 	//boss
@@ -64,6 +64,34 @@ enum Type
 	Dead = 802,
 	Right = 803,
 	Up = 804,
+
+	//Level5 + 6
+	GROUND = 1,
+	STAIR = 2,
+	DOOR = 3,
+
+	//Items
+	SMALLHEART = 4,
+	LARGEHEART = 5,
+	BAG400 = 6,
+	BAG700 = 7,
+	BAG1000 =8,
+	DOUBLESHOT = 9,
+	TRIPLESHOT = 10,
+	AXE = 11,
+	BOOMERANG = 12,
+	FIREBOMB = 13,
+
+	//Enemy
+	WHITESKELETON = 14,
+	REDSKELETON = 15,
+	PLEAMAN = 16,
+	AXEKNIGHT = 17,
+	BONEBILLAR = 18,
+	MEDUSAHEAD = 19,
+	EAGLE = 20,
+	VAMPIREBAT = 21,
+
 };
 
 

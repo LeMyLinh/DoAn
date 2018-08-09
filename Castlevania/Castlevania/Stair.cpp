@@ -1,7 +1,5 @@
 #include "Stair.h"
 
-
-
 Stair* Stair::pStaticObj = 0;
 
 

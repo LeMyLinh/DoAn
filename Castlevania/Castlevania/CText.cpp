@@ -1,7 +1,6 @@
 #include "CText.h"
 #include "Global.h"
 
-
 CText::CText(char* text, int size, float x, float y,D3DCOLOR color)
 {
 	Text = new char[strlen(text)];

@@ -2,8 +2,8 @@
 #include <algorithm>
 #include "Global.h"
 
-
 Font* Font::pFont = 0;
+
 Font::Font()
 {
 

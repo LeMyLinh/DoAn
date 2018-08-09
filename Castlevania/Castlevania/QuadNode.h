@@ -22,7 +22,7 @@ public:
 	void SetNode(int _id);
 	void SetNode(int _id, RECT _bounds, list<int> _list);
 	~QuadNode();
-;
+
 };
 
 #endif // !_QUANODE_H_

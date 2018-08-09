@@ -5,6 +5,7 @@
 
 class Font
 {
+private:
 	ID3DXFont* _font;
 	static Font* pFont;
 public:

@@ -36,6 +36,7 @@ void GTexture::loadTextTureFromFile(LPCWSTR fileName, D3DXCOLOR ColorKey)
 	Width = info.Width;
 	Height = info.Height;
 	srcRect = { 0,0, Width,Height };
+
 	hr = D3DXCreateTextureFromFileEx(
 		G_lpDirect3DDevice,
 		fileName,

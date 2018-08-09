@@ -1,7 +1,5 @@
 #include "Object.h"
 
-
-
 int Object::GetIndex()
 {
 	return index;

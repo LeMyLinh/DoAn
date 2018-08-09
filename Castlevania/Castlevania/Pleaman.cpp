@@ -1,8 +1,6 @@
 #include "Pleaman.h"
 #include "EnemyRender.h"
 
-
-
 Pleaman::Pleaman()
 {
 }

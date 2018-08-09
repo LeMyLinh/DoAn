@@ -1,7 +1,6 @@
 #pragma once
 #include "BaseObject.h"
 
-
 class CGate:public BaseObject
 {
 protected:

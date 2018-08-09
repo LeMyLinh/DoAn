@@ -1,7 +1,6 @@
 #include "BonePillar.h"
 #include "EnemyRender.h"
 
-
 BonePillar::BonePillar()
 {
 }

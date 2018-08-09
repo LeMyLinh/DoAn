@@ -1,5 +1,6 @@
 #ifndef _COLLISION_H_
 #define _COLLISION_H_
+
 #include <d3d9.h>
 #include "Box.h"
 

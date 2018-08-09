@@ -1,5 +1,6 @@
 #ifndef _SIMON_H_
 #define _SIMON_H_
+
 #include "BaseObject.h"
 #include "GSprite.h"
 #include "Object.h"

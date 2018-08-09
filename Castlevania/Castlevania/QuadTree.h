@@ -5,6 +5,7 @@
 #include "QuadNode.h"
 #include <d3d9.h>
 using namespace std;
+
 class QuadTree
 {
 	

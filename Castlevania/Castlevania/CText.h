@@ -2,7 +2,6 @@
 #define _CTEXT_H_
 #include <d3dx9.h>
 
-
 class CText
 {
 private:

@@ -1,7 +1,5 @@
 #include "MovePlatform.h"
 
-
-
 MovePlatform::MovePlatform()
 {
 }

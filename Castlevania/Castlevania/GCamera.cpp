@@ -2,7 +2,6 @@
 #include "Global.h"
 #include "Gate.h"
 
-
 GCamera::GCamera(int width, int height, float _angle, D3DXVECTOR3 _scaleFactors, int x, int y,int layer)
 {
 	this->Width = width;
@@ -124,25 +123,25 @@ void GCamera::Update(int x,int y,int layer, bool &IsNextSatge, bool &IsAutoRun, 
 		switch (layer)
 		{
 		case 1:
-			cameraY = lv2_Layer1.bottom * 2 + 16 - G_ScreenHeight / 2;
-			widthMap = lv2_Layer1.right * 2;
-			xMap = lv2_Layer1.left * 2;
+			cameraY = LV5_STAGE1.bottom * 2 + 16 - G_ScreenHeight / 2;
+			widthMap = LV5_STAGE1.right * 2;
+			xMap = LV5_STAGE1.left * 2;
 			break;
 		case 2:
-			cameraY = lv2_Layer2.bottom * 2 + 16 - G_ScreenHeight / 2;
-			widthMap = lv2_Layer2.right * 2;
-			xMap = lv2_Layer2.left * 2;
+			cameraY = LV5_STAGE2.bottom * 2 + 16 - G_ScreenHeight / 2;
+			widthMap = LV5_STAGE2.right * 2;
+			xMap = LV5_STAGE2.left * 2;
 			break;
 		case 3:
-			cameraY = lv2_Layer3.bottom * 2 + 16 - G_ScreenHeight / 2;
-			widthMap = lv2_Layer3.right * 2;
-			xMap = lv2_Layer3.left * 2;
+			cameraY = LV5_STAGE3.bottom * 2 + 16 - G_ScreenHeight / 2;
+			widthMap = LV5_STAGE3.right * 2;
+			xMap = LV5_STAGE3.left * 2;
 			break;
 		case 4:
-			cameraX = lv2_Layer4.left * 2;
-			cameraY = lv2_Layer4.bottom * 2 + 16 - G_ScreenHeight / 2 - 20;
-			widthMap = lv2_Layer4.right * 2;
-			xMap = lv2_Layer4.left * 2;
+			cameraX = LV5_STAGE4.left * 2;
+			cameraY = LV5_STAGE4.bottom * 2 + 16 - G_ScreenHeight / 2 - 20;
+			widthMap = LV5_STAGE4.right * 2;
+			xMap = LV5_STAGE4.left * 2;
 			break;
 		default:
 			break;

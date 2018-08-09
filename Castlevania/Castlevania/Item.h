@@ -1,10 +1,10 @@
 #pragma once
+
 #include <vector>
 #include "Object.h"
 #include "GTexture.h"
 #include "GSprite.h"
 using namespace std;
-
 
 class Item
 {

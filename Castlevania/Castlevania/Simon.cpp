@@ -21,9 +21,7 @@ Simon::Simon(int _x, int _y, int _inlayer)
 	turn = TURN_LEFT; //turn left
 	x = _x;
 	y = _y;
-	// position
-	/*x = lv2_Layer4.left * 2 + 200;
-	y = lv2_Layer4.bottom * 2 - 150;*/
+
 	vecX = 0;
 	vecY = 0;
 	//
@@ -43,7 +41,6 @@ Simon::Simon(int _x, int _y, int _inlayer)
 	effectDelay = 20;
 	coutIndex = 0;
 	Isfind = false;
-	//tempobj = new Object();
 	IsContinousClimb = false;
 	tempMin = 0;
 	IsBeaten = false;
@@ -72,10 +69,6 @@ void Simon::Turn(int Turn)
 
 void Simon::SetStateFight()
 {
-	/*if (IsFight == false && IsSkill == true)
-	{
-		IsFight = true;
-	}*/
 }
 
 void Simon::SetState()
@@ -549,7 +542,7 @@ void Simon::Update(std::vector<Object*> listObject, std::vector<int*> &listInfo,
 		if(listInfo[listObject[i]->GetID()][6] == 1)
 			continue;
 		//stair
-		if (listObject[i]->GetType() == 617 || listObject[i]->GetType() == 618 || listObject[i]->GetType() == 612 || listObject[i]->GetType() == 613)
+		if (listObject[i]->GetType() == STAIR || listObject[i]->GetType() == 617 || listObject[i]->GetType() == 618 || listObject[i]->GetType() == 612 || listObject[i]->GetType() == 613)
 		{
 			if (Collision::AABBCheck(this->GetBox(), listObject[i]->GetBox()))
 			{
@@ -614,48 +607,48 @@ void Simon::Update(std::vector<Object*> listObject, std::vector<int*> &listInfo,
 				switch (inLayer)
 				{
 				case 4:
-					if (y + 35 <= lv2_Layer4.top * 2 && state == CLIMBING_UP)
+					if (y + 35 <= LV5_STAGE4.top * 2 && state == CLIMBING_UP)
 					{
 						inLayer = 3;
-						y = lv2_Layer3.bottom * 2 - Sprite->_FrameHeight;
+						y = LV5_STAGE3.bottom * 2 - Sprite->_FrameHeight;
 						IsOnTheStair = true;
 						SetState();
 						vecY = 0;
 					}
 					break;
 				case 3:
-					if (y + 35 <= lv2_Layer3.top * 2 && state == CLIMBING_UP)
+					if (y + 35 <= LV5_STAGE3.top * 2 && state == CLIMBING_UP)
 					{
 						inLayer = 2;
-						y = lv2_Layer2.bottom * 2 - Sprite->_FrameHeight;
+						y = LV5_STAGE2.bottom * 2 - Sprite->_FrameHeight;
 						IsOnTheStair = true;
 						SetState();
 						vecY = 0;
 					}
-					if (y + Sprite->_FrameHeight + 5 >= lv2_Layer3.bottom * 2 && state == CLIMBING_DOWN)
+					if (y + Sprite->_FrameHeight + 5 >= LV5_STAGE3.bottom * 2 && state == CLIMBING_DOWN)
 					{
 						inLayer = 4;
-						y = lv2_Layer4.top * 2 - Sprite->_FrameHeight + 32;
+						y = LV5_STAGE4.top * 2 - Sprite->_FrameHeight + 32;
 					}
 					break;
 					case 2:
-						if (y + 35 <= lv2_Layer2.top * 2 && state == CLIMBING_UP)
+						if (y + 35 <= LV5_STAGE2.top * 2 && state == CLIMBING_UP)
 						{
 							inLayer = 1;
-							y = lv2_Layer1.bottom * 2 - Sprite->_FrameHeight;
+							y = LV5_STAGE1.bottom * 2 - Sprite->_FrameHeight;
 
 						}
-						if (y + Sprite->_FrameHeight + 5 >= lv2_Layer2.bottom * 2 && state == CLIMBING_DOWN)
+						if (y + Sprite->_FrameHeight + 5 >= LV5_STAGE2.bottom * 2 && state == CLIMBING_DOWN)
 						{
 							inLayer = 3;
-							y = lv2_Layer3.top * 2 - Sprite->_FrameHeight + 32;
+							y = LV5_STAGE3.top * 2 - Sprite->_FrameHeight + 32;
 						}
 						break;
 					case 1:
-						if (y + Sprite->_FrameHeight >= lv2_Layer1.bottom * 2 && state == CLIMBING_DOWN)
+						if (y + Sprite->_FrameHeight >= LV5_STAGE1.bottom * 2 && state == CLIMBING_DOWN)
 						{
 							inLayer = 2;
-							y = lv2_Layer2.top * 2 - Sprite->_FrameHeight + 32;
+							y = LV5_STAGE2.top * 2 - Sprite->_FrameHeight + 32;
 						}
 						break;
 				default:
@@ -664,7 +657,7 @@ void Simon::Update(std::vector<Object*> listObject, std::vector<int*> &listInfo,
 			}
 		}
 		//ground
-		if (listObject[i]->GetType() == 616 || listObject[i]->GetType() == 618 || (listObject[i]->GetType() >= 626 && listObject[i]->GetType() <= 630) || listObject[i]->GetType() == 613)
+		if (listObject[i]->GetType() == GROUND || listObject[i]->GetType() == 616 || listObject[i]->GetType() == 618 || (listObject[i]->GetType() >= 626 && listObject[i]->GetType() <= 630) || listObject[i]->GetType() == 613)
 		{		
 			if (FlipStair&&Sprite->GetIndex() >= 10)
 				continue;
@@ -728,7 +721,7 @@ void Simon::Update(std::vector<Object*> listObject, std::vector<int*> &listInfo,
 			}
 		}
 		//gate
-		if (listObject[i]->GetType() == 659)
+		if (listObject[i]->GetType() == DOOR || listObject[i]->GetType() == 659)
 		{		
 			camera->gate = listObject[i]->GetX();
 			if(x<listObject[i]->GetX())
@@ -751,7 +744,9 @@ void Simon::Update(std::vector<Object*> listObject, std::vector<int*> &listInfo,
 			}			
 		}
 		//candle
-		else if (listObject[i]->GetType() == 600 || (listObject[i]->GetType() >= 605 && listObject[i]->GetType() <= 610)
+		else if (listObject[i]->GetType() == SMALLHEART || listObject[i]->GetType() == LARGEHEART ||
+			listObject[i]->GetType() == AXE || 
+			listObject[i]->GetType() == 600 || (listObject[i]->GetType() >= 605 && listObject[i]->GetType() <= 610)
 			|| (listObject[i]->GetType() >= 620 && listObject[i]->GetType() <= 630))	
 		{
 			Fight(listObject[i], listInfo,fhidden);
@@ -1044,7 +1039,7 @@ void Simon::PickUpItem(BlackBoard* blacBoard, ObjManager* objManager)
 				if (Item::GetStaticObj()->b == false)
 				{
 					Item::GetStaticObj()->b = true;
-					Item::GetStaticObj()->setXY(i, lv2_Layer4.left * 2 + 200, lv2_Layer4.bottom * 2 - 150);
+					Item::GetStaticObj()->setXY(i, LV5_STAGE4.left * 2 + 200, LV5_STAGE4.bottom * 2 - 150);
 					Item::GetStaticObj()->GetListItem()[i].temp = 0;
 					Item::GetStaticObj()->GetListItem();
 					return;
@@ -1340,28 +1335,28 @@ void Simon::CheckDie()
 	switch (inLayer)
 	{
 	case 1:
-		c = Box::ConvertRECT(lv2_Layer1);
+		c = Box::ConvertRECT(LV5_STAGE1);
 		c.x *= 2;
 		c.y *= 2;
 		c.w *= 2;
 		c.h *= 2;	
 		break;
 	case 2:
-		c = Box::ConvertRECT(lv2_Layer2);
+		c = Box::ConvertRECT(LV5_STAGE2);
 		c.x *= 2;
 		c.y *= 2;
 		c.w *= 2;
 		c.h *= 2;
 		break;
 	case 3:
-		c = Box::ConvertRECT(lv2_Layer3);
+		c = Box::ConvertRECT(LV5_STAGE3);
 		c.x *= 2;
 		c.y *= 2;
 		c.w *= 2;
 		c.h *= 2;		
 		break;
 	case 4:
-		c = Box::ConvertRECT(lv2_Layer4);
+		c = Box::ConvertRECT(LV5_STAGE4);
 		c.x *= 2;
 		c.y *= 2;
 		c.w *= 2;

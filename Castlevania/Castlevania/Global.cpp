@@ -25,6 +25,12 @@ RECT lv2_Layer2{ 0,240,1536,416 };
 RECT lv2_Layer3{ 768,432,2048,607 };
 RECT lv2_Layer4{ 1792,624,2048,816 };
 
+RECT LV5_STAGE1{ 0,16,1024,192 };
+RECT LV5_STAGE2{ 512,240, 1792 +512, 416 };
+RECT LV5_STAGE3{ 768,464,1536 + 768,640 };
+RECT LV5_STAGE4{ 768,688,512 + 768,864 };
+
+
 int G_Stage = 1;
 bool Islockcamera =false;
 int G_bossHP = 16;

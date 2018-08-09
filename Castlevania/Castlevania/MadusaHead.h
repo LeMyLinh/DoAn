@@ -4,6 +4,7 @@
 #include <cstdlib> 
 #include <ctime> 
 #include <math.h>
+
 using namespace std;
 
 class MadusaHead:public Enemy

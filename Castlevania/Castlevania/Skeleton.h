@@ -23,7 +23,6 @@ class Skeleton: public Enemy
 	int direct;
 	int wait;
 
-	//
 	bool IsThrow;
 	bool IsJump;
 	bool IsFalling;

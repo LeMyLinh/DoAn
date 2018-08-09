@@ -16,6 +16,7 @@ CGate * CGate::GetStaticObj()
 {
 	if (pStaticObj == 0)
 		pStaticObj = new CGate();
+
 	return pStaticObj;
 }
 

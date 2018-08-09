@@ -1,6 +1,7 @@
 #pragma once
 #include "GTexture.h"
 #include "GSprite.h"
+
 class EnemyRender
 {
 	static EnemyRender* pStaticObj;

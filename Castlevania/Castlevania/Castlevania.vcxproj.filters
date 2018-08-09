@@ -143,6 +143,9 @@
     <ClCompile Include="Level2.cpp">
       <Filter>Scene</Filter>
     </ClCompile>
+    <ClCompile Include="Level5.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BlackBoard.h">
@@ -287,6 +290,9 @@
       <Filter>Scene</Filter>
     </ClInclude>
     <ClInclude Include="Level2.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Level5.h">
       <Filter>Scene</Filter>
     </ClInclude>
   </ItemGroup>

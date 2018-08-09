@@ -171,9 +171,11 @@ void BlackBoard::PickUpItem(int itemID)
 		break;
 	case GroundSmallLightRandom:
 		break;
+	case LARGEHEART:
 	case GroundSmallLightHeart:
 		HeartValue += 5;
 		break;
+	case SMALLHEART:
 	case GroundSmallLightSmallHeart:
 		HeartValue += 1;
 		break;
@@ -181,12 +183,15 @@ void BlackBoard::PickUpItem(int itemID)
 		break;
 	case GroundSmallLightKnife:	
 		break;
+	case BAG1000:
 	case GroundSmallLightBag1000:
 		G_ScoreValue += 1000;		
 		break;
+	case BAG700:
 	case GroundSmallLightBag700:
 		G_ScoreValue += 700;
 		break;
+	case BAG400:
 	case GroundSmallLightBag400:
 		G_ScoreValue += 400;
 		break;

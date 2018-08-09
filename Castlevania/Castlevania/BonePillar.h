@@ -1,7 +1,7 @@
 #pragma once
 #include "Enemy.h"
 
-class BonePillar:public Enemy
+class BonePillar: public Enemy
 {
 	bool IsFight;
 	int localTime;

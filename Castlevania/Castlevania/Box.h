@@ -22,8 +22,7 @@ public:
 	float w, h;
 
 	// velocity
-	float vx, vy;
-	
+	float vx, vy;	
 
 	//flip Box (swap x,y)
 	Box FlipBox()

@@ -1,7 +1,5 @@
 #include "MadusaHead.h"
 
-
-
 MadusaHead::MadusaHead()
 {
 	

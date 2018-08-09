@@ -9,7 +9,6 @@ private:
 	static KeyBoard* _keyBoard;
 	BYTE  _KeyStates[256];
 	DIDEVICEOBJECTDATA _KeyEvents[GL_KEY_BUFFER_SIZE]; // Buffered keyboard data
-
 public:
 	KeyBoard();
 

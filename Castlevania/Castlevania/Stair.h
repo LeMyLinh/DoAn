@@ -1,5 +1,6 @@
 #pragma once
 #include "BaseObject.h"
+
 class Stair :public BaseObject
 {
 	static Stair* pStaticObj;

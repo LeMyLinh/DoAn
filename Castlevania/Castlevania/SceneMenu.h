@@ -15,6 +15,7 @@ protected:
 public:
 	SceneMenu();
 	~SceneMenu();
+
 	virtual void RenderFrame(int Delta);
 	virtual void LoadResources();
 	virtual void OnKeyDown(int KeyCode);

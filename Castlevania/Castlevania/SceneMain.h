@@ -3,6 +3,7 @@
 #include "Game.h"
 #include "Level2.h"
 #include "Level3.h"
+#include "Level5.h"
 #include "SceneMenu.h"
 
 class SceneMain: public CGame

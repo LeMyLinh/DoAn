@@ -16,7 +16,7 @@ public:
 	~BaseObject();
 };
 
-#endif // !_BASEOBJECT_H_
+#endif
 
 
 

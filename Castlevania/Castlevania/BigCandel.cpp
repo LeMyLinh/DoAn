@@ -1,6 +1,5 @@
 #include "BigCandel.h"
 
-
 BigCandel* BigCandel::pStaticObj = 0;
 
 

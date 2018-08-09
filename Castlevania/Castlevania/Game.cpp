@@ -6,7 +6,6 @@
 #include <ctime> 
 #include <dinput.h>
 
-
 CGame::CGame(int _ncmdShow)
 {
 	ncmdShow = _ncmdShow;

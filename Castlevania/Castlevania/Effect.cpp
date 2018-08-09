@@ -1,6 +1,5 @@
 #include "Effect.h"
 
-
 Effect* Effect::pStaticObj = 0;
 
 

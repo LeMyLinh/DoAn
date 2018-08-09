@@ -1,14 +1,12 @@
 #include "Level3.h"
 #include "Global.h"
 
-
-
 Level3::Level3()
 {
 	Scene_Index = 2;
-	lv2_Layer1 = RECT{ 1024,48,3584,223 };
-	lv2_Layer2 = RECT{ 0,240,1536,416 };
-	lv2_Layer3 = RECT{ 0,432,768,607 };
+	LV5_STAGE1 = RECT{ 1024,48,3584,223 };
+	LV5_STAGE2 = RECT{ 0,240,1536,416 };
+	LV5_STAGE3 = RECT{ 0,432,768,607 };
 	LoadResources();
 	Islockcamera = false;
 }
@@ -82,7 +80,7 @@ void Level3::LoadResources()
 	//
 	Scene_Index = 1;
 	map = new Map();
-	simon = new Simon(lv2_Layer3.right*2 - 200 /*6400*/, lv2_Layer3.bottom * 2 - 300 /*90*/,3);
+	simon = new Simon(LV5_STAGE3.right*2 - 200 /*6400*/, LV5_STAGE3.bottom * 2 - 300 /*90*/,3);
 	objManager = new ObjManager();
 	blackBoard = new BlackBoard();
 
@@ -91,14 +89,14 @@ void Level3::LoadResources()
 	KeyBoard::GetKey()->InitKeyboard();
 	GTexture* texture = new GTexture();
 	texture->loadTextTureFromFile(L"caveman.bmp", D3DCOLOR_XRGB(255, 0, 255));
-	camera = new GCamera(G_ScreenWidth, G_ScreenHeight, 0, D3DXVECTOR3(1.0f, 1.0f, 1.0f), lv2_Layer3.right * 2 - 200, lv2_Layer3.bottom * 2 - 200, 3);
+	camera = new GCamera(G_ScreenWidth, G_ScreenHeight, 0, D3DXVECTOR3(1.0f, 1.0f, 1.0f), LV5_STAGE3.right * 2 - 200, LV5_STAGE3.bottom * 2 - 200, 3);
 	//
 	GTexture* t = new GTexture();
 	t->loadTextTureFromFile(L"Data/lv2.png", D3DCOLOR_XRGB(255, 0, 255));
 	simon->LoadResource(L"Resources/simon.png", 8, 3, 0);
 	Font::GetFont()->Innit();
-	objManager->Init("Data/lv2-GameObj.txt"/*, "Data/lv2-GameObj-Quadtree.txt"*/);
-	map->Init(L"Data/lv2.png", "Data/lv2-MAP.txt", /*"Data/lv2-MAP-quadtree.txt",*/10,6);
+	objManager->Init("Data/lv2-GameObj.txt");
+	map->Init(L"Data/lv2.png", "Data/lv2-MAP.txt",10,6);
 
 	Tile::GetStaticObj()->Init();
 	BigCandel::GetStaticObj()->Init();

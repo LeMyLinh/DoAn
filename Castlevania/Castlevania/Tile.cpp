@@ -1,6 +1,5 @@
 #include "Tile.h"
 
-
 Tile* Tile::pStaticObj = 0;
 
 Tile::Tile()

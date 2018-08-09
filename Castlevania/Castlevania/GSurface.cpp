@@ -1,8 +1,6 @@
 #include "GSurface.h"
 #include "Global.h"
 
-
-
 GSurface::GSurface()
 {
 }

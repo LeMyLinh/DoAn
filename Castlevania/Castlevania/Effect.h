@@ -14,7 +14,6 @@ public:
 	void Init();
 	void Add(Object* obj);
 	static Effect* GetStaticObj();
-	//void Update();
 	void Draw();
 	~Effect();
 };

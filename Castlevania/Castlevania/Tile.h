@@ -14,6 +14,6 @@ public:
 	~Tile();
 };
 
-#endif // !_TILE_H_
+#endif
 
 

@@ -14,6 +14,7 @@ struct SaveStage
 	float x;
 	float y;
 };
+
 class GCamera
 {
 private:

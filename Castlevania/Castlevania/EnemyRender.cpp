@@ -1,6 +1,5 @@
 #include "EnemyRender.h"
 
-
 EnemyRender* EnemyRender::pStaticObj = 0;
 
 EnemyRender::EnemyRender()

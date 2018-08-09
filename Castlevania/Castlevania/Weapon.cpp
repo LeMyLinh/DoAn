@@ -3,7 +3,6 @@
 
 Weapon* Weapon::pStaticObj = 0;
 
-
 Weapon::Weapon()
 {
 	Knife = new GTexture();	
@@ -57,11 +56,13 @@ void Weapon::CheckWeaponInItem(Object item)
 	_type = (Type)item.GetType();
 	switch (_type)
 	{
+	case AXE:
 	case GroundSmallLightAxe:
 		typeWP = 3;
 		damge = 2;
 		MultiShot = 1;
 		break;
+	case BOOMERANG:
 	case GroundSmallLightBoomerang:
 		typeWP = 2;
 		damge = 2;
@@ -72,6 +73,7 @@ void Weapon::CheckWeaponInItem(Object item)
 		break;
 	case GroundSmallLightDoubleShot:
 		break;
+	case FIREBOMB:
 	case GroundSmallLightFireBomb:
 		typeWP = 4;
 		MultiShot = 1;
@@ -82,10 +84,12 @@ void Weapon::CheckWeaponInItem(Object item)
 		MultiShot = 1;
 		damge = 1;
 		break;
+	case DOUBLESHOT:
 	case ItemDoubleShot:
 		if (typeWP != 0 || typeWP != 5)
 			MultiShot = 2;
 		break;
+	case TRIPLESHOT:
 	case ItemTripbleShot:
 		if (typeWP != 0 || typeWP != 5)
 			MultiShot = 3;

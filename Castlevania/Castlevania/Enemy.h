@@ -3,6 +3,7 @@
 #include "Collision.h"
 #include "Effect.h"
 #include "Global.h"
+
 class Enemy:public Object
 {
 protected:

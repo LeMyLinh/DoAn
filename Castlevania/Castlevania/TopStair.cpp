@@ -1,6 +1,5 @@
 #include "TopStair.h"
 
-
 TopStair* TopStair::pStaticObj = 0;
 
 

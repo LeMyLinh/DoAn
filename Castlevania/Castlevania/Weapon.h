@@ -1,4 +1,5 @@
 #pragma once
+
 #include "Object.h"
 #include "GTexture.h"
 #include "GSprite.h"

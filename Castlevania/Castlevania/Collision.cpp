@@ -3,8 +3,6 @@
 #include <stdio.h>
 using namespace std;
 
-
-
 Collision::Collision()
 {
 }

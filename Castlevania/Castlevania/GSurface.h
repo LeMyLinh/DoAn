@@ -9,6 +9,7 @@ private:
 	LPDIRECT3DSURFACE9 surface;
 public:
 	D3DXIMAGE_INFO info;
+
 	GSurface();
 	int LoadSurfaceFromFile(char* filePath);
 	void DrawSurface();

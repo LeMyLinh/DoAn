@@ -1,9 +1,5 @@
 #include "SpearGuard.h"
 
-
-
-
-
 SpearGuard::SpearGuard()
 {
 }
