@@ -16,9 +16,6 @@ void Level5::LoadResources()
 	blackBoard = new BlackBoard();
 
 	KeyBoard::GetKey()->InitKeyboard();
-	GTexture* texture = new GTexture();
-	texture->loadTextTureFromFile(L"caveman.bmp", D3DCOLOR_XRGB(255, 0, 255));
-
 	camera = new GCamera(G_ScreenWidth, G_ScreenHeight, 0, D3DXVECTOR3(1.0f, 1.0f, 1.0f), LV5_STAGE4.left * 2 + 200, LV5_STAGE4.bottom * 2 - 150, 4);
 	map->Init(L"Data/level5_tile.png", "Data/Level5_map.txt", 8, 6);
 	GTexture* t = new GTexture();
@@ -83,9 +80,7 @@ void Level5::UpdateGame(int Delta)
 }
 void Level5::ProcessInput(int Delta)
 {
-
 }
-
 
 void Level5::ProcessInput_UP(int Delta)
 {
@@ -106,6 +101,4 @@ void Level5::ProcessInput_LEFT(int Delta)
 
 void Level5::OnKeyDown(int KeyCode)
 {
-	/*if (KeyCode == DIK_Z)
-	simon->SetStateFight();*/
 }

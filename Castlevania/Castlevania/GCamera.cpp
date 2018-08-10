@@ -138,8 +138,7 @@ void GCamera::Update(int x,int y,int layer, bool &IsNextSatge, bool &IsAutoRun, 
 			xMap = LV5_STAGE3.left * 2;
 			break;
 		case 4:
-			cameraX = LV5_STAGE4.left * 2;
-			cameraY = LV5_STAGE4.bottom * 2 + 16 - G_ScreenHeight / 2 - 20;
+			cameraY = LV5_STAGE4.bottom * 2 + 16 - G_ScreenHeight / 2;
 			widthMap = LV5_STAGE4.right * 2;
 			xMap = LV5_STAGE4.left * 2;
 			break;
