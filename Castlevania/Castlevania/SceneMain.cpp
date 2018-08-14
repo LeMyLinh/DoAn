@@ -12,17 +12,14 @@ void SceneMain::NextLevel()
 		}
 		if (scene->Scene_Index == 1)
 		{
-			scene = new Level3(); return;
+			scene = new Level6(); return;
 		}
-		//if()
 	}
 
 }
 void SceneMain::LoadResources(LPDIRECT3DDEVICE9 d3ddv)
 {
 	scene=new SceneMenu();
-	//scene = new Level2();
-	//scene = new Level3();
 }
 
 void SceneMain::UpdateGame(LPDIRECT3DDEVICE9 d3ddv, int Delta)

@@ -9,8 +9,8 @@
 #include "GSurface.h"
 
 
-#define GAME_NAME L"FrameWork"
-//size of key buffer(used in game class to save key state
+#define GAME_NAME L"Castlevania"
+
 #define GL_KEY_BUFFER_SIZE	1024
 
 extern int G_ScreenWidth;
@@ -28,11 +28,6 @@ extern LPDIRECTINPUTDEVICE8 G_KeyBoard;
 
 extern LPDIRECT3DSURFACE9 G_BackBuffer;
 
-//Map
-extern RECT lv2_Layer1;
-extern RECT lv2_Layer2;
-extern RECT lv2_Layer3;
-extern RECT lv2_Layer4;
 
 extern RECT LV5_STAGE1;
 extern RECT LV5_STAGE2;

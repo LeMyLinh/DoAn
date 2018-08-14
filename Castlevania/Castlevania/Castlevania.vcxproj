@@ -154,11 +154,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Bat.cpp" />
-    <ClCompile Include="BigCandel.cpp" />
     <ClCompile Include="BlackBoard.cpp" />
     <ClCompile Include="BonePillar.cpp" />
-    <ClCompile Include="BossLv2.cpp" />
-    <ClCompile Include="Bosslv3.cpp" />
     <ClCompile Include="Box.cpp" />
     <ClCompile Include="Collision.cpp" />
     <ClCompile Include="CText.cpp" />
@@ -169,27 +166,20 @@
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Gate.cpp" />
     <ClCompile Include="GCamera.cpp" />
-    <ClCompile Include="Ghost.cpp" />
     <ClCompile Include="Global.cpp" />
     <ClCompile Include="GSprite.cpp" />
     <ClCompile Include="GSurface.cpp" />
     <ClCompile Include="GTexture.cpp" />
     <ClCompile Include="Item.cpp" />
     <ClCompile Include="KeyBoard.cpp" />
-    <ClCompile Include="Level2.cpp" />
-    <ClCompile Include="Level3.cpp" />
     <ClCompile Include="Level5.cpp" />
+    <ClCompile Include="Level6.cpp" />
     <ClCompile Include="MadusaHead.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="BaseObject.cpp" />
-    <ClCompile Include="MovePlatform.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="ObjManager.cpp" />
-    <ClCompile Include="Player.cpp" />
     <ClCompile Include="Pleaman.cpp" />
-    <ClCompile Include="QuadNode.cpp" />
-    <ClCompile Include="QuadTree.cpp" />
-    <ClCompile Include="Raven.cpp" />
     <ClCompile Include="SceneMain.cpp" />
     <ClCompile Include="SceneMenu.cpp" />
     <ClCompile Include="Simon.cpp" />
@@ -199,19 +189,16 @@
     <ClCompile Include="Stair.cpp" />
     <ClCompile Include="Tile.cpp" />
     <ClCompile Include="TopStair.cpp" />
-    <ClCompile Include="Trap.cpp" />
     <ClCompile Include="Weapon.cpp" />
     <ClCompile Include="winMain.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bat.h" />
-    <ClInclude Include="BigCandel.h" />
     <ClInclude Include="BlackBoard.h" />
     <ClInclude Include="BonePillar.h" />
-    <ClInclude Include="BossLv2.h" />
-    <ClInclude Include="Bosslv3.h" />
     <ClInclude Include="Box.h" />
     <ClInclude Include="Collision.h" />
+    <ClInclude Include="Constant.h" />
     <ClInclude Include="CText.h" />
     <ClInclude Include="Effect.h" />
     <ClInclude Include="Enemy.h" />
@@ -220,27 +207,20 @@
     <ClInclude Include="Game.h" />
     <ClInclude Include="Gate.h" />
     <ClInclude Include="GCamera.h" />
-    <ClInclude Include="Ghost.h" />
     <ClInclude Include="Global.h" />
     <ClInclude Include="GSprite.h" />
     <ClInclude Include="GSurface.h" />
     <ClInclude Include="GTexture.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="KeyBoard.h" />
-    <ClInclude Include="Level2.h" />
-    <ClInclude Include="Level3.h" />
     <ClInclude Include="Level5.h" />
+    <ClInclude Include="Level6.h" />
     <ClInclude Include="MadusaHead.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="BaseObject.h" />
-    <ClInclude Include="MovePlatform.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="ObjManager.h" />
-    <ClInclude Include="Player.h" />
     <ClInclude Include="Pleaman.h" />
-    <ClInclude Include="QuadNode.h" />
-    <ClInclude Include="QuadTree.h" />
-    <ClInclude Include="Raven.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneMain.h" />
     <ClInclude Include="SceneMenu.h" />
@@ -251,7 +231,6 @@
     <ClInclude Include="Stair.h" />
     <ClInclude Include="Tile.h" />
     <ClInclude Include="TopStair.h" />
-    <ClInclude Include="Trap.h" />
     <ClInclude Include="Weapon.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

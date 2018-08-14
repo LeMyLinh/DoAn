@@ -3,33 +3,30 @@
 #include "Item.h"
 #include "Weapon.h"
 #include <string.h>
-#define HEAL_IMAGE L"Resources/heal.png"
-#define BLACKBOARD_IMAGE L"Resources/blackboard.png"
+
 #pragma warning(disable:4996)
 BlackBoard::BlackBoard()
 {
-	Localtime=0;
+	Localtime = 0;
 	x = 0;
 	y = 0;
 	LoadResources();
 }
 void BlackBoard::LoadResources()
 {
-	LabelScore = new CText("SCORE-00000000",26,10,5,D3DCOLOR_ARGB(255, 255, 255, 255));
-	LabelPlayer = new CText("PLAYER",26,10,35,D3DCOLOR_ARGB(255, 255, 255, 255));
-	LabelEnemy = new CText("ENEMY",26,10,65,D3DCOLOR_ARGB(255, 255, 255, 255));
-	LabelTime = new CText("TIME-0300",26,250,5,D3DCOLOR_ARGB(255, 255, 255, 255));
-	LabelStage = new CText("STAGE 01",26,400,5,D3DCOLOR_ARGB(255, 255, 255, 255));
-	LabelHeart = new CText("05",26,441,40,D3DCOLOR_ARGB(255, 255, 255, 255));
-	PValue = new CText("03",26,441,60,D3DCOLOR_ARGB(255, 255, 255, 255));
+	LabelScore = new CText("SCORE-00000000", 26, 10, 5, D3DCOLOR_ARGB(255, 255, 255, 255));
+	LabelPlayer = new CText("PLAYER", 26, 10, 35, D3DCOLOR_ARGB(255, 255, 255, 255));
+	LabelEnemy = new CText("ENEMY", 26, 10, 65, D3DCOLOR_ARGB(255, 255, 255, 255));
+	LabelTime = new CText("TIME-0300", 26, 250, 5, D3DCOLOR_ARGB(255, 255, 255, 255));
+	LabelStage = new CText("STAGE 01", 26, 400, 5, D3DCOLOR_ARGB(255, 255, 255, 255));
+	LabelHeart = new CText("05", 26, 441, 40, D3DCOLOR_ARGB(255, 255, 255, 255));
+	PValue = new CText("03", 26, 441, 60, D3DCOLOR_ARGB(255, 255, 255, 255));
 
-	TimeValue=300;
-	HeartValue=5;
-	//Score = new CText("SCORE-00000000",26,10,10,D3DCOLOR_ARGB(255, 255, 255, 255));
-	//Time = new CText("0300",26,390,10,D3DCOLOR_ARGB(255, 255, 255, 255));
+	TimeValue = 300;
+	HeartValue = 5;
 
 	blackboard = new GTexture();
-	blackboard->loadTextTureFromFile(BLACKBOARD_IMAGE,D3DCOLOR_XRGB(255,0,255));
+	blackboard->loadTextTureFromFile(BLACKBOARD_IMAGE, D3DCOLOR_XRGB(255, 0, 255));
 	T_Heal = new GTexture();
 	T_Heal->loadTextTureFromFile(HEAL_IMAGE, D3DCOLOR_XRGB(255, 0, 255));
 	S_Heal = new GSprite(T_Heal, 3, 1, 50);
@@ -38,18 +35,15 @@ BlackBoard::~BlackBoard()
 {
 }
 void BlackBoard::RenderFrame(int t, int x, int y, int simonHP)
-{	
+{
 	G_SpriteHandler->Begin(D3DXSPRITE_ALPHABLEND);
 	Convert(LabelHeart->Text, "", HeartValue);
 	Convert(LabelScore->Text, "SCORE-", G_ScoreValue);
 	Convert(LabelStage->Text, "STAGE-", G_Stage);
-	blackboard->RenderTexture(x+blackboard->Width/2,y - 90 + blackboard->Height/2);
+	blackboard->RenderTexture(x + blackboard->Width / 2, y - 90 + blackboard->Height / 2);
 
 	switch (Weapon::GetStaticObj()->typeWP)
 	{
-	case 1:
-		Item::GetStaticObj()->knife->RenderTexture(x + blackboard->Width / 2 + 37, y - 90 + blackboard->Height / 2 + 10);
-		break;
 	case 2:
 		Item::GetStaticObj()->Bomerang->RenderTexture(x + blackboard->Width / 2 + 37, y - 90 + blackboard->Height / 2 + 10);
 		break;
@@ -59,19 +53,16 @@ void BlackBoard::RenderFrame(int t, int x, int y, int simonHP)
 	case 4:
 		Item::GetStaticObj()->boom->RenderTexture(x + blackboard->Width / 2 + 37, y - 90 + blackboard->Height / 2 + 10);
 		break;
-	case 5:
-		Item::GetStaticObj()->StopWatch->RenderTexture(x + blackboard->Width / 2 + 37, y - 90 + blackboard->Height / 2 + 10);
-		break;
 	default:
 		break;
 	}
 
 	if (Weapon::GetStaticObj()->MultiShot == 2)
 		Item::GetStaticObj()->iconDoubleShot->RenderTexture(x + blackboard->Width / 2 + 180, y - 90 + blackboard->Height / 2 + 10);
-	if(Weapon::GetStaticObj()->MultiShot==3)
+	if (Weapon::GetStaticObj()->MultiShot == 3)
 		Item::GetStaticObj()->iconTripbleShot->RenderTexture(x + blackboard->Width / 2 + 180, y - 90 + blackboard->Height / 2 + 10);
 	DrawPlayerValue(x + T_Heal->Width / 2 + 100, y - 90 + T_Heal->Height / 2 + 40, simonHP);
-	DrawEnemyValue(x + T_Heal->Width / 2 + 100, y - 90 + T_Heal->Height / 2 + 70,G_bossHP);
+	DrawEnemyValue(x + T_Heal->Width / 2 + 100, y - 90 + T_Heal->Height / 2 + 70, G_bossHP);
 	G_SpriteHandler->End();
 	LabelScore->Draw();
 	LabelPlayer->Draw();
@@ -85,25 +76,25 @@ void BlackBoard::RenderFrame(int t, int x, int y, int simonHP)
 	this->x = x + T_Heal->Width / 2 + 50;
 	this->y = y + T_Heal->Height / 2 + 50;
 	//
-	
+
 }
 void BlackBoard::UpdateTime(int t)
 {
-	Localtime+=t;
-	if (Localtime>400)
+	Localtime += t;
+	if (Localtime > 400)
 	{
-		Localtime=0;
-		Convert(LabelTime->Text,"TIME-",TimeValue--);
+		Localtime = 0;
+		Convert(LabelTime->Text, "TIME-", TimeValue--);
 	}
 }
-void BlackBoard::DrawPlayerValue(float x,float y, int simonHP)
+void BlackBoard::DrawPlayerValue(float x, float y, int simonHP)
 {
-	for (int i=0;i<16;i++)
+	for (int i = 0; i < 16; i++)
 	{
 		if (i < simonHP)
 		{
-			S_Heal->Draw(x, y, 0);		
-		}		
+			S_Heal->Draw(x, y, 0);
+		}
 		else
 		{
 			S_Heal->Draw(x, y, 1);
@@ -111,9 +102,9 @@ void BlackBoard::DrawPlayerValue(float x,float y, int simonHP)
 		x += 10;
 	}
 }
-void BlackBoard::DrawEnemyValue(float x,float y, int BossHP)
+void BlackBoard::DrawEnemyValue(float x, float y, int BossHP)
 {
-	for (int i=0;i<16;i++)
+	for (int i = 0; i < 16; i++)
 	{
 		if (i < BossHP)
 		{
@@ -129,21 +120,22 @@ void BlackBoard::DrawEnemyValue(float x,float y, int BossHP)
 string BlackBoard::ToString(long n)
 {
 	string s;
-    while (n>0)
-    {
-        s=char('0'+n%10)+s;
-        n=n/10;
-    }
-    return s;
+	while (n > 0)
+	{
+		s = char('0' + n % 10) + s;
+		n = n / 10;
+	}
+	return s;
 }
 void BlackBoard::Convert(char* main, char* text, long val)
 {
-	string s=ToString(val);
-	int n=strlen(main)-strlen(text)-s.length();
+	string s = ToString(val);
+	int n = strlen(main) - strlen(text) - s.length();
+
 	string result = text;
-	for (int i=0;i<n;i++) result+='0';
-	result+=s;
-	std::strcpy(main,result.c_str());
+	for (int i = 0; i < n; i++) result += '0';
+	result += s;
+	std::strcpy(main, result.c_str());
 }
 void BlackBoard::PickUpItem(int itemID)
 {
@@ -151,48 +143,25 @@ void BlackBoard::PickUpItem(int itemID)
 	_type = (Type)itemID;
 	switch (_type)
 	{
-	case GroundBigLightHeart:
+	case AXE:
 		break;
-	case GroundBigLightRod:
+	case BOOMERANG:
 		break;
-	case GroundBigLightDagger:
-		break;
-	case GroundBigLight:
-		break;
-	case GroundSmallLightAxe:
-		break;
-	case GroundSmallLightBoomerang:
-		break;
-	case GroundSmallLightCross:
-		break;
-	case GroundSmallLightDoubleShot:
-		break;
-	case GroundSmallLightFireBomb:
-		break;
-	case GroundSmallLightRandom:
+	case FIREBOMB:
 		break;
 	case LARGEHEART:
-	case GroundSmallLightHeart:
 		HeartValue += 5;
 		break;
 	case SMALLHEART:
-	case GroundSmallLightSmallHeart:
 		HeartValue += 1;
 		break;
-	case GroundSmallLightRod:
-		break;
-	case GroundSmallLightKnife:	
-		break;
 	case BAG1000:
-	case GroundSmallLightBag1000:
-		G_ScoreValue += 1000;		
+		G_ScoreValue += 1000;
 		break;
 	case BAG700:
-	case GroundSmallLightBag700:
 		G_ScoreValue += 700;
 		break;
 	case BAG400:
-	case GroundSmallLightBag400:
 		G_ScoreValue += 400;
 		break;
 	default:

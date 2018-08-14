@@ -9,7 +9,6 @@ TopStair::TopStair()
 
 void TopStair::Init()
 {
-	BaseObject::LoadResource(L"Resources/ground/4-3.png", 1, 1, 0);
 }
 
 TopStair * TopStair::GetStaticObj()
@@ -21,7 +20,6 @@ TopStair * TopStair::GetStaticObj()
 
 void TopStair::Draw(int _x, int _y)
 {
-	Sprite->Draw(_x + Sprite->_FrameWidth / 2, _y + Sprite->_FrameHeight / 2);
 }
 
 

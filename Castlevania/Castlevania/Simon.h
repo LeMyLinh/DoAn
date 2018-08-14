@@ -13,7 +13,7 @@
 #define TURN_LEFT -1
 #define TURN_RIGHT 1
 #define HIGHT_JUMP 64
-#define SPEED_SIMON 3.5
+#define SPEED_SIMON 3
 
 enum State
 {

@@ -1,7 +1,6 @@
 ﻿#ifndef _OBJMANAGER_H_
 #define _OBJMANAGER_H_
 
-#include "QuadTree.h"
 #include "BaseObject.h"
 #include <vector>
 #include <d3d9.h>
@@ -13,7 +12,6 @@
 #include "Object.h"
 #include "Font.h"
 #include <stdio.h>
-#include "BigCandel.h"
 #include "SmallCandle.h"
 #include "Stair.h"
 #include "TopStair.h"
@@ -23,19 +21,13 @@
 #include "SpearGuard.h"
 #include "Enemy.h"
 #include "Item.h"
-#include "MovePlatform.h"
 #include "Gate.h"
 #include "Weapon.h"
 #include "Bat.h"
 #include "MadusaHead.h"
-#include "Trap.h"
-#include "Ghost.h"
 #include "BonePillar.h"
-#include "BossLv2.h"
 #include "Pleaman.h"
 #include "Skeleton.h"
-#include "Raven.h"
-#include "Bosslv3.h"
 
 using namespace std;
 
@@ -136,48 +128,14 @@ public:
 			Enemy* obj;
 			switch (_type)
 			{
-			case GroundMovingPlatform:
-				obj = new MovePlatform(t[0], t[1], t[2], t[3], t[4], t[5]);
-				break;
-			case GroundTrident:
-				obj = new Trap(t[0], t[1], t[2], t[3], t[4], t[5]);
-				break;
-			case BossLv2:
-				obj = new BossLV2(t[0], t[1], t[2], t[3], t[4], t[5]);
-				break;
-			case BossLv3:
-				obj = new BosslV3(t[0], t[1], t[2], t[3], t[4], t[5]);
-				break;
-			case EnemyZombie:
-				break;
-			case EnemyBlackLeopard:
-				obj = new Enemy(t[0], t[1], t[2], t[3], t[4], t[5]);
-				break;
-			case EnemyVampireBat:
+			case VAMPIREBAT:
 				obj = new Bat(t[0], t[1], t[2], t[3], t[4], t[5]);
 				break;
-			case EnemyMedusa:
+			case MEDUSAHEAD:
 				obj = new MadusaHead(t[0], t[1], t[2], t[3], t[4], t[5]);
 				break;
-			case EnemyAxeMan:
-				break;
-			case EnemyDragonSkullCannon:
+			case BONEBILLAR:
 				obj = new BonePillar(t[0], t[1], t[2], t[3], t[4], t[5]);
-				break;
-			case EnemyBlackNight:
-				obj = new SpearGuard(t[0], t[1], t[2], t[3], t[4], t[5]);
-				break;
-			case EnemyWhiteSkeleton:
-				obj = new Skeleton(t[0], t[1], t[2], t[3], t[4], t[5]);
-				break;
-			case EnemyGhost:
-				obj = new Ghost(t[0], t[1], t[2], t[3], t[4], t[5]);
-				break;
-			case EnemyRaven:
-				obj = new Raven(t[0], t[1], t[2], t[3], t[4], t[5]);
-				break;
-			case EnemyPleaman:
-				obj = new Pleaman(t[0], t[1], t[2], t[3], t[4], t[5]);
 				break;
 			case WHITESKELETON:
 				obj = new Skeleton(t[0], t[1], t[2], t[3], t[4], t[5]);
@@ -213,12 +171,7 @@ public:
 			RECT check{ t[2],t[3], t[2] + t[4],t[3] + t[5] };
 			if (Collision::CheckCollison(rect, check))
 			{
-				if (t[1] >= 600 && t[1] != 615 && t[1] != 611)
-				{
-					Object* obj = new Object(t[0], t[1], t[2] , t[3] , t[4], t[5]);
-					listObj.push_back(obj);
-				}
-				else if (t[1] >= 1 && t[1] <= 13)
+				if ((t[1] >= 1 && t[1] <= 13 ) || t[1] == 22)
 				{
 					Object* obj = new Object(t[0], t[1], t[2], t[3], t[4], t[5]);
 					listObj.push_back(obj);
@@ -310,9 +263,6 @@ public:
 
 	void Draw()
 	{
-		
-		//Update animation
-		BigCandel::GetStaticObj()->Update();
 		SmallCandle::GetStaticObj()->Update();
 		//Draw gate
 		CGate::GetStaticObj()->Draw();
@@ -325,40 +275,10 @@ public:
 			_type = (Type)listObj[i]->GetType();
 			switch (_type)
 			{
-			case GroundBigLightHeart:
-				BigCandel::GetStaticObj()->Draw(listObj[i]->GetX(), listObj[i]->GetY());
-				break;
-			case Gate:
-				break;
-			case Ground2:
-				break;
-			case GroundStair2:				
-				break;
-			case GroundStiar3:
-				break;
-			case ItemRoast:
-				if (InfoObj[listObj[i]->GetID()][6] == 1)
-					Item::GetStaticObj()->DrawBreakWall(listObj[i]);
-				break;
-			case ItemDoubleShot:
-				if (InfoObj[listObj[i]->GetID()][6] == 1)
-					Item::GetStaticObj()->DrawBreakWall(listObj[i]);
-				break;
-			case ItemTripbleShot:
-				if (InfoObj[listObj[i]->GetID()][6] == 1)
-					Item::GetStaticObj()->DrawBreakWall(listObj[i]);
-				break;
-			case ItemHidden:
-				if (InfoObj[listObj[i]->GetID()][6] == 1)
-					Item::GetStaticObj()->DrawBreakWall(listObj[i]);
-				break;
-			case ItemCrown:
-				if (InfoObj[listObj[i]->GetID()][6] == 1)
-					Item::GetStaticObj()->DrawBreakWall(listObj[i]);
-				break;
 			case GROUND:
 			case DOOR:
 			case STAIR:
+			case LEFTSTAIR:
 				break;
 			case DOUBLESHOT:
 				if (InfoObj[listObj[i]->GetID()][6] == 1)
@@ -382,42 +302,6 @@ public:
 				continue;
 			switch (_type)
 			{			
-			case GroundMovingPlatform:
-				EnemyRender::GetStaticObj()->DrawMovePlatform(listEnemy[i]->GetX(), listEnemy[i]->GetY());
-				break;
-			case GroundTrident:
-				listEnemy[i]->Draw();
-				break;
-			case BossLv2:
-				listEnemy[i]->Draw();
-				break;
-			case BossLv3:
-				listEnemy[i]->Draw();
-				break;
-			case EnemyVampireBat:
-				EnemyRender::GetStaticObj()->DrawBat(listEnemy[i]->GetX(), listEnemy[i]->GetY(), listEnemy[i]->GetIndex(), listEnemy[i]->GetDirect());
-				break;
-			case EnemyMedusa:
-				EnemyRender::GetStaticObj()->DrawMedusaHead(listEnemy[i]->GetX(), listEnemy[i]->GetY(), listEnemy[i]->GetIndex(), listEnemy[i]->GetDirect());
-				break;
-			case EnemyDragonSkullCannon:
-				listEnemy[i]->Draw();
-				break;
-			case EnemyBlackNight:
-				EnemyRender::GetStaticObj()->DrawSpearGuard(listEnemy[i]->GetX(), listEnemy[i]->GetY(), listEnemy[i]->GetIndex(), listEnemy[i]->GetDirect());
-				break;
-			case EnemyWhiteSkeleton:
-				listEnemy[i]->Draw();
-				break;
-			case EnemyGhost:
-				listEnemy[i]->Draw();
-				break;
-			case EnemyRaven:
-				listEnemy[i]->Draw();
-				break;
-			case EnemyPleaman:
-				listEnemy[i]->Draw();
-				break;
 			case WHITESKELETON:
 				listEnemy[i]->Draw();
 				break;
@@ -453,7 +337,7 @@ public:
 		for (int i = 0; i < listObj.size(); i++)
 		{
 			//xu ly va cham voi mat dat
-			if (listObj[i]->GetType() == GROUND ||listObj[i]->GetType() == 616)
+			if (listObj[i]->GetType() == GROUND)
 			{
 				//item
 				Item::GetStaticObj()->CollisionHandle(listObj[i]);
@@ -468,37 +352,7 @@ public:
 					_type = (Type)listEnemy[j]->GetType();
 					switch (_type)
 					{
-					case GroundMovingPlatform:
-						tempBox = listEnemy[j]->GetBox();
-						tempBox.x = listEnemy[j]->GetBox().x - 10;
-						tempBox.w = listEnemy[j]->GetBox().w + 10;
-						if (Collision::HitTheWall(tempBox, listObj[i]->GetBox()))
-						{
-							listEnemy[j]->turn *= -1;
-						}
-						break;
-					case BossLv2:
-						listEnemy[j]->CollisionWithObj(listObj[i]);
-						break;
-					case BossLv3:
-						listEnemy[j]->CollisionWithObj(listObj[i]);
-						break;
-					case EnemyZombie:
-						break;
-					case EnemyBlackLeopard:
-						break;
-					case EnemyVampireBat:
-						break;
-					case EnemyMedusa:
-						break;
-					case EnemyFishMan:
-						break;
-					case EnemyAxeMan:
-						break;
-					case EnemyDragonSkullCannon:
-						break;
 					case AXEKNIGHT:
-					case EnemyBlackNight:
 						if (Collision::HitTheWall(listEnemy[j]->GetBox(), listObj[i]->GetBox()))
 						{
 							listEnemy[j]->SetVec(listEnemy[j]->GetBox().vx*(-1), listEnemy[j]->GetBox().vy);
@@ -530,14 +384,10 @@ public:
 						}
 						break;
 					case WHITESKELETON:
-					case EnemyWhiteSkeleton:
 						listEnemy[j]->CollisionWithObj(listObj[i]);
 						break;
 					case PLEAMAN:
-					case EnemyPleaman:
 						listEnemy[j]->CollisionWithObj(listObj[i]);
-						break;
-					case EnemyRaven:
 						break;
 					default:
 						break;
@@ -582,7 +432,6 @@ public:
 	}
 	~ObjManager() 
 	{ 
-		//if (quadTree != NULL) delete quadTree; 
 		f.close();
 	}
 };

@@ -13,12 +13,10 @@
 
 using namespace std;
 
-
-
 Simon::Simon(int _x, int _y, int _inlayer)
 {
 	state = STAND;
-	turn = TURN_LEFT; //turn left
+	turn = TURN_RIGHT; //turn left
 	x = _x;
 	y = _y;
 
@@ -83,26 +81,7 @@ void Simon::SetState()
 		return;
 	if (oldState != state)
 		oldState = state;
-	//if (IsJumping || (IsFalling && Sprite->GetIndex()<10))
-	//{
-	//	if (KeyBoard::GetKey()->IsKeyDown(DIK_UP))
-	//	{
-	//		IsSkill = true;
-	//	}
-	//	if (KeyBoard::GetKey()->IsKeyDown(DIK_Z))
-	//	{
-	//		if (IsFight == false)
-	//		{
-	//			IsFight = true;
-	//			//combo
-	//			if (IsSkill == true && IsFight == true && Weapon::GetStaticObj()->Ready() == true)
-	//			{
-	//				IsCombo = true;
-	//			}
-	//		}
-	//	}
-	//	return;
-	//}
+
 	if (IsOntheGround)
 	{
 		if (KeyBoard::GetKey()->IsKeyDown(DIK_RIGHT) && Sprite->GetIndex() < 10)
@@ -137,7 +116,7 @@ void Simon::SetState()
 				if (IsSkill == true && IsFight == true && Weapon::GetStaticObj()->Ready() == true)
 				{
 					if (Weapon::GetStaticObj()->typeWP == 5)
-					{
+					{   
 						UseWP5 = true;
 						IsFight = false;
 					}
@@ -196,9 +175,7 @@ void Simon::SetState()
 				}			
 			}
 		}
-	}
-
-	
+	}	
 }
 
 void Simon::climb(Object* x)
@@ -247,7 +224,7 @@ void Simon::climbDown(Object * x)
 			min = (abs(min) < abs(dTop)) ? min : dTop;
 		}
 
-		if (abs(min) > 3 && x->GetType() != 612)
+		if (abs(min) > 3 && x->GetType() != LEFTSTAIR)
 		{
 			this->x += 1.5;
 			this->y -= 1.5;
@@ -257,11 +234,9 @@ void Simon::climbDown(Object * x)
 		}
 		min -= 1;
 	}
+
 	if (Sprite->GetIndex() == 10)
 	{
-		/*if (x->GetX() + x->GetBox().w / 2 - (this->x + 12) >= -3)
-			return;*/
-
 		if (dTop <= 0)
 			return;
 		if (dMid <= 0)
@@ -296,7 +271,7 @@ void Simon::climbDown(Object * x)
 	}
 
 	y = y - min;
-	if (x->GetType() == 612)
+	if (x->GetType() == LEFTSTAIR)
 		this->x -= min;
 	else
 		this->x += min;
@@ -542,7 +517,7 @@ void Simon::Update(std::vector<Object*> listObject, std::vector<int*> &listInfo,
 		if(listInfo[listObject[i]->GetID()][6] == 1)
 			continue;
 		//stair
-		if (listObject[i]->GetType() == STAIR || listObject[i]->GetType() == 617 || listObject[i]->GetType() == 618 || listObject[i]->GetType() == 612 || listObject[i]->GetType() == 613)
+		if (listObject[i]->GetType() == STAIR || listObject[i]->GetType() == LEFTSTAIR || listObject[i]->GetType() == STAIRUN)
 		{
 			if (Collision::AABBCheck(this->GetBox(), listObject[i]->GetBox()))
 			{
@@ -550,14 +525,14 @@ void Simon::Update(std::vector<Object*> listObject, std::vector<int*> &listInfo,
 					(y + Sprite->_FrameHeight - (listObject[i]->GetY() + listObject[i]->GetBox().h) > 5))
 					continue;
 				IsOnTheStair = true;
-				if ((listObject[i]->GetType() == 612 || listObject[i]->GetType() == 613) && y+Sprite->_FrameHeight<= listObject[i]->GetY() + listObject[i]->GetBox().h)
+				if ((listObject[i]->GetType() == LEFTSTAIR || listObject[i]->GetType() == STAIRUN) && y+Sprite->_FrameHeight<= listObject[i]->GetY() + listObject[i]->GetBox().h)
 					FlipStair = true;
 				//tim duong len cau thang
 				if (state == CLIMBING_UP && IsFalling == false)
 				{
 					if (y + Sprite->_FrameHeight - (listObject[i]->GetY() + listObject[i]->GetBox().h) == 0)
 					{
-						if (listObject[i]->GetType() == 612)
+						if (listObject[i]->GetType() == LEFTSTAIR)
 						{
 							//cau thang trai.
 							if(listObject[i]->GetX() + listObject[i]->GetBox().w / 2  != x + 12)
@@ -585,7 +560,7 @@ void Simon::Update(std::vector<Object*> listObject, std::vector<int*> &listInfo,
 				{
 					//if (y + Sprite->_FrameHeight <= listObject[i]->GetY() + listObject[i]->GetBox().h / 2 + 5 && y + Sprite->_FrameHeight >= listObject[i]->GetY())
 					//{
-						if (listObject[i]->GetType() == 612)
+						if (listObject[i]->GetType() == LEFTSTAIR)
 							this->x = listObject[i]->GetX() + listObject[i]->GetBox().w- Sprite->_FrameWidth+ 17;
 						else
 							this->x = listObject[i]->GetX() - 12;
@@ -657,11 +632,11 @@ void Simon::Update(std::vector<Object*> listObject, std::vector<int*> &listInfo,
 			}
 		}
 		//ground
-		if (listObject[i]->GetType() == GROUND || listObject[i]->GetType() == 616 || listObject[i]->GetType() == 618 || (listObject[i]->GetType() >= 626 && listObject[i]->GetType() <= 630) || listObject[i]->GetType() == 613)
+		if (listObject[i]->GetType() == GROUND || listObject[i]->GetType() == TOPSTAIR || listObject[i]->GetType() == STAIRUN)
 		{		
 			if (FlipStair&&Sprite->GetIndex() >= 10)
 				continue;
-			if (listObject[i]->GetType() == 618 && Sprite->GetIndex()>=10)
+			if (listObject[i]->GetType() == TOPSTAIR && Sprite->GetIndex()>=10)
 			{
 				continue;
 			}		
@@ -712,16 +687,10 @@ void Simon::Update(std::vector<Object*> listObject, std::vector<int*> &listInfo,
 					continue;
 				IsStop = true;
 				vecX = 0;
-				/*if (check == 1)
-				x = listObject[i]->GetX() - 44;
-				else
-				{
-				x = listObject[i]->GetX() + listObject[i]->GetBox().w - 11;
-				}*/
 			}
 		}
 		//gate
-		if (listObject[i]->GetType() == DOOR || listObject[i]->GetType() == 659)
+		if (listObject[i]->GetType() == DOOR)
 		{		
 			camera->gate = listObject[i]->GetX();
 			if(x<listObject[i]->GetX())
@@ -745,9 +714,7 @@ void Simon::Update(std::vector<Object*> listObject, std::vector<int*> &listInfo,
 		}
 		//candle
 		else if (listObject[i]->GetType() == SMALLHEART || listObject[i]->GetType() == LARGEHEART ||
-			listObject[i]->GetType() == AXE || 
-			listObject[i]->GetType() == 600 || (listObject[i]->GetType() >= 605 && listObject[i]->GetType() <= 610)
-			|| (listObject[i]->GetType() >= 620 && listObject[i]->GetType() <= 630))	
+			listObject[i]->GetType() == AXE)	
 		{
 			Fight(listObject[i], listInfo,fhidden);
 		}
@@ -880,9 +847,6 @@ void Simon::Draw(int DeltaTime)
 	Sprite->Update(DeltaTime);
 	debug4 = Sprite->GetIndex();
 	char str[100];
-	/*sprintf_s(str, " %d  %d  %d  ", debug,debug2,debug4);
-	RECT rect{ 0,0,300,100 };
-	Font::GetFont()->Render(NULL, str, rect, DT_LEFT, D3DCOLOR_XRGB(255, 255, 255));*/
 }
 
 void Simon::LoadResource(LPCWSTR resourceFile, int cols, int rows, int detalTime)
@@ -919,7 +883,7 @@ int Simon::GetLayerMap()
 
 void Simon::TimDuong(Object o)
 {
-	if (o.GetType()==612)
+	if (o.GetType() == LEFTSTAIR)
 	{
 		if (o.GetX() + o.GetBox().w / 2 < x + 12)
 		{
@@ -983,35 +947,6 @@ void Simon::TimDuong(Object o)
 
 void Simon::TimDuongXuong(Object * o)
 {
-	//if (o->GetX() + o->GetBox().w / 2 < x +12)
-	//{
-	//	Turn(TURN_LEFT);
-	//	state = RUNING;
-	//	SetAnimation(state);
-	//	x -= 1.5;
-	//	//y += vecY;
-	//	if (o->GetX() + o->GetBox().w / 2 >= x + 12)
-	//	{
-	//		x = o->GetX() + o->GetBox().w / 2 - 12;
-	//		Isfind_Down = false;
-	//		//state = CLIMBING_DOWN;
-	//		return;
-	//	}
-	//}
-	//if (o->GetX() + o->GetBox().w / 2 > x + 12)
-	//{
-	//	Turn(TURN_RIGHT);
-	//	state = RUNING;
-	//	SetAnimation(state);
-	//	x += 1.5;
-	//	//y += vecY;
-	//	if (o->GetX() + o->GetBox().w / 2 >= x + 12)
-	//	{
-	//		x = o->GetX() + o->GetBox().w / 2 - 12;			
-	//		//Isfind_Down = CLIMBING_DOWN;
-	//		return;
-	//	}
-	//}
 }
 
 void Simon::PickUpItem(BlackBoard* blacBoard, ObjManager* objManager)
@@ -1022,45 +957,14 @@ void Simon::PickUpItem(BlackBoard* blacBoard, ObjManager* objManager)
 		{
 			//xu ly
 			blacBoard->PickUpItem(Item::GetStaticObj()->GetListItem()[i].GetType());
-			if (Item::GetStaticObj()->GetListItem()[i].GetType() == 621)
-			{
-				if (lvOfMorningStar < 2)
-					lvOfMorningStar++;
-				effectDelay = 0;
-			}
-			if (Item::GetStaticObj()->GetListItem()[i].GetType() == 626)
-			{
-				HP += 3;
-				if (HP > 16)
-					HP = 16;
-			}
-			if (Item::GetStaticObj()->GetListItem()[i].GetType() == 630)
-			{
-				if (Item::GetStaticObj()->b == false)
-				{
-					Item::GetStaticObj()->b = true;
-					Item::GetStaticObj()->setXY(i, LV5_STAGE4.left * 2 + 200, LV5_STAGE4.bottom * 2 - 150);
-					Item::GetStaticObj()->GetListItem()[i].temp = 0;
-					Item::GetStaticObj()->GetListItem();
-					return;
-				}
-				else
-				{
-					G_ScoreValue += 2000;
-					Item::GetStaticObj()->b = false;
-					Item::GetStaticObj()->RemoveAt(i);
-					return;
-				}
-			}
-			if (Item::GetStaticObj()->GetListItem()[i].GetType() == 607)
+			if (Item::GetStaticObj()->GetListItem()[i].GetType() == FIREBOMB)
 			{
 				objManager->Delete();
 			}
 			
 			Weapon::GetStaticObj()->CheckWeaponInItem(Item::GetStaticObj()->GetListItem()[i]);
 			//delete
-			if (Item::GetStaticObj()->GetListItem()[i].GetType() != 630)
-				Item::GetStaticObj()->RemoveAt(i);
+			Item::GetStaticObj()->RemoveAt(i);
 		}
 	}
 }
@@ -1074,101 +978,57 @@ void Simon::CollisonWithEnemy(std::vector<Enemy*> listEnemy)
 		//va cham voi enemy
 		if (listEnemy[i]->CheckCollision(this->GetBox()))
 		{
-			if (listEnemy[i]->GetType() == 615)
+			if (IsInvincible)
+				return;
+			if (listEnemy[i]->IsDie)
+				continue;											
+			//xu ly simon
+			if (Sprite->GetIndex() >= 10)
 			{
-				float normalx, normaly;
-				float colisionTime;
-				if (Collision::IsStandOnGround(this->GetBox(), listEnemy[i]->GetBox()))
+				HP -= listEnemy[i]->Damege;
+				IsInvincible = true;
+				return;
+			}
+			IsBeaten = true;
+			HP -= listEnemy[i]->Damege;
+			y_old = y;
+			IsJumping = true;
+			vecY = 0;
+			if (vecX != 0)
+			{
+				if (vecX > 0)
 				{
-					y = listEnemy[i]->GetY() - this->GetBox().h;
-					IsFalling = false;
-					if (IsBeaten)
-					{
-						IsBeaten = false;
-						state = SITING;
-						sitDelay = 2;
-						IsInvincible = true;
-					}
-					x += listEnemy[i]->GetBox().vx;
+					Turn(TURN_LEFT);
 				}
 				else
 				{
-					if (vecY > 15)
-					{
-						state = SITING;
-						sitDelay = 0;
-					}
-					colisionTime = Collision::SweptAABB(this->GetBox(), listEnemy[i]->GetBox(), normalx, normaly);
-					if (colisionTime < 1.0f &&colisionTime>0.0f && normaly == -1)
-					{
-						x += vecX*colisionTime;
-						y += vecY*colisionTime;
-						if (IsBeaten)
-						{
-							IsBeaten = false;
-							state = SITING;
-							sitDelay = 2;
-							IsInvincible = true;
-						}
-						if (y == listEnemy[i]->GetY() - this->GetBox().h)
-							IsFalling = false;
-						x += listEnemy[i]->GetBox().vx;
-					}
+					Turn(TURN_RIGHT);
 				}
-			}	
+			}
 			else
 			{
-				if (IsInvincible)
-					return;
-				if (listEnemy[i]->IsDie)
-					continue;											
-				//xu ly simon
-				if (Sprite->GetIndex() >= 10)
+				if (listEnemy[i]->GetBox().vx>0)
 				{
-					HP -= listEnemy[i]->Damege;
-					IsInvincible = true;
-					return;
-				}
-				IsBeaten = true;
-				HP -= listEnemy[i]->Damege;
-				y_old = y;
-				IsJumping = true;
-				vecY = 0;
-				if (vecX != 0)
-				{
-					if (vecX > 0)
-					{
-						Turn(TURN_LEFT);
-					}
-					else
-					{
-						Turn(TURN_RIGHT);
-					}
+					Turn(TURN_RIGHT);
 				}
 				else
 				{
-					if (listEnemy[i]->GetBox().vx>0)
-					{
-						Turn(TURN_RIGHT);
-					}
-					else
-					{
-						Turn(TURN_LEFT);
-					}
+					Turn(TURN_LEFT);
 				}
-				vecX = 4 * (turn);
+			}
+			vecX = 4 * (turn);
 
-				//xu ly enemy
-				if (listEnemy[i]->GetType() == 203 || listEnemy[i]->GetType() == 204 || listEnemy[i]->GetType() == 211)
-				{
-					Object* obj = new Object();
-					obj->SetObj(0, 0, listEnemy[i]->GetX(), listEnemy[i]->GetY(), listEnemy[i]->Width, listEnemy[i]->Heigt);
-					Effect::GetStaticObj()->Add(obj);
-					listEnemy[i]->IsDie = true;
-				}
+			//xu ly enemy
+			if (listEnemy[i]->GetType() == MEDUSAHEAD)
+			{
+				Object* obj = new Object();
+				obj->SetObj(0, 0, listEnemy[i]->GetX(), listEnemy[i]->GetY(), listEnemy[i]->Width, listEnemy[i]->Heigt);
+				Effect::GetStaticObj()->Add(obj);
+				listEnemy[i]->IsDie = true;
+			}
 					
-				break;
-			}			
+			break;
+						
 		}
 	}
 }
@@ -1213,44 +1073,26 @@ void Simon::Fight(Object* o,std::vector<int*> &listInf,bool& fhidden)
 		if ((Collision::AABBCheck(MorningStarBox, o->GetBox()) && IsCombo == false)
 			|| Weapon::GetStaticObj()->Check(o) == true)
 		{			
-			if (o->GetType() >= 626 && o->GetType() <= 630)
-			{
-				if (fhidden || oldIndex == Sprite->GetIndex())
-					return;
-			}
 			int* t = new int[7];
 			Effect::GetStaticObj()->Add(o);
 			Item::GetStaticObj()->Add(o,lvOfMorningStar);
 			//o->IsDie = true;
-			if (o->GetType() >= 626 && o->GetType() <= 630)
+			for (int i = 0; i < listInf.size(); i++)
 			{
-				fhidden = true;
-				listInf[o->GetID()][6] = 1;
-				return;
-			}
-			else
-			{		
-				//listInf[o->GetID()][1] = -1;				
-				for (int i = 0; i < listInf.size(); i++)
+				t = listInf[i];
+				if (t[0] == o->GetID())
 				{
-					t = listInf[i];
-					if (t[0] == o->GetID())
-					{
-						delete listInf[o->GetID()];
-						listInf.erase(listInf.begin() + o->GetID());
-						return;
-					}
+					delete listInf[o->GetID()];
+					listInf.erase(listInf.begin() + o->GetID());
+					return;
 				}
-			}
-			
+			}			
 			
 		}		
 	}
 	//subWeapon
 	if (Weapon::GetStaticObj()->Check(o) == true)
 	{
-		if (o->GetType() >= 626 && o->GetType() <= 630)
-			return;
 		int* t = new int[7];
 		Effect::GetStaticObj()->Add(o);
 		Item::GetStaticObj()->Add(o,lvOfMorningStar);
@@ -1283,15 +1125,13 @@ void Simon::FightEnemy(vector<Enemy*> listEnemy)
 			return;
 		for (int i = 0; i < listEnemy.size(); i++)
 		{
-			if (listEnemy[i]->GetType() == 615)
-				continue;
 			listEnemy[i]->checkFight(MorningStarBox, lv + 1);
 		}
 	}
 	//subWeapon
 	for (int i = 0; i < listEnemy.size(); i++)
 	{
-		if (listEnemy[i]->GetType() == 615 || listEnemy[i]->IsDie)
+		if (listEnemy[i]->IsDie)
 			continue;
 		if(Weapon::GetStaticObj()->Check(listEnemy[i]))
 		{ 

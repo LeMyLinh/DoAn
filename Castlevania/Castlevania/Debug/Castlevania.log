@@ -1,17 +1,54 @@
-﻿  GCamera.cpp
+﻿  Level5.cpp
   c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
 e:\hockyhe\doan\castlevania\castlevania\box.h(48): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
 e:\hockyhe\doan\castlevania\castlevania\box.h(49): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
 e:\hockyhe\doan\castlevania\castlevania\box.h(50): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
 e:\hockyhe\doan\castlevania\castlevania\box.h(51): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
-e:\hockyhe\doan\castlevania\castlevania\gcamera.cpp(15): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
-e:\hockyhe\doan\castlevania\castlevania\gcamera.cpp(17): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-e:\hockyhe\doan\castlevania\castlevania\gcamera.cpp(18): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-e:\hockyhe\doan\castlevania\castlevania\gcamera.cpp(67): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-e:\hockyhe\doan\castlevania\castlevania\gcamera.cpp(68): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-e:\hockyhe\doan\castlevania\castlevania\gcamera.cpp(79): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-e:\hockyhe\doan\castlevania\castlevania\gcamera.cpp(80): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-e:\hockyhe\doan\castlevania\castlevania\gcamera.cpp(169): warning C4244: 'argument': conversion from 'double' to 'FLOAT', possible loss of data
-e:\hockyhe\doan\castlevania\castlevania\gcamera.cpp(167): warning C4244: 'argument': conversion from 'double' to 'FLOAT', possible loss of data
-e:\hockyhe\doan\castlevania\castlevania\gcamera.cpp(166): warning C4244: 'argument': conversion from 'double' to 'FLOAT', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(77): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(109): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(123): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(163): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(168): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(194): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(196): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(202): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(220): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(239): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(251): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(273): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(298): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(337): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(350): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(369): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(408): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(415): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(427): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\level5.cpp(54): warning C4101: 'str': unreferenced local variable
+  Level6.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hockyhe\doan\castlevania\castlevania\box.h(48): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(49): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(50): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\box.h(51): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(77): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(109): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(123): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(163): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(168): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(194): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(196): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(202): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(220): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(239): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(251): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(273): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(298): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(337): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(350): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(369): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(408): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(415): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(427): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\level6.cpp(32): warning C4101: 'str': unreferenced local variable
+  Generating Code...
   Castlevania.vcxproj -> E:\HocKyHe\DoAn\Castlevania\Debug\Castlevania.exe

@@ -1,7 +1,6 @@
 #ifndef _MAP_H_
 #define _MAP_H_
 #include "GSprite.h"
-#include "QuadTree.h"
 #include <d3d9.h>
 #include <list>
 using namespace std;
@@ -9,7 +8,7 @@ using namespace std;
 class Map
 {
 private:
-	
+
 	int col; // so cot cua ma tran
 	int row; // so hang cua ma tran
 	int** Mattrix; //Ma tran load map obj

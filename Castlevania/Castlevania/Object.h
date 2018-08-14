@@ -5,61 +5,6 @@
 
 enum Type
 {
-	//ground
-	GroundBigLightHeart = 601, //k
-	GroundBigLightRod = 602, //k
-	GroundBigLightDagger = 603, //k
-	GroundBigLight = 604, //k
-	GroundSmallLightAxe = 605, //k
-	GroundSmallLightBoomerang = 606,
-	GroundSmallLightCross = 607,
-	GroundSmallLightDoubleShot = 609, //k
-	GroundSmallLightFireBomb = 608, //k
-	GroundSmallLightRandom = 610,
-	GroundSmallLightHeart = 620, //tim to
-	GroundSmallLightSmallHeart = 600, 
-	GroundSmallLightRod = 621, //k
-	GroundSmallLightKnife = 622,
-	GroundSmallLightBag1000 = 623,
-	GroundSmallLightBag700 = 624,
-	GroundSmallLightBag400 = 625,
-	GroundTrident = 611, //cái T ngược
-	GroundStair = 612, //k
-	GroundUnknow = 613, //k
-	ground = 614, //k
-	GroundMovingPlatform = 615, //cái nền đi chuyển
-	Gate = 659,
-	Ground2 = 616,
-	GroundStair2 = 617,
-	GroundStiar3 = 618, //đầu cầu thang
-	//hidden item
-	ItemRoast = 626, //
-	ItemDoubleShot = 627,
-	ItemTripbleShot = 628, //k
-	ItemHidden = 629, //chỗ gạch vỡ đc
-	ItemCrown = 630,
-
-	//boss
-	BossLv1 = 401,
-	BossLv2 = 402,
-	BossLv3 = 403,
-
-	// Enemy
-	EnemyZombie = 201,// ma cà rồng map1
-	EnemyBlackLeopard = 202,// con báo map1
-	EnemyVampireBat = 203,// dơi map1
-	EnemyMedusa = 204,// con có rắn
-	EnemyFishMan = 205,//người cá map1
-	EnemyAxeMan = 206,// thằng cầm rìu
-	EnemyDragonSkullCannon = 207,//2 đầu lâu map2
-	EnemyBlackNight = 208,//thằng cầm thương
-	EnemyWhiteSkeleton = 209,// bộ xương trắng                                 
-	EnemyGhost = 210,//ma map2        
-	EnemyRaven = 211,
-	EnemyPleaman = 212,
-
-
-					 // Other
 	Down = 801,
 	Dead = 802,
 	Right = 803,
@@ -69,7 +14,9 @@ enum Type
 	GROUND = 1,
 	STAIR = 2,
 	DOOR = 3,
-
+	LEFTSTAIR = 22,
+	TOPSTAIR = 23,
+	STAIRUN = 24,
 	//Items
 	SMALLHEART = 4,
 	LARGEHEART = 5,

@@ -44,12 +44,6 @@
     <ClCompile Include="Tile.cpp">
       <Filter>Map</Filter>
     </ClCompile>
-    <ClCompile Include="QuadTree.cpp">
-      <Filter>Map</Filter>
-    </ClCompile>
-    <ClCompile Include="QuadNode.cpp">
-      <Filter>Map</Filter>
-    </ClCompile>
     <ClCompile Include="BaseObject.cpp">
       <Filter>Object</Filter>
     </ClCompile>
@@ -65,28 +59,16 @@
     <ClCompile Include="BonePillar.cpp">
       <Filter>Object\Enemy</Filter>
     </ClCompile>
-    <ClCompile Include="BossLv2.cpp">
-      <Filter>Object\Enemy</Filter>
-    </ClCompile>
-    <ClCompile Include="Bosslv3.cpp">
-      <Filter>Object\Enemy</Filter>
-    </ClCompile>
     <ClCompile Include="Enemy.cpp">
       <Filter>Object\Enemy</Filter>
     </ClCompile>
     <ClCompile Include="EnemyRender.cpp">
       <Filter>Object\Enemy</Filter>
     </ClCompile>
-    <ClCompile Include="Ghost.cpp">
-      <Filter>Object\Enemy</Filter>
-    </ClCompile>
     <ClCompile Include="MadusaHead.cpp">
       <Filter>Object\Enemy</Filter>
     </ClCompile>
     <ClCompile Include="Pleaman.cpp">
-      <Filter>Object\Enemy</Filter>
-    </ClCompile>
-    <ClCompile Include="Raven.cpp">
       <Filter>Object\Enemy</Filter>
     </ClCompile>
     <ClCompile Include="Skeleton.cpp">
@@ -98,16 +80,10 @@
     <ClCompile Include="Box.cpp">
       <Filter>FrameWork</Filter>
     </ClCompile>
-    <ClCompile Include="BigCandel.cpp">
-      <Filter>Object\Item</Filter>
-    </ClCompile>
     <ClCompile Include="Gate.cpp">
       <Filter>Object\Item</Filter>
     </ClCompile>
     <ClCompile Include="Item.cpp">
-      <Filter>Object\Item</Filter>
-    </ClCompile>
-    <ClCompile Include="MovePlatform.cpp">
       <Filter>Object\Item</Filter>
     </ClCompile>
     <ClCompile Include="SmallCandle.cpp">
@@ -119,16 +95,10 @@
     <ClCompile Include="TopStair.cpp">
       <Filter>Object\Item</Filter>
     </ClCompile>
-    <ClCompile Include="Trap.cpp">
-      <Filter>Object\Item</Filter>
-    </ClCompile>
     <ClCompile Include="Simon.cpp">
       <Filter>Object\Player</Filter>
     </ClCompile>
     <ClCompile Include="Weapon.cpp">
-      <Filter>Object\Player</Filter>
-    </ClCompile>
-    <ClCompile Include="Player.cpp">
       <Filter>Object\Player</Filter>
     </ClCompile>
     <ClCompile Include="SceneMenu.cpp">
@@ -137,13 +107,10 @@
     <ClCompile Include="SceneMain.cpp">
       <Filter>Scene</Filter>
     </ClCompile>
-    <ClCompile Include="Level3.cpp">
-      <Filter>Scene</Filter>
-    </ClCompile>
-    <ClCompile Include="Level2.cpp">
-      <Filter>Scene</Filter>
-    </ClCompile>
     <ClCompile Include="Level5.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Level6.cpp">
       <Filter>Scene</Filter>
     </ClCompile>
   </ItemGroup>
@@ -190,12 +157,6 @@
     <ClInclude Include="Tile.h">
       <Filter>Map</Filter>
     </ClInclude>
-    <ClInclude Include="QuadTree.h">
-      <Filter>Map</Filter>
-    </ClInclude>
-    <ClInclude Include="QuadNode.h">
-      <Filter>Map</Filter>
-    </ClInclude>
     <ClInclude Include="BaseObject.h">
       <Filter>Object</Filter>
     </ClInclude>
@@ -211,28 +172,16 @@
     <ClInclude Include="BonePillar.h">
       <Filter>Object\Enemy</Filter>
     </ClInclude>
-    <ClInclude Include="BossLv2.h">
-      <Filter>Object\Enemy</Filter>
-    </ClInclude>
-    <ClInclude Include="Bosslv3.h">
-      <Filter>Object\Enemy</Filter>
-    </ClInclude>
     <ClInclude Include="Enemy.h">
       <Filter>Object\Enemy</Filter>
     </ClInclude>
     <ClInclude Include="EnemyRender.h">
       <Filter>Object\Enemy</Filter>
     </ClInclude>
-    <ClInclude Include="Ghost.h">
-      <Filter>Object\Enemy</Filter>
-    </ClInclude>
     <ClInclude Include="MadusaHead.h">
       <Filter>Object\Enemy</Filter>
     </ClInclude>
     <ClInclude Include="Pleaman.h">
-      <Filter>Object\Enemy</Filter>
-    </ClInclude>
-    <ClInclude Include="Raven.h">
       <Filter>Object\Enemy</Filter>
     </ClInclude>
     <ClInclude Include="Skeleton.h">
@@ -244,16 +193,10 @@
     <ClInclude Include="Box.h">
       <Filter>FrameWork</Filter>
     </ClInclude>
-    <ClInclude Include="BigCandel.h">
-      <Filter>Object\Item</Filter>
-    </ClInclude>
     <ClInclude Include="Gate.h">
       <Filter>Object\Item</Filter>
     </ClInclude>
     <ClInclude Include="Item.h">
-      <Filter>Object\Item</Filter>
-    </ClInclude>
-    <ClInclude Include="MovePlatform.h">
       <Filter>Object\Item</Filter>
     </ClInclude>
     <ClInclude Include="SmallCandle.h">
@@ -265,16 +208,10 @@
     <ClInclude Include="TopStair.h">
       <Filter>Object\Item</Filter>
     </ClInclude>
-    <ClInclude Include="Trap.h">
-      <Filter>Object\Item</Filter>
-    </ClInclude>
     <ClInclude Include="Simon.h">
       <Filter>Object\Player</Filter>
     </ClInclude>
     <ClInclude Include="Weapon.h">
-      <Filter>Object\Player</Filter>
-    </ClInclude>
-    <ClInclude Include="Player.h">
       <Filter>Object\Player</Filter>
     </ClInclude>
     <ClInclude Include="SceneMenu.h">
@@ -286,14 +223,14 @@
     <ClInclude Include="Scene.h">
       <Filter>Scene</Filter>
     </ClInclude>
-    <ClInclude Include="Level3.h">
-      <Filter>Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="Level2.h">
-      <Filter>Scene</Filter>
-    </ClInclude>
     <ClInclude Include="Level5.h">
       <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Level6.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Constant.h">
+      <Filter>FrameWork</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

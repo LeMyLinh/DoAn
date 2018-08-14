@@ -12,30 +12,23 @@ class Item
 	vector<Object> listItem;
 	
 public:
-	Object* beakWall;
 	GTexture* Heart;
 	GTexture* bigHeart;	
 	GSprite* Bag;
 	GTexture* morningStar;
-	GTexture* Roast; //dui ga
 	GTexture* rosary; // clear anemy
-	GSprite* crown; //vuong niem
 	GTexture* treasureChest;//kho bao
 	GTexture* Invincible; //bao ve
 	GTexture* Hidden; //tang hinh
 	GTexture* doubleShot;
 	GTexture* tripleShot;
 	GSprite* spriritBall;
-	GTexture* lvUp;
-	GTexture* knife;
 	//weapon
 	GTexture* Bomerang;
 	GTexture* axe;
 	GTexture* boom;
-	GTexture* BreakWall;
 	GTexture* iconDoubleShot;
 	GTexture* iconTripbleShot;
-	GTexture* StopWatch;
 	//
 	bool b;
 

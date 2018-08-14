@@ -5,8 +5,6 @@ Weapon* Weapon::pStaticObj = 0;
 
 Weapon::Weapon()
 {
-	Knife = new GTexture();	
-	StopWatch = new GTexture();
 	typeWP = 2;
 	IsFight = false;
 	IsReady = true;
@@ -32,11 +30,9 @@ void Weapon::Init()
 	GTexture* tBomerang = new GTexture(); //2
 	GTexture* tAxe = new GTexture(); //3
 	GTexture* tBom = new GTexture(); //4
-	Knife->loadTextTureFromFile(L"Resources/weapon/1.png", D3DCOLOR_XRGB(255, 0, 255));
 	tBomerang->loadTextTureFromFile(L"Resources/weapon/4.png", D3DCOLOR_XRGB(255, 0, 255));
 	tBom->loadTextTureFromFile(L"Resources/weapon/2.png", D3DCOLOR_XRGB(255, 0, 255));
 	tAxe->loadTextTureFromFile(L"Resources/weapon/3.png", D3DCOLOR_XRGB(255, 0, 255));
-	StopWatch->loadTextTureFromFile(L"Resources/item/5.png", D3DCOLOR_XRGB(255, 0, 255));
 
 	Bomerang = new GSprite(tBomerang, 3, 1, 1000 / 10);
 	Bom = new GSprite(tBom, 3, 1, 1000 / 10);
@@ -57,45 +53,27 @@ void Weapon::CheckWeaponInItem(Object item)
 	switch (_type)
 	{
 	case AXE:
-	case GroundSmallLightAxe:
 		typeWP = 3;
 		damge = 2;
 		MultiShot = 1;
 		break;
 	case BOOMERANG:
-	case GroundSmallLightBoomerang:
 		typeWP = 2;
 		damge = 2;
 		MultiShot = 1;
 		break;
-	case GroundSmallLightCross:
-		//typeWP = 5;
-		break;
-	case GroundSmallLightDoubleShot:
-		break;
 	case FIREBOMB:
-	case GroundSmallLightFireBomb:
 		typeWP = 4;
 		MultiShot = 1;
 		damge = 1;
 		break;
-	case GroundSmallLightKnife:
-		typeWP = 1;
-		MultiShot = 1;
-		damge = 1;
-		break;
 	case DOUBLESHOT:
-	case ItemDoubleShot:
 		if (typeWP != 0 || typeWP != 5)
 			MultiShot = 2;
 		break;
 	case TRIPLESHOT:
-	case ItemTripbleShot:
 		if (typeWP != 0 || typeWP != 5)
 			MultiShot = 3;
-		break;
-	case GroundSmallLightRandom:
-		typeWP = 5;
 		break;
 	default:
 		break;
@@ -115,10 +93,6 @@ void Weapon::Fight(int _x, int _y, int turn, BlackBoard* lackBoard)
 	D3DXVECTOR2 i;
 	switch (typeWP)
 	{
-	case 1:
-		obj.Width = Knife->Width;
-		obj.Heigt = Knife->Height;
-		break;
 	case 2:
 		obj.Width = Bomerang->_FrameWidth;
 		obj.Heigt = Bomerang->_FrameHeight;
@@ -345,10 +319,6 @@ void Weapon::Draw()
 	{
 		switch (typeWP)
 		{
-		case 1:
-			Knife->SetFormat(D3DXVECTOR2(-listWeapon[i].turn, 1), 0, 1);
-			Knife->RenderTexture(listWeapon[i].GetX() + listWeapon[i].GetBox().w / 2, listWeapon[i].GetY() + listWeapon[i].GetBox().h / 2);
-			break;
 		case 2:	
 			Bomerang->Draw(listWeapon[i].GetX() + listWeapon[i].GetBox().w / 2, listWeapon[i].GetY() + listWeapon[i].GetBox().h / 2, listWeapon[i].index);
 			break;

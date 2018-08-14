@@ -12,11 +12,9 @@ using namespace std;
 class Weapon
 {
 	static Weapon* pStaticObj;
-	GTexture* Knife; //1
 	GSprite* Bomerang; //2
 	GSprite* Axe; //3
 	GSprite* Bom; //4
-	GTexture* StopWatch; //5
 	bool IsFight;
 	bool IsReady;
 	int localTime;
