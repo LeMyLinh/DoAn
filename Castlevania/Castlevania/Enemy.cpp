@@ -8,7 +8,7 @@ Enemy::Enemy()
 	delay = 20;
 }
 
-Enemy::Enemy(int _id, int _type, int _x, int _y, int _Width, int _Height):Object(_id, _type, _x, _y, _Width, _Height)
+Enemy::Enemy(int _id, int _type, int _x, int _y, int _Width, int _Height) :Object(_id, _type, _x, _y, _Width, _Height)
 {
 	IsDie = false;
 	Damege = 0;
@@ -20,10 +20,10 @@ Enemy::Enemy(int _id, int _type, int _x, int _y, int _Width, int _Height):Object
 
 void Enemy::Update(Box RectCamera, Box simon, int Deltatime)
 {
-	if (HP<=0)
+	if (HP <= 0)
 	{
 		this->IsDie = true;
-	}	
+	}
 }
 
 
@@ -36,7 +36,7 @@ void Enemy::checkFight(Box vk, int lv)
 		return;
 	if (Collision::AABBCheck(vk, this->GetBox()))
 	{
-		Beaten(lv);	
+		Beaten(lv);
 	}
 }
 
@@ -57,7 +57,7 @@ void Enemy::Beaten(int lv)
 
 bool Enemy::CheckCollision(Box simon)
 {
-	return Collision::AABBCheck(simon,this->GetBox());
+	return Collision::AABBCheck(simon, this->GetBox());
 }
 
 int Enemy::GetHP()

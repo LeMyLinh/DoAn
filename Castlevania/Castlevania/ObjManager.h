@@ -229,6 +229,7 @@ public:
 		rect = rectCamera;
 
 		AddListObj();
+
 		if (Frozen < 120)
 		{
 			Isclear = true;
