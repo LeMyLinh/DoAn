@@ -11,15 +11,15 @@ void Level5::LoadResources()
 {
 	Scene_Index = 1;
 	map = new Map();
-	simon = new Simon(LV5_STAGE3.left * 2 + 1000, LV5_STAGE3.bottom * 2 - 150, 3);
+	simon = new Simon(LV5_STAGE4.left * 2 + 200, LV5_STAGE4.bottom * 2 - 150, 4);
 	objManager = new ObjManager();
 	blackBoard = new BlackBoard();
 
 	KeyBoard::GetKey()->InitKeyboard();
-	camera = new GCamera(G_ScreenWidth, G_ScreenHeight, 0, D3DXVECTOR3(1.0f, 1.0f, 1.0f), LV5_STAGE3.left * 2 + 1000, LV5_STAGE3.bottom * 2 - 150, 3);
+	camera = new GCamera(G_ScreenWidth, G_ScreenHeight, 0, D3DXVECTOR3(1.0f, 1.0f, 1.0f), LV5_STAGE4.left * 2 + 200, LV5_STAGE4.bottom * 2 - 150, 4);
 	map->Init(L"Map/level5_tile.png", "Map/Level5_map.txt", 8, 6);
 	GTexture* t = new GTexture();
-	t->loadTextTureFromFile(L"level5_tile.png", D3DCOLOR_XRGB(255, 0, 255));
+	t->loadTextTureFromFile(L"Map/level5_tile.png", D3DCOLOR_XRGB(255, 0, 255));
 	simon->LoadResource(L"Resources/simon.png", 8, 3, 0);
 	Font::GetFont()->Innit();
 	objManager->Init("Map/Level5_Object.txt");

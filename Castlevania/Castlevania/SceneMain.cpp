@@ -8,7 +8,7 @@ void SceneMain::NextLevel()
 	{
 		if (scene->Scene_Index==0) 
 		{ 
-			scene = new Level5(); return; 
+			scene = new Level6(); return; 
 		}
 		if (scene->Scene_Index == 1)
 		{

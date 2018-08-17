@@ -134,9 +134,6 @@ void Weapon::Update(RECT camera, BlackBoard* lackBoard, Box Simon, int DeltaTime
 		return;
 	switch (typeWP)
 	{
-	case 1:
-		UpdateKnife(camera);
-		break;
 	case 2:
 		UpdateBoomerang(camera,Simon);
 		break;
