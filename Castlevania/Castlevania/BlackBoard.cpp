@@ -145,7 +145,7 @@ void BlackBoard::PickUpItem(int itemID)
 	{
 	case AXE:
 		break;
-	case BOOMERANG:
+	case CROSS:
 		break;
 	case FIREBOMB:
 		break;

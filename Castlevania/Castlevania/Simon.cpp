@@ -582,48 +582,48 @@ void Simon::Update(std::vector<Object*> listObject, std::vector<int*> &listInfo,
 				switch (inLayer)
 				{
 				case 4:
-					if (y + 35 <= LV5_STAGE4.top * 2 && state == CLIMBING_UP)
+					if (y + 35 <= STAGE4.top * 2 && state == CLIMBING_UP)
 					{
 						inLayer = 3;
-						y = LV5_STAGE3.bottom * 2 - Sprite->_FrameHeight;
+						y = STAGE3.bottom * 2 - Sprite->_FrameHeight;
 						IsOnTheStair = true;
 						SetState();
 						vecY = 0;
 					}
 					break;
 				case 3:
-					if (y + 35 <= LV5_STAGE3.top * 2 && state == CLIMBING_UP)
+					if (y + 35 <= STAGE3.top * 2 && state == CLIMBING_UP)
 					{
 						inLayer = 2;
-						y = LV5_STAGE2.bottom * 2 - Sprite->_FrameHeight;
+						y = STAGE2.bottom * 2 - Sprite->_FrameHeight;
 						IsOnTheStair = true;
 						SetState();
 						vecY = 0;
 					}
-					if (y + Sprite->_FrameHeight + 5 >= LV5_STAGE3.bottom * 2 && state == CLIMBING_DOWN)
+					if (y + Sprite->_FrameHeight + 5 >= STAGE3.bottom * 2 && state == CLIMBING_DOWN)
 					{
 						inLayer = 4;
-						y = LV5_STAGE4.top * 2 - Sprite->_FrameHeight + 32;
+						y = STAGE4.top * 2 - Sprite->_FrameHeight + 32;
 					}
 					break;
 					case 2:
-						if (y + 35 <= LV5_STAGE2.top * 2 && state == CLIMBING_UP)
+						if (y + 35 <= STAGE2.top * 2 && state == CLIMBING_UP)
 						{
 							inLayer = 1;
-							y = LV5_STAGE1.bottom * 2 - Sprite->_FrameHeight;
+							y = STAGE1.bottom * 2 - Sprite->_FrameHeight;
 
 						}
-						if (y + Sprite->_FrameHeight + 5 >= LV5_STAGE2.bottom * 2 && state == CLIMBING_DOWN)
+						if (y + Sprite->_FrameHeight + 5 >= STAGE2.bottom * 2 && state == CLIMBING_DOWN)
 						{
 							inLayer = 3;
-							y = LV5_STAGE3.top * 2 - Sprite->_FrameHeight + 32;
+							y = STAGE3.top * 2 - Sprite->_FrameHeight + 32;
 						}
 						break;
 					case 1:
-						if (y + Sprite->_FrameHeight >= LV5_STAGE1.bottom * 2 && state == CLIMBING_DOWN)
+						if (y + Sprite->_FrameHeight >= STAGE1.bottom * 2 && state == CLIMBING_DOWN)
 						{
 							inLayer = 2;
-							y = LV5_STAGE2.top * 2 - Sprite->_FrameHeight + 32;
+							y = STAGE2.top * 2 - Sprite->_FrameHeight + 32;
 						}
 						break;
 				default:
@@ -1175,28 +1175,28 @@ void Simon::CheckDie()
 	switch (inLayer)
 	{
 	case 1:
-		c = Box::ConvertRECT(LV5_STAGE1);
+		c = Box::ConvertRECT(STAGE1);
 		c.x *= 2;
 		c.y *= 2;
 		c.w *= 2;
 		c.h *= 2;	
 		break;
 	case 2:
-		c = Box::ConvertRECT(LV5_STAGE2);
+		c = Box::ConvertRECT(STAGE2);
 		c.x *= 2;
 		c.y *= 2;
 		c.w *= 2;
 		c.h *= 2;
 		break;
 	case 3:
-		c = Box::ConvertRECT(LV5_STAGE3);
+		c = Box::ConvertRECT(STAGE3);
 		c.x *= 2;
 		c.y *= 2;
 		c.w *= 2;
 		c.h *= 2;		
 		break;
 	case 4:
-		c = Box::ConvertRECT(LV5_STAGE4);
+		c = Box::ConvertRECT(STAGE4);
 		c.x *= 2;
 		c.y *= 2;
 		c.w *= 2;

@@ -1,7 +1,7 @@
 #ifndef _SCENEMAIN_H_
 #define _SCENEMAIN_H_
 #include "Game.h"
-#include "Level6.h"
+#include "Level1.h"
 #include "Level5.h"
 #include "SceneMenu.h"
 

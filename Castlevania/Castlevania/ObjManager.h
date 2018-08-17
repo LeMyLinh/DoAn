@@ -128,7 +128,7 @@ public:
 			Enemy* obj;
 			switch (_type)
 			{
-			case VAMPIREBAT:
+			case BAT:
 				obj = new Bat(t[0], t[1], t[2], t[3], t[4], t[5]);
 				break;
 			case MEDUSAHEAD:
@@ -172,7 +172,7 @@ public:
 			RECT check{ t[2],t[3], t[2] + t[4],t[3] + t[5] };
 			if (Collision::CheckCollison(rect, check))
 			{
-				if ((t[1] >= 1 && t[1] <= 13 ) || t[1] == 22)
+				if ((t[1] >= GROUND && t[1] <= FIREBOMB ) || (t[1] >= LEFTSTAIR && t[1] <= HOLYWATER ))
 				{
 					Object* obj = new Object(t[0], t[1], t[2], t[3], t[4], t[5]);
 					listObj.push_back(obj);
@@ -281,6 +281,8 @@ public:
 			case DOOR:
 			case STAIR:
 			case LEFTSTAIR:
+			case BLOCKGATE:
+			case BIGCANDLE:
 				break;
 			case DOUBLESHOT:
 				if (InfoObj[listObj[i]->GetID()][6] == 1)
@@ -313,7 +315,7 @@ public:
 			case AXEKNIGHT:
 				EnemyRender::GetStaticObj()->DrawSpearGuard(listEnemy[i]->GetX(), listEnemy[i]->GetY(), listEnemy[i]->GetIndex(), listEnemy[i]->GetDirect());
 				break;
-			case VAMPIREBAT:
+			case BAT:
 				EnemyRender::GetStaticObj()->DrawBat(listEnemy[i]->GetX(), listEnemy[i]->GetY(), listEnemy[i]->GetIndex(), listEnemy[i]->GetDirect());
 				break;
 			default:

@@ -57,7 +57,7 @@ void Weapon::CheckWeaponInItem(Object item)
 		damge = 2;
 		MultiShot = 1;
 		break;
-	case BOOMERANG:
+	case CROSS:
 		typeWP = 2;
 		damge = 2;
 		MultiShot = 1;

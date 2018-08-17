@@ -2,7 +2,13 @@
 
 Level5::Level5()
 {
+	Scene_Index = 2;
+	STAGE1 = RECT{ 0,16,1024,192 };
+	STAGE2 = RECT{ 512,240, 1792 + 512, 416 };
+	STAGE3 = RECT{ 768,464,1536 + 768,640 };
+	STAGE4 = RECT{ 768,688,512 + 768,864 };
 	LoadResources();
+	Islockcamera = false;
 }
 Level5::~Level5()
 {
@@ -11,20 +17,12 @@ void Level5::LoadResources()
 {
 	Scene_Index = 1;
 	map = new Map();
-<<<<<<< HEAD
-	simon = new Simon(LV5_STAGE4.left * 2 + 200, LV5_STAGE4.bottom * 2 - 150, 4);
-=======
-	simon = new Simon(LV5_STAGE3.left * 2 + 170, LV5_STAGE3.bottom * 2 - 150, 3);
->>>>>>> cf6d064daf94208e882ba5e9c812668c30202558
+	simon = new Simon(STAGE3.left * 2 + 170, STAGE3.bottom * 2 - 150, 3);
 	objManager = new ObjManager();
 	blackBoard = new BlackBoard();
 
 	KeyBoard::GetKey()->InitKeyboard();
-<<<<<<< HEAD
-	camera = new GCamera(G_ScreenWidth, G_ScreenHeight, 0, D3DXVECTOR3(1.0f, 1.0f, 1.0f), LV5_STAGE4.left * 2 + 200, LV5_STAGE4.bottom * 2 - 150, 4);
-=======
-	camera = new GCamera(G_ScreenWidth, G_ScreenHeight, 0, D3DXVECTOR3(1.0f, 1.0f, 1.0f), LV5_STAGE3.left * 2 + 170, LV5_STAGE3.bottom * 2 - 150, 3);
->>>>>>> cf6d064daf94208e882ba5e9c812668c30202558
+	camera = new GCamera(G_ScreenWidth, G_ScreenHeight, 0, D3DXVECTOR3(1.0f, 1.0f, 1.0f), STAGE3.left * 2 + 170, STAGE3.bottom * 2 - 150, 3);
 	map->Init(L"Map/level5_tile.png", "Map/Level5_map.txt", 8, 6);
 	GTexture* t = new GTexture();
 	t->loadTextTureFromFile(L"Map/level5_tile.png", D3DCOLOR_XRGB(255, 0, 255));
@@ -46,8 +44,6 @@ void Level5::RenderFrame(int Delta)
 	if (G_lpDirect3DDevice->BeginScene())
 	{
 		G_lpDirect3DDevice->ColorFill(G_BackBuffer, NULL, D3DCOLOR_XRGB(0, 0, 0));
-
-
 
 		G_SpriteHandler->Begin(D3DXSPRITE_ALPHABLEND);
 		camera->SetTransForm();

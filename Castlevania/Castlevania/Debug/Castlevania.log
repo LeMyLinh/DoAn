@@ -1,37 +1,49 @@
-<<<<<<< HEAD
-﻿  Level6.cpp
+﻿  AxeKnight.cpp
+  Level5.cpp
   c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
 e:\hockyhe\doan\castlevania\castlevania\objmanager.h(77): warning C4018: '<': signed/unsigned mismatch
 e:\hockyhe\doan\castlevania\castlevania\objmanager.h(109): warning C4018: '<': signed/unsigned mismatch
 e:\hockyhe\doan\castlevania\castlevania\objmanager.h(123): warning C4018: '<': signed/unsigned mismatch
-e:\hockyhe\doan\castlevania\castlevania\objmanager.h(163): warning C4018: '<': signed/unsigned mismatch
-e:\hockyhe\doan\castlevania\castlevania\objmanager.h(168): warning C4018: '<': signed/unsigned mismatch
-e:\hockyhe\doan\castlevania\castlevania\objmanager.h(194): warning C4018: '<': signed/unsigned mismatch
-e:\hockyhe\doan\castlevania\castlevania\objmanager.h(196): warning C4018: '<': signed/unsigned mismatch
-e:\hockyhe\doan\castlevania\castlevania\objmanager.h(202): warning C4018: '<': signed/unsigned mismatch
-e:\hockyhe\doan\castlevania\castlevania\objmanager.h(220): warning C4018: '<': signed/unsigned mismatch
-e:\hockyhe\doan\castlevania\castlevania\objmanager.h(240): warning C4018: '<': signed/unsigned mismatch
-e:\hockyhe\doan\castlevania\castlevania\objmanager.h(252): warning C4018: '<': signed/unsigned mismatch
-e:\hockyhe\doan\castlevania\castlevania\objmanager.h(274): warning C4018: '<': signed/unsigned mismatch
-e:\hockyhe\doan\castlevania\castlevania\objmanager.h(299): warning C4018: '<': signed/unsigned mismatch
-e:\hockyhe\doan\castlevania\castlevania\objmanager.h(338): warning C4018: '<': signed/unsigned mismatch
-e:\hockyhe\doan\castlevania\castlevania\objmanager.h(351): warning C4018: '<': signed/unsigned mismatch
-e:\hockyhe\doan\castlevania\castlevania\objmanager.h(370): warning C4018: '<': signed/unsigned mismatch
-e:\hockyhe\doan\castlevania\castlevania\objmanager.h(409): warning C4018: '<': signed/unsigned mismatch
-e:\hockyhe\doan\castlevania\castlevania\objmanager.h(416): warning C4018: '<': signed/unsigned mismatch
-e:\hockyhe\doan\castlevania\castlevania\objmanager.h(428): warning C4018: '<': signed/unsigned mismatch
-e:\hockyhe\doan\castlevania\castlevania\level6.cpp(33): warning C4101: 'str': unreferenced local variable
-  Castlevania.vcxproj -> E:\HocKyHe\DoAn\Castlevania\Debug\Castlevania.exe
-=======
-﻿  Bat.cpp
-  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-d:\git\new folder\doan\castlevania\castlevania\bat.cpp(23): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-d:\git\new folder\doan\castlevania\castlevania\bat.cpp(84): warning C4305: '=': truncation from 'double' to 'float'
-d:\git\new folder\doan\castlevania\castlevania\bat.cpp(102): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-d:\git\new folder\doan\castlevania\castlevania\bat.cpp(105): warning C4804: '<': unsafe use of type 'bool' in operation
-d:\git\new folder\doan\castlevania\castlevania\bat.cpp(108): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-d:\git\new folder\doan\castlevania\castlevania\bat.cpp(147): warning C4305: '+=': truncation from 'double' to 'float'
-d:\git\new folder\doan\castlevania\castlevania\bat.cpp(152): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-d:\git\new folder\doan\castlevania\castlevania\bat.cpp(158): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  Castlevania.vcxproj -> D:\Git\New folder\DoAn\Castlevania\Debug\Castlevania.exe
->>>>>>> cf6d064daf94208e882ba5e9c812668c30202558
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(164): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(169): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(195): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(197): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(203): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(221): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(241): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(253): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(275): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(300): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(342): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(355): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(374): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(413): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(420): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(432): warning C4018: '<': signed/unsigned mismatch
+e:\hockyhe\doan\castlevania\castlevania\level5.cpp(54): warning C4101: 'str': unreferenced local variable
+  Generating Code...
+  LINK : E:\HocKyHe\DoAn\Castlevania\Debug\Castlevania.exe not found or not built by the last incremental link; performing full link
+CText.obj : error LNK2019: unresolved external symbol _D3DXCreateFontIndirectW@12 referenced in function "public: void __thiscall CText::Init(void)" (?Init@CText@@QAEXXZ)
+Font.obj : error LNK2019: unresolved external symbol _D3DXCreateFontA@48 referenced in function "public: void __thiscall Font::Innit(void)" (?Innit@Font@@QAEXXZ)
+Game.obj : error LNK2019: unresolved external symbol _Direct3DCreate9@4 referenced in function "protected: bool __thiscall CGame::InitD3D9(void)" (?InitD3D9@CGame@@IAE_NXZ)
+Game.obj : error LNK2019: unresolved external symbol _DirectInput8Create@20 referenced in function "protected: void __thiscall CGame::InitKeyboard(void)" (?InitKeyboard@CGame@@IAEXXZ)
+KeyBoard.obj : error LNK2001: unresolved external symbol _DirectInput8Create@20
+Game.obj : error LNK2019: unresolved external symbol _D3DXCreateSprite@8 referenced in function "protected: bool __thiscall CGame::InitD3D9(void)" (?InitD3D9@CGame@@IAE_NXZ)
+Game.obj : error LNK2001: unresolved external symbol _IID_IDirectInput8W
+KeyBoard.obj : error LNK2001: unresolved external symbol _IID_IDirectInput8W
+Game.obj : error LNK2001: unresolved external symbol _GUID_SysKeyboard
+KeyBoard.obj : error LNK2001: unresolved external symbol _GUID_SysKeyboard
+Game.obj : error LNK2001: unresolved external symbol _c_dfDIKeyboard
+KeyBoard.obj : error LNK2001: unresolved external symbol _c_dfDIKeyboard
+GCamera.obj : error LNK2019: unresolved external symbol _D3DXMatrixOrthoLH@20 referenced in function "public: __thiscall GCamera::GCamera(int,int,float,struct D3DXVECTOR3,int,int,int)" (??0GCamera@@QAE@HHMUD3DXVECTOR3@@HHH@Z)
+GSurface.obj : error LNK2019: unresolved external symbol _D3DXGetImageInfoFromFileA@8 referenced in function "public: int __thiscall GSurface::LoadSurfaceFromFile(char *)" (?LoadSurfaceFromFile@GSurface@@QAEHPAD@Z)
+GSurface.obj : error LNK2019: unresolved external symbol _D3DXLoadSurfaceFromFileA@32 referenced in function "public: int __thiscall GSurface::LoadSurfaceFromFile(char *)" (?LoadSurfaceFromFile@GSurface@@QAEHPAD@Z)
+GTexture.obj : error LNK2019: unresolved external symbol _D3DXMatrixMultiply@12 referenced in function "public: struct D3DXMATRIX __thiscall D3DXMATRIX::operator*(struct D3DXMATRIX const &)const " (??DD3DXMATRIX@@QBE?AU0@ABU0@@Z)
+GTexture.obj : error LNK2019: unresolved external symbol _D3DXMatrixTransformation2D@28 referenced in function "public: void __thiscall GTexture::RenderTexture(int,int)" (?RenderTexture@GTexture@@QAEXHH@Z)
+GTexture.obj : error LNK2019: unresolved external symbol _D3DXGetImageInfoFromFileW@8 referenced in function "public: void __thiscall GTexture::loadTextTureFromFile(wchar_t const *,struct D3DXCOLOR)" (?loadTextTureFromFile@GTexture@@QAEXPB_WUD3DXCOLOR@@@Z)
+GTexture.obj : error LNK2019: unresolved external symbol _D3DXCreateTextureFromFileExW@56 referenced in function "public: void __thiscall GTexture::loadTextTureFromFile(wchar_t const *,struct D3DXCOLOR)" (?loadTextTureFromFile@GTexture@@QAEXPB_WUD3DXCOLOR@@@Z)
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Lib\x64\d3d9.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Lib\x64\d3dx9.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Lib\x64\dinput8.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Lib\x64\dxguid.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+E:\HocKyHe\DoAn\Castlevania\Debug\Castlevania.exe : fatal error LNK1120: 15 unresolved externals

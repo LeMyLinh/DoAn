@@ -123,24 +123,24 @@ void GCamera::Update(int x,int y,int layer, bool &IsNextSatge, bool &IsAutoRun, 
 		switch (layer)
 		{
 		case 1:
-			cameraY = LV5_STAGE1.bottom * 2 + 16 - G_ScreenHeight / 2;
-			widthMap = LV5_STAGE1.right * 2;
-			xMap = LV5_STAGE1.left * 2;
+			cameraY = STAGE1.bottom * 2 + 16 - G_ScreenHeight / 2;
+			widthMap = STAGE1.right * 2;
+			xMap = STAGE1.left * 2;
 			break;
 		case 2:
-			cameraY = LV5_STAGE2.bottom * 2 + 16 - G_ScreenHeight / 2;
-			widthMap = LV5_STAGE2.right * 2;
-			xMap = LV5_STAGE2.left * 2;
+			cameraY = STAGE2.bottom * 2 + 16 - G_ScreenHeight / 2;
+			widthMap = STAGE2.right * 2;
+			xMap = STAGE2.left * 2;
 			break;
 		case 3:
-			cameraY = LV5_STAGE3.bottom * 2 + 16 - G_ScreenHeight / 2;
-			widthMap = LV5_STAGE3.right * 2;
-			xMap = LV5_STAGE3.left * 2;
+			cameraY = STAGE3.bottom * 2 + 16 - G_ScreenHeight / 2;
+			widthMap = STAGE3.right * 2;
+			xMap = STAGE3.left * 2;
 			break;
 		case 4:
-			cameraY = LV5_STAGE4.bottom * 2 + 16 - G_ScreenHeight / 2;
-			widthMap = LV5_STAGE4.right * 2;
-			xMap = LV5_STAGE4.left * 2;
+			cameraY = STAGE4.bottom * 2 + 16 - G_ScreenHeight / 2;
+			widthMap = STAGE4.right * 2;
+			xMap = STAGE4.left * 2;
 			break;
 		default:
 			break;

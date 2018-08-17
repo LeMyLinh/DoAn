@@ -141,7 +141,7 @@ void Item::Draw(int Delta)
 		case AXE:	
 			axe->RenderTexture(listItem[i].GetX() + listItem[i].GetBox().w / 2, listItem[i].GetY() + listItem[i].GetBox().h / 2);
 			break;
-		case BOOMERANG:
+		case CROSS:
 			Bomerang->RenderTexture(listItem[i].GetX() + listItem[i].GetBox().w / 2, listItem[i].GetY() + listItem[i].GetBox().h / 2);
 			break;
 		case FIREBOMB:

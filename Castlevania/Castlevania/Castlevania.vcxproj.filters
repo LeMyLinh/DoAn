@@ -107,14 +107,14 @@
     <ClCompile Include="Level5.cpp">
       <Filter>Scene</Filter>
     </ClCompile>
-    <ClCompile Include="Level6.cpp">
-      <Filter>Scene</Filter>
-    </ClCompile>
     <ClCompile Include="AxeKnight.cpp">
       <Filter>Object\Enemy</Filter>
     </ClCompile>
     <ClCompile Include="Pleaman.cpp">
       <Filter>Object\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Level1.cpp">
+      <Filter>Scene</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -229,13 +229,15 @@
     <ClInclude Include="Level5.h">
       <Filter>Scene</Filter>
     </ClInclude>
-    <ClInclude Include="Level6.h">
-      <Filter>Scene</Filter>
-    </ClInclude>
     <ClInclude Include="Constant.h">
       <Filter>FrameWork</Filter>
     </ClInclude>
-    <ClInclude Include="AxeKnight.h" />
+    <ClInclude Include="AxeKnight.h">
+      <Filter>Object\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Level1.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Map">

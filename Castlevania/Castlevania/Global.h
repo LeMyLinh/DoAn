@@ -29,10 +29,10 @@ extern LPDIRECTINPUTDEVICE8 G_KeyBoard;
 extern LPDIRECT3DSURFACE9 G_BackBuffer;
 
 
-extern RECT LV5_STAGE1;
-extern RECT LV5_STAGE2;
-extern RECT LV5_STAGE3;
-extern RECT LV5_STAGE4;
+extern RECT STAGE1;
+extern RECT STAGE2;
+extern RECT STAGE3;
+extern RECT STAGE4;
 
 extern int G_Stage;
 extern bool Islockcamera;

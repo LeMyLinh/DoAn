@@ -8,7 +8,6 @@ using namespace std;
 class Map
 {
 private:
-
 	int col; // so cot cua ma tran
 	int row; // so hang cua ma tran
 	int** Mattrix; //Ma tran load map obj

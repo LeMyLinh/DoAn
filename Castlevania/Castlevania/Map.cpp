@@ -8,6 +8,11 @@
 #pragma warning(disable:4996)
 using namespace std;
 
+#define VECTORTWO D3DXVECTOR2(2, 2)
+
+#define SCALE 2
+
+#define TILESIZE 32
 
 Map::Map()
 {
@@ -54,7 +59,9 @@ void Map::LoadMattrixFromFile(char * FileName)
 			col = atoi(strTemp.c_str());
 	}
 	//get size tile
+
 	getline(f, line);
+	
 	//get mattrix
 	Mattrix = new int*[row];
 	for (int i = 0; i < row; i++)
@@ -82,19 +89,17 @@ void Map::LoadMattrixFromFile(char * FileName)
 			}
 		}
 		i++;
-	}
-
-	
+	}	
 }
 
 
 void Map::DrawMap()
 {
-	BackGround->SetFormat(D3DXVECTOR2(2, 2), 0, 1);
+	BackGround->SetFormat(VECTORTWO, 0, 1);
 
 	for (int i= 0; i < row; i++)
 		for (int j = 0; j <col; j++)
-			BackGround->Draw(((int)((j + i * col) % col) + 1) * 64 - 32, (((j + i * col) / col) + 1) * 64 - 32, Mattrix[i][j]);
+			BackGround->Draw(((int)((j + i * col) % col) + 1) * SCALE * TILESIZE - TILESIZE, (((j + i * col) / col) + 1) * SCALE * TILESIZE - TILESIZE, Mattrix[i][j]);
 }
 
 
