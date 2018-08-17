@@ -68,9 +68,6 @@
     <ClCompile Include="MadusaHead.cpp">
       <Filter>Object\Enemy</Filter>
     </ClCompile>
-    <ClCompile Include="Pleaman.cpp">
-      <Filter>Object\Enemy</Filter>
-    </ClCompile>
     <ClCompile Include="Skeleton.cpp">
       <Filter>Object\Enemy</Filter>
     </ClCompile>
@@ -112,6 +109,12 @@
     </ClCompile>
     <ClCompile Include="Level6.cpp">
       <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="AxeKnight.cpp">
+      <Filter>Object\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Pleaman.cpp">
+      <Filter>Object\Enemy</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -232,6 +235,7 @@
     <ClInclude Include="Constant.h">
       <Filter>FrameWork</Filter>
     </ClInclude>
+    <ClInclude Include="AxeKnight.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Map">

@@ -13,8 +13,8 @@ void EnemyRender::Init()
 	SpearGuard = new GSprite(texture1, 4, 1, 0);
 	//Bat
 	GTexture* texture2 = new GTexture();
-	texture2->loadTextTureFromFile(L"Resources/enemy/0.png", D3DCOLOR_XRGB(255, 0, 255));
-	Bat = new GSprite(texture2, 4, 1, 0);
+	texture2->loadTextTureFromFile(L"Resources/boss/0.png", D3DCOLOR_XRGB(255, 0, 255));
+	Bat = new GSprite(texture2, 3, 1, 0);
 	//medusa
 	GTexture* texture3 = new GTexture();
 	texture3->loadTextTureFromFile(L"Resources/enemy/6.png", D3DCOLOR_XRGB(255, 0, 255));
