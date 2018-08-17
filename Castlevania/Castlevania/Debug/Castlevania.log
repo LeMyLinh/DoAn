@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿  Level6.cpp
   c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
 e:\hockyhe\doan\castlevania\castlevania\objmanager.h(77): warning C4018: '<': signed/unsigned mismatch
@@ -21,3 +22,16 @@ e:\hockyhe\doan\castlevania\castlevania\objmanager.h(416): warning C4018: '<': s
 e:\hockyhe\doan\castlevania\castlevania\objmanager.h(428): warning C4018: '<': signed/unsigned mismatch
 e:\hockyhe\doan\castlevania\castlevania\level6.cpp(33): warning C4101: 'str': unreferenced local variable
   Castlevania.vcxproj -> E:\HocKyHe\DoAn\Castlevania\Debug\Castlevania.exe
+=======
+﻿  Bat.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+d:\git\new folder\doan\castlevania\castlevania\bat.cpp(23): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+d:\git\new folder\doan\castlevania\castlevania\bat.cpp(84): warning C4305: '=': truncation from 'double' to 'float'
+d:\git\new folder\doan\castlevania\castlevania\bat.cpp(102): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+d:\git\new folder\doan\castlevania\castlevania\bat.cpp(105): warning C4804: '<': unsafe use of type 'bool' in operation
+d:\git\new folder\doan\castlevania\castlevania\bat.cpp(108): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+d:\git\new folder\doan\castlevania\castlevania\bat.cpp(147): warning C4305: '+=': truncation from 'double' to 'float'
+d:\git\new folder\doan\castlevania\castlevania\bat.cpp(152): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+d:\git\new folder\doan\castlevania\castlevania\bat.cpp(158): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  Castlevania.vcxproj -> D:\Git\New folder\DoAn\Castlevania\Debug\Castlevania.exe
+>>>>>>> cf6d064daf94208e882ba5e9c812668c30202558

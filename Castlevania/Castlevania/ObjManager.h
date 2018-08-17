@@ -137,8 +137,9 @@ public:
 			case BONEBILLAR:
 				obj = new BonePillar(t[0], t[1], t[2], t[3], t[4], t[5]);
 				break;
+				//đang đổi chỗ white skeletion vs bat
 			case WHITESKELETON:
-				obj = new Skeleton(t[0], t[1], t[2], t[3], t[4], t[5]);
+				obj = new Bat(t[0], t[1], t[2], t[3], t[4], t[5]);
 				break;
 			case PLEAMAN:
 				obj = new Pleaman(t[0], t[1], t[2], t[3], t[4], t[5]);
@@ -311,6 +312,9 @@ public:
 				break;
 			case AXEKNIGHT:
 				EnemyRender::GetStaticObj()->DrawSpearGuard(listEnemy[i]->GetX(), listEnemy[i]->GetY(), listEnemy[i]->GetIndex(), listEnemy[i]->GetDirect());
+				break;
+			case VAMPIREBAT:
+				EnemyRender::GetStaticObj()->DrawBat(listEnemy[i]->GetX(), listEnemy[i]->GetY(), listEnemy[i]->GetIndex(), listEnemy[i]->GetDirect());
 				break;
 			default:
 				break;
