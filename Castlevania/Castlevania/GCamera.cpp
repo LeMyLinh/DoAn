@@ -2,7 +2,7 @@
 #include "Global.h"
 #include "Gate.h"
 
-GCamera::GCamera(int width, int height, float _angle, D3DXVECTOR3 _scaleFactors, int x, int y,int layer)
+GCamera::GCamera(int width, int height, float _angle, D3DXVECTOR3 _scaleFactors, int x, int y, int layer)
 {
 	this->Width = width;
 	this->Height = height;
@@ -19,12 +19,12 @@ GCamera::GCamera(int width, int height, float _angle, D3DXVECTOR3 _scaleFactors,
 	save.layer = layer;
 }
 
-void GCamera::Update(int x,int y,int layer, bool &IsNextSatge, bool &IsAutoRun, int delta)
+void GCamera::Update(int x, int y, int layer, bool &IsNextSatge, bool &IsAutoRun, int delta)
 {
 	//next state
 	if (Islockcamera);
 	else if (IsNextSatge == true)
-	{	
+	{
 		if (OpenGate)
 		{
 			if (indexGate > 1)
@@ -45,18 +45,18 @@ void GCamera::Update(int x,int y,int layer, bool &IsNextSatge, bool &IsAutoRun, 
 			{
 				locaTime = 0;
 				indexGate++;
-			}			
+			}
 		}
 		else if (CloseGate)
-		{					
+		{
 			if (indexGate > -1 && indexGate < 2)
 				CGate::GetStaticObj()->Update(save.xObj, save.yObj, indexGate);
 			if (indexGate == -1)
-			{			
+			{
 				if (locaTime > 100 / 10)
 				{
 					locaTime = 0;
-					if (save.turn == 1 && cameraX >= save.xObj + G_ScreenWidth/2 - 3)
+					if (save.turn == 1 && cameraX >= save.xObj + G_ScreenWidth / 2 - 3)
 					{
 						IsNextSatge = false;
 						CloseGate = false;
@@ -68,11 +68,11 @@ void GCamera::Update(int x,int y,int layer, bool &IsNextSatge, bool &IsAutoRun, 
 						save.y = y;
 					}
 
-					else if (save.turn == -1 && cameraX <= save.xObj - G_ScreenWidth/2 + 3)
+					else if (save.turn == -1 && cameraX <= save.xObj - G_ScreenWidth / 2 + 3)
 					{
 						IsNextSatge = false;
 						CloseGate = false;
-						G_Stage++; 
+						G_Stage++;
 						gate = save.xObj;
 						save.stage = G_Stage;
 						save.layer = layer;
@@ -89,7 +89,7 @@ void GCamera::Update(int x,int y,int layer, bool &IsNextSatge, bool &IsAutoRun, 
 				locaTime = 0;
 				if (indexGate >= 0)
 					indexGate--;
-			}		
+			}
 		}
 		else
 		{
@@ -112,7 +112,7 @@ void GCamera::Update(int x,int y,int layer, bool &IsNextSatge, bool &IsAutoRun, 
 					cameraX += save.turn * 3;
 			}
 		}
-		
+
 
 
 	}
@@ -147,7 +147,7 @@ void GCamera::Update(int x,int y,int layer, bool &IsNextSatge, bool &IsAutoRun, 
 		}
 
 		//khoa camera
-		if (gate != -1 && abs(x -gate)<400)
+		if (gate != -1 && abs(x - gate) < 400)
 		{
 			if (save.turn == 1 && cameraX > gate - G_ScreenWidth / 2)
 				cameraX = gate - G_ScreenWidth / 2;
@@ -160,14 +160,14 @@ void GCamera::Update(int x,int y,int layer, bool &IsNextSatge, bool &IsAutoRun, 
 			cameraX = xMap + G_ScreenWidth / 2;
 	}
 
-	
+
 
 	this->viewMatrix = D3DXMATRIX(
 		scaleFactors.x * cos(angle), scaleFactors.x * sin(angle), 0, 0,
 		-scaleFactors.y * sin(angle), scaleFactors.y * cos(angle), 0, 0,
 		0, 0, scaleFactors.z, 0,
 		-cameraX * scaleFactors.x * cos(angle) + cameraY * scaleFactors.y * sin(angle), -cameraX * scaleFactors.y * sin(angle) - cameraY * scaleFactors.y * cos(angle), 0, 1
-		);
+	);
 }
 
 void GCamera::SetTransForm()

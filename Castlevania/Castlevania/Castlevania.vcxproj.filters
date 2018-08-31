@@ -50,9 +50,6 @@
     <ClCompile Include="Object.cpp">
       <Filter>Object</Filter>
     </ClCompile>
-    <ClCompile Include="ObjManager.cpp">
-      <Filter>Object</Filter>
-    </ClCompile>
     <ClCompile Include="Bat.cpp">
       <Filter>Object\Enemy</Filter>
     </ClCompile>
@@ -69,9 +66,6 @@
       <Filter>Object\Enemy</Filter>
     </ClCompile>
     <ClCompile Include="Skeleton.cpp">
-      <Filter>Object\Enemy</Filter>
-    </ClCompile>
-    <ClCompile Include="SpearGuard.cpp">
       <Filter>Object\Enemy</Filter>
     </ClCompile>
     <ClCompile Include="Box.cpp">
@@ -115,6 +109,30 @@
     </ClCompile>
     <ClCompile Include="Level1.cpp">
       <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="RedSkeleton.cpp">
+      <Filter>Object\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="BigCandle.cpp">
+      <Filter>Object\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="BlockGate.cpp">
+      <Filter>Object\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Zombie.cpp">
+      <Filter>Object\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Panther.cpp">
+      <Filter>Object\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="BossLevel1.cpp">
+      <Filter>Object\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="BossLevel5.cpp">
+      <Filter>Object\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Perman.cpp">
+      <Filter>Object\Enemy</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -190,9 +208,6 @@
     <ClInclude Include="Skeleton.h">
       <Filter>Object\Enemy</Filter>
     </ClInclude>
-    <ClInclude Include="SpearGuard.h">
-      <Filter>Object\Enemy</Filter>
-    </ClInclude>
     <ClInclude Include="Box.h">
       <Filter>FrameWork</Filter>
     </ClInclude>
@@ -237,6 +252,30 @@
     </ClInclude>
     <ClInclude Include="Level1.h">
       <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="RedSkeleton.h">
+      <Filter>Object\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="BigCandle.h">
+      <Filter>Object\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="BlockGate.h">
+      <Filter>Object\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Zombie.h">
+      <Filter>Object\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Panther.h">
+      <Filter>Object\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Perman.h">
+      <Filter>Object\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="BossLevel1.h">
+      <Filter>Object\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="BossLevel5.h">
+      <Filter>Object\Enemy</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

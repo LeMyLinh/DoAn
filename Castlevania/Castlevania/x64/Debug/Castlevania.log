@@ -1,5 +1,15 @@
-﻿  SceneMain.cpp
+﻿  Level5.cpp
   c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-e:\hockyhe\doan\castlevania\castlevania\objmanager.h(327): warning C4477: 'sprintf_s' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'unsigned __int64'
-  e:\hockyhe\doan\castlevania\castlevania\objmanager.h(327): note: consider using '%zd' in the format string
+e:\hockyhe\doan\castlevania\castlevania\constant.h(29): warning C4005: 'BOMERANG_IMAGE': macro redefinition
+  e:\hockyhe\doan\castlevania\castlevania\constant.h(15): note: see previous definition of 'BOMERANG_IMAGE'
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(374): warning C4477: 'sprintf_s' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'unsigned __int64'
+  e:\hockyhe\doan\castlevania\castlevania\objmanager.h(374): note: consider using '%zd' in the format string
+e:\hockyhe\doan\castlevania\castlevania\level5.cpp(62): warning C4101: 'str': unreferenced local variable
+  SceneMain.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\hockyhe\doan\castlevania\castlevania\constant.h(29): warning C4005: 'BOMERANG_IMAGE': macro redefinition
+  e:\hockyhe\doan\castlevania\castlevania\constant.h(15): note: see previous definition of 'BOMERANG_IMAGE'
+e:\hockyhe\doan\castlevania\castlevania\objmanager.h(374): warning C4477: 'sprintf_s' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'unsigned __int64'
+  e:\hockyhe\doan\castlevania\castlevania\objmanager.h(374): note: consider using '%zd' in the format string
+  Generating Code...
   Castlevania.vcxproj -> E:\HocKyHe\DoAn\Castlevania\x64\Debug\Castlevania.exe

@@ -17,7 +17,7 @@
 
 enum State
 {
-	STAND =0,
+	STAND = 0,
 	RUNING,
 	JUMPING,
 	SITING,
@@ -28,7 +28,7 @@ enum State
 	UP_FIGHTING,
 	DOWN_FIGHTING
 };
-class Simon: public BaseObject
+class Simon : public BaseObject
 {
 private:
 	int turn;
@@ -40,7 +40,7 @@ private:
 	bool IsFight; //Danh
 	bool IsOnTheStair; //dang tren cau thang	
 	bool IsJumping; //dang nhay
-	bool IsOntheGround; 
+	bool IsOntheGround;
 	GSprite* MoringStar; //Roi
 	GTexture* simonDeath;
 	int lvOfMorningStar;
@@ -65,46 +65,36 @@ private:
 	bool IsInvincible;
 	bool FlipStair;
 	int countWall;
-	bool IsStop;	
+	bool IsStop;
 	bool IscolorEffect;
 	bool b;
 	int yold;
 	int delayDeath;
-	bool UseWP5;
 	//thuoc tinh
 	int HP;
 	int localTime;
-
-	int debug=0;
-	int debug2 = 0;
-	float debug3 = 1;
-	int debug4 = 0;
-	int ct =0;
-	
 public:
 	Simon(int _x, int _y, int _inlayer);
 	bool IsNextStage; // chuyen man
 	bool IsAutoRun;
 	void Turn(int turn);
-	void SetStateFight();
 	void SetState();
 	void climb(Object* x);
 	void climbDown(Object *x);
 	void SetAnimation(State _state);
-	void Update(std::vector<Object*> listObject, std::vector<int*> &listInfo, BlackBoard* blacBoard, vector<Enemy*> listEnemy, int detaltime, GCamera* camera,ObjManager* objManager);
+	void Update(std::vector<Object*> listObject, std::vector<int*> &listInfo, BlackBoard* blacBoard, vector<Enemy*> listEnemy, int detaltime, GCamera* camera, ObjManager* objManager);
 	void Draw(int DeltaTime);
 	void LoadResource(LPCWSTR resourceFile, int cols, int rows, int detalTime);
 	Box GetBox();
 	int GetLayerMap();
 	// tim duong len cau thang.
 	void TimDuong(Object o);
-	void TimDuongXuong(Object* o);
 	void PickUpItem(BlackBoard* blacBoard, ObjManager* objManager);
 	void CollisonWithEnemy(std::vector<Enemy*> listEnemy);
 	void beaten();
 	void ThrowSubweapon(BlackBoard* blacBoard);
 	//Kiem tra Danh
-	void Fight(Object *o, std::vector<int*> &listInf,bool& fhidden);
+	void Fight(Object *o, std::vector<int*> &listInf, bool& fhidden);
 	void FightEnemy(vector<Enemy*> listEnemy);
 	void EffectColor(int delta);
 	void CheckDie();

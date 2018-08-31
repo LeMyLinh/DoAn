@@ -3,6 +3,7 @@
 
 class SmallCandle :public BaseObject
 {
+private:
 	static SmallCandle* pStaticObj;
 public:
 	SmallCandle();

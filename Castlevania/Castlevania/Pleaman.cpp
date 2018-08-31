@@ -20,7 +20,7 @@ Pleaman::Pleaman(int _id, int _type, int _x, int _y, int _Width, int _Height) :E
 	vecX = 0;
 	//Infomation
 	HP = 1;
-	Damege = 3;
+	Damage = 3;
 	Point = 500;
 	fid = index;
 	//
@@ -73,8 +73,8 @@ void Pleaman::Update(Box RectCamera, Box simon, int Deltatime)
 					turn = -1;
 			}
 		}
-		
-		if (abs(x  - simon.x) < 90 && !IsJump)
+
+		if (abs(x - simon.x) < 90 && !IsJump)
 		{
 			HightJump = 90;
 			IsJump = true;
@@ -83,7 +83,7 @@ void Pleaman::Update(Box RectCamera, Box simon, int Deltatime)
 			vecY = 0;
 		}
 
-		UpdateMove(RectCamera, simon, Deltatime);	
+		UpdateMove(RectCamera, simon, Deltatime);
 		IsFalling = true;
 	}
 
@@ -115,7 +115,7 @@ void Pleaman::CollisionWithObj(Object * obj)
 	else
 		t.h += vecY;
 	if (Collision::IsStandOnGround(t, obj->GetBox()))
-	{			
+	{
 		y = obj->GetY() - 35;
 		/*if (timejump >= 10)
 			timejump = 0;*/
@@ -127,14 +127,14 @@ void Pleaman::CollisionWithObj(Object * obj)
 			allowFalling = false;
 		}
 		else
-		{		
+		{
 			timejump = 0;
 			HightJump = 17;
 			yold = y;
 			allowFalling = true;
 			IsJump = true;
 			vecY = 0;
-		}		
+		}
 	}
 	if (Collision::HitTheWall(GetBox(), obj->GetBox()))
 	{
@@ -142,7 +142,7 @@ void Pleaman::CollisionWithObj(Object * obj)
 			turn *= -1;
 		/*yold = y;
 		vecY = 0;
-		
+
 		IsJump = true;
 		allowFalling = true;*/
 	}
@@ -156,7 +156,7 @@ void Pleaman::UpdateMove(Box RectCamera, Box simon, int deltatime)
 			vecX = 5 * turn;
 		else
 			vecX = 4 * turn;
-	}		
+	}
 	else
 		vecX = 0;
 	//vecX = 4 * turn;
@@ -201,9 +201,9 @@ void Pleaman::UpdateMove(Box RectCamera, Box simon, int deltatime)
 			//vecX = 0;
 			vecY = 0;
 		}
-			
+
 	}
-	
+
 
 	/*if (IsJump)
 	{

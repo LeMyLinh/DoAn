@@ -7,8 +7,7 @@ Tile::Tile()
 }
 
 void Tile::Init()
-{
-	BaseObject::LoadResource(L"Resources/ground/2-2.png", 1, 1, 0);
+{	
 }
 
 
@@ -24,7 +23,6 @@ void Tile::Draw(int _x, int _y, int _index)
 	Sprite->SelectIndex(_index);
 	Sprite->Draw(_x + Sprite->_FrameWidth / 2, _y + Sprite->_FrameHeight / 2);
 }
-
 
 
 Tile::~Tile()

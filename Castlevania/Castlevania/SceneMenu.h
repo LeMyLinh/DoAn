@@ -9,7 +9,7 @@
 class SceneMenu : public Scene
 {
 protected:
-	CText* Text;
+	CText * Text;
 	RECT Region_Text;
 	GTexture* BackGround;
 public:

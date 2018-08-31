@@ -22,5 +22,5 @@ public:
 	~KeyBoard();
 };
 
-#endif // !_KEYBOARD_H_
+#endif
 

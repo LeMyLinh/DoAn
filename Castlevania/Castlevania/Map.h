@@ -22,7 +22,7 @@ public:
 	~Map();
 };
 
-#endif // !_MAP_H_
+#endif
 
 
 

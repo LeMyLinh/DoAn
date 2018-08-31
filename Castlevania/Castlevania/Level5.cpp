@@ -17,12 +17,14 @@ void Level5::LoadResources()
 {
 	Scene_Index = 1;
 	map = new Map();
-	simon = new Simon(STAGE3.left * 2 + 170, STAGE3.bottom * 2 - 150, 3);
+	simon = new Simon(STAGE4.left * 2 + 170, STAGE4.bottom * 2 - 150, 4);
+
 	objManager = new ObjManager();
 	blackBoard = new BlackBoard();
 
 	KeyBoard::GetKey()->InitKeyboard();
-	camera = new GCamera(G_ScreenWidth, G_ScreenHeight, 0, D3DXVECTOR3(1.0f, 1.0f, 1.0f), STAGE3.left * 2 + 170, STAGE3.bottom * 2 - 150, 3);
+	camera = new GCamera(G_ScreenWidth, G_ScreenHeight, 0, D3DXVECTOR3(1.0f, 1.0f, 1.0f), STAGE4.left * 2 + 170, STAGE4.bottom * 2 - 150, 4);
+
 	map->Init(L"Map/level5_tile.png", "Map/Level5_map.txt", 8, 6);
 	GTexture* t = new GTexture();
 	t->loadTextTureFromFile(L"Map/level5_tile.png", D3DCOLOR_XRGB(255, 0, 255));
@@ -31,12 +33,14 @@ void Level5::LoadResources()
 	objManager->Init("Map/Level5_Object.txt");
 	Tile::GetStaticObj()->Init();
 	SmallCandle::GetStaticObj()->Init();
+	BigCandle::GetStaticObj()->Init();
 	Stair::GetStaticObj()->Init();
 	TopStair::GetStaticObj()->Init();
 	Effect::GetStaticObj()->Init();
 	EnemyRender::GetStaticObj()->Init();
 	Item::GetStaticObj()->Init();
 	CGate::GetStaticObj()->Init();
+	BlockGate::GetStaticObj()->Init();
 	Weapon::GetStaticObj()->Init();
 }
 void Level5::RenderFrame(int Delta)

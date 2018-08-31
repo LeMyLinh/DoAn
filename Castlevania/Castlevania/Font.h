@@ -15,7 +15,7 @@ public:
 	static Font* GetFont();
 	~Font();
 };
-#endif // !_FONT_H__
+#endif
 
 
 

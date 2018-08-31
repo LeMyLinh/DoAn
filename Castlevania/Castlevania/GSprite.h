@@ -16,7 +16,7 @@ enum MODE
 class GSprite
 {
 private:
-	GTexture* _texture;
+	GTexture * _texture;
 
 	int _Cols;		//số cột frame
 	int _Rows;		//số hàng frame
@@ -34,7 +34,7 @@ private:
 public:
 	int _FrameWidth;		//width of 1 frame
 	int _FrameHeight;	//height of 1 frame
-	GSprite(GTexture* texture,int cols,int rows,int timeAnimation);
+	GSprite(GTexture* texture, int cols, int rows, int timeAnimation);
 	GSprite(GTexture* texture, int cols, int rows, int timeAnimation, int start, int end);
 	~GSprite();
 
@@ -56,7 +56,7 @@ public:
 	void SetDefault();
 	//update animation
 	void Update(int ellapseTime);
-	void SetAnimation(int start,int end);
+	void SetAnimation(int start, int end);
 	void SetAnimation(int start, int end, MODE Mode);
 	void SetTimeAni(int timeAni);
 	void SetMode(MODE Mode);

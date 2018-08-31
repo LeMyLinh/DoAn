@@ -6,8 +6,9 @@
 
 using namespace std;
 
-class Pleaman: public Enemy
+class Pleaman : public Enemy
 {
+private:
 	float fid;
 	bool IsJump;
 	bool IsFight;

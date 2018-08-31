@@ -8,10 +8,11 @@
 #include <vector>
 using namespace std;
 
-class Skeleton: public Enemy
+class Skeleton : public Enemy
 {
+private:
 	vector<Object> Bone;
-	int numBone;	
+	int numBone;
 	int count;
 	float fid;
 	int localTime;

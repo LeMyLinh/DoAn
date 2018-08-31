@@ -15,7 +15,7 @@ protected:
 public:
 	bool IsDie;
 	int delay;
-	int Damege;
+	int Damage;
 	Enemy();
 	Enemy(int _id, int _type, int _x, int _y, int _Width, int _Height);
 	virtual void Update(Box RectCamera,Box simon, int Deltatime);

@@ -25,7 +25,7 @@ protected:
 	virtual void RenderFrame(LPDIRECT3DDEVICE9 d3ddv, int Delta);
 	DWORD _DeltaTime;
 
-	//keyboar
+	//keyboard
 	void InitKeyboard();
 
 	void ProcessKeyBoard();
@@ -50,4 +50,4 @@ public:
 	void GameEnd();
 	~CGame();
 };
-#endif // !_GAME_H_
+#endif

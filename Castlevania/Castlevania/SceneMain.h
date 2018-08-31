@@ -5,13 +5,13 @@
 #include "Level5.h"
 #include "SceneMenu.h"
 
-class SceneMain: public CGame
+class SceneMain : public CGame
 {
-public: 	
+public:
 	SceneMain(int _nCmdShow);
 	~SceneMain();
 	Scene* scene;
-protected:	
+protected:
 	virtual void RenderFrame(LPDIRECT3DDEVICE9 d3ddv, int Delta);
 	virtual void ProcessInput(LPDIRECT3DDEVICE9 d3ddv, int Delta);
 	virtual void LoadResources(LPDIRECT3DDEVICE9 d3ddv);

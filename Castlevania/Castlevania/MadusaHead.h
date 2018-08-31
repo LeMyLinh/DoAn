@@ -9,6 +9,7 @@ using namespace std;
 
 class MadusaHead:public Enemy
 {
+private:
 	float temp;
 	bool IsFight;
 	int delay;

@@ -14,10 +14,10 @@ private:
 	float deep;
 	D3DCOLOR color;
 public:
-	GTexture();
-	GTexture(const GTexture &cTexture);
 	int Width;
 	int Height;
+	GTexture();
+	GTexture(const GTexture &cTexture);
 	void loadTextTureFromFile(LPCWSTR fileName, D3DXCOLOR ColorKey = 0xffffffff);
 	//in texture voi position trung voi tam .
 	void RenderTexture(int x, int y);

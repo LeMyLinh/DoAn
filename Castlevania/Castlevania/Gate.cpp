@@ -1,4 +1,5 @@
 #include "Gate.h"
+#include "Constant.h"
 
 CGate* CGate::pStaticObj = 0;
 
@@ -8,7 +9,7 @@ CGate::CGate()
 
 void CGate::Init()
 {
-	BaseObject::LoadResource(L"Resources/ground/Gate.png", 2, 1, 1000/1);
+	BaseObject::LoadResource(GATE_IMAGE, COL_OF_GATE, ROW_OF_GATE, TIME_ANIM_GATE);
 	IsDraw = false;
 }
 

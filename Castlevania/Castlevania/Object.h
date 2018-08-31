@@ -5,12 +5,7 @@
 
 enum Type
 {
-	Down = 801,
-	Dead = 802,
-	Right = 803,
-	Up = 804,
-
-	//Level5
+	//Level 1 + 5
 	GROUND = 1,
 	STAIR = 2,
 	DOOR = 3,
@@ -19,11 +14,13 @@ enum Type
 	STAIRUN = 26,
 	BLOCKGATE = 27,
 	//Items
-	BIGCANDLE = 28,
+	//BIGCANDLE = 28,
 	STOPWATCH = 29,
-	KNIFE = 30,
-	MORNINGSTAR = 31,
+	KNIFE_BIGCANDLE = 34,
+	MORNINGSTAR_BIGCANDLE = 35,
 	HOLYWATER = 32,
+	LARGEHEART_BIGCANDLE = 33,
+
 	SMALLHEART = 4,
 	LARGEHEART = 5,
 	BAG400 = 6,
@@ -47,6 +44,9 @@ enum Type
 	PANTHER = 22,
 	PERMAN = 23,
 
+	//Boss
+	BOSSLEVEL1 = 34,
+	BOSSLEVEL5 = 35,
 
 };
 
@@ -58,9 +58,9 @@ protected:
 	float x;
 	float y;
 	float vecX;
-	float vecY;	
+	float vecY;
 	int Type;
-	int id;		
+	int id;
 public:
 	//index of sprite
 	int Width;

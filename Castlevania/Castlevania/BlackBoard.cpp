@@ -50,17 +50,10 @@ void BlackBoard::RenderFrame(int t, int x, int y, int simonHP)
 	case 3:
 		Item::GetStaticObj()->axe->RenderTexture(x + blackboard->Width / 2 + 37, y - 90 + blackboard->Height / 2 + 10);
 		break;
-	case 4:
-		Item::GetStaticObj()->boom->RenderTexture(x + blackboard->Width / 2 + 37, y - 90 + blackboard->Height / 2 + 10);
-		break;
 	default:
 		break;
 	}
 
-	if (Weapon::GetStaticObj()->MultiShot == 2)
-		Item::GetStaticObj()->iconDoubleShot->RenderTexture(x + blackboard->Width / 2 + 180, y - 90 + blackboard->Height / 2 + 10);
-	if (Weapon::GetStaticObj()->MultiShot == 3)
-		Item::GetStaticObj()->iconTripbleShot->RenderTexture(x + blackboard->Width / 2 + 180, y - 90 + blackboard->Height / 2 + 10);
 	DrawPlayerValue(x + T_Heal->Width / 2 + 100, y - 90 + T_Heal->Height / 2 + 40, simonHP);
 	DrawEnemyValue(x + T_Heal->Width / 2 + 100, y - 90 + T_Heal->Height / 2 + 70, G_bossHP);
 	G_SpriteHandler->End();
@@ -75,7 +68,6 @@ void BlackBoard::RenderFrame(int t, int x, int y, int simonHP)
 	UpdateTime(t);
 	this->x = x + T_Heal->Width / 2 + 50;
 	this->y = y + T_Heal->Height / 2 + 50;
-	//
 
 }
 void BlackBoard::UpdateTime(int t)

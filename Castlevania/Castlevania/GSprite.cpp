@@ -4,16 +4,16 @@
 
 
 
-GSprite::GSprite(GTexture * texture, int cols, int rows, int timeAnimation):_texture(texture)
+GSprite::GSprite(GTexture * texture, int cols, int rows, int timeAnimation) :_texture(texture)
 {
 	this->_texture = texture;
 	this->_Cols = cols;
 	this->_Rows = rows;
 	this->_timeAni = timeAnimation;
-	
+
 	this->_FrameHeight = this->_texture->Height / rows;
 	this->_FrameWidth = this->_texture->Width / cols;
-	this->_Count = rows*cols;
+	this->_Count = rows * cols;
 	this->_start = 0;
 	this->_index = _start;
 	this->_end = _Count - 1;
@@ -24,7 +24,7 @@ GSprite::GSprite(GTexture * texture, int cols, int rows, int timeAnimation):_tex
 	mode = REPEAT;
 }
 
-GSprite::GSprite(GTexture * texture, int cols, int rows, int timeAnimation, int start, int end):_texture(texture)
+GSprite::GSprite(GTexture * texture, int cols, int rows, int timeAnimation, int start, int end) :_texture(texture)
 {
 	this->_texture = texture;
 	this->_Cols = cols;
@@ -33,7 +33,7 @@ GSprite::GSprite(GTexture * texture, int cols, int rows, int timeAnimation, int 
 
 	this->_FrameHeight = this->_texture->Height / rows;
 	this->_FrameWidth = this->_texture->Width / cols;
-	this->_Count = rows*cols;
+	this->_Count = rows * cols;
 	this->_start = start;
 	this->_index = _start;
 	this->_end = end;
@@ -59,7 +59,7 @@ void GSprite::Next()
 		}
 
 	}
-	else if(mode == ONE_TURN)
+	else if (mode == ONE_TURN)
 	{
 		if (_index <= _end)
 			_index++;
@@ -99,7 +99,7 @@ void GSprite::Update(int ellapseTime)
 	_timeLocal += ellapseTime;
 
 	if (_timeLocal >= _timeAni)
-	{		
+	{
 		_timeLocal = 0;
 		this->Next();
 	}
@@ -121,11 +121,11 @@ void GSprite::SetAnimation(int start, int end, MODE Mode)
 {
 	/*if (start != _start || end != _end)
 	{*/
-		_start = start;
-		_end = end;
-		mode = Mode;
-		if (_index<start || _index>end)
-			_index = start;
+	_start = start;
+	_end = end;
+	mode = Mode;
+	if (_index<start || _index>end)
+		_index = start;
 	//}
 }
 
@@ -153,7 +153,7 @@ void GSprite::Draw(int x, int y)
 	_rect.left = (_index % _Cols)*_FrameWidth;
 	_rect.right = _rect.left + _FrameWidth;
 	_rect.bottom = _rect.top + _FrameHeight;
-	
+
 	//cap nhat lai toa do
 	_texture->RenderTexture(x, y, _rect);
 }

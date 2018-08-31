@@ -1,8 +1,9 @@
 #pragma once
 #include "Enemy.h"
 
-class BonePillar: public Enemy
+class BonePillar : public Enemy
 {
+private:
 	bool IsFight;
 	int localTime;
 	Object ball1;

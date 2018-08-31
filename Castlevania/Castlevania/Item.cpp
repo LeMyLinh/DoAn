@@ -4,6 +4,8 @@
 #include <cstdlib> 
 #include <ctime> 
 #include <math.h>
+#include "Constant.h"
+
 using namespace std;
 
 Item* Item::pStaticObj = 0;
@@ -14,8 +16,6 @@ Item::Item()
 	bigHeart = new GTexture();
 	morningStar = new GTexture();
 	rosary = new GTexture();
-	treasureChest = new GTexture();
-	Invincible = new GTexture();
 	Hidden = new GTexture();
 	doubleShot = new GTexture();
 	tripleShot = new GTexture();	
@@ -30,63 +30,30 @@ Item::Item()
 
 void Item::Init()
 {
-	Heart->loadTextTureFromFile(L"Resources/item/0.png",D3DCOLOR_XRGB(255,0,255));
-	bigHeart->loadTextTureFromFile(L"Resources/item/1.png", D3DCOLOR_XRGB(255, 0, 255));
+	Heart->loadTextTureFromFile(SMALLHEART_IMAGE , COLOR_LOAD_TEXTURE);
+	bigHeart->loadTextTureFromFile(LARGEHEART_IMAGE, COLOR_LOAD_TEXTURE);
 	GTexture* money = new GTexture();
-	money->loadTextTureFromFile(L"Resources/item/2.png", D3DCOLOR_XRGB(255, 0, 255));
+	money->loadTextTureFromFile(BAGMONEY_IMAGE, COLOR_LOAD_TEXTURE);
 	Bag = new GSprite(money, 3, 1, 0);
-	morningStar->loadTextTureFromFile(L"Resources/item/3.png", D3DCOLOR_XRGB(255, 0, 255));
-	doubleShot->loadTextTureFromFile(L"Resources/item/11.png", D3DCOLOR_XRGB(255, 0, 255));
-	tripleShot->loadTextTureFromFile(L"Resources/item/12.png", D3DCOLOR_XRGB(255, 0, 255));
-	Bomerang->loadTextTureFromFile(L"Resources/item/8.png", D3DCOLOR_XRGB(255, 0, 255));
-	axe->loadTextTureFromFile(L"Resources/item/7.png", D3DCOLOR_XRGB(255, 0, 255));
-	boom->loadTextTureFromFile(L"Resources/item/9.png", D3DCOLOR_XRGB(255, 0, 255));
-	rosary->loadTextTureFromFile(L"Resources/item/6.png", D3DCOLOR_XRGB(255, 0, 255));
-	doubleShot->loadTextTureFromFile(L"Resources/item/11.png", D3DCOLOR_XRGB(255, 0, 255));
-	tripleShot->loadTextTureFromFile(L"Resources/item/12.png", D3DCOLOR_XRGB(255, 0, 255));
-	iconDoubleShot->loadTextTureFromFile(L"Resources/item/11-2.png", D3DCOLOR_XRGB(255, 0, 255));
-	iconTripbleShot->loadTextTureFromFile(L"Resources/item/12-2.png", D3DCOLOR_XRGB(255, 0, 255));
+	morningStar->loadTextTureFromFile(MORNINGSTAR_IMAGE, COLOR_LOAD_TEXTURE);
+	doubleShot->loadTextTureFromFile(DOUBLESHOT_IMAGE, COLOR_LOAD_TEXTURE);
+	tripleShot->loadTextTureFromFile(TRIPLESHOT_IMAGE, COLOR_LOAD_TEXTURE);
+	Bomerang->loadTextTureFromFile(BOMERANG_IMAGE, COLOR_LOAD_TEXTURE);
+	axe->loadTextTureFromFile(AXE_IMAGE, COLOR_LOAD_TEXTURE);
+	boom->loadTextTureFromFile(FIREBOMB_IMAGE, COLOR_LOAD_TEXTURE);
+	rosary->loadTextTureFromFile(ROSARY_IMAGE, COLOR_LOAD_TEXTURE);
+	iconDoubleShot->loadTextTureFromFile(ICON_DOUBLESHOT, COLOR_LOAD_TEXTURE);
+	iconTripbleShot->loadTextTureFromFile(ICON_TRIPLESHOT, COLOR_LOAD_TEXTURE);
+
 	GTexture* ttspriritBall = new GTexture();
-	ttspriritBall->loadTextTureFromFile(L"Resources/item/13.png", D3DCOLOR_XRGB(255, 0, 255));
-	spriritBall = new GSprite(ttspriritBall, 2, 1, 1000 / 20);
+	ttspriritBall->loadTextTureFromFile(SPRIRITBALL, COLOR_LOAD_TEXTURE);
+	spriritBall = new GSprite(ttspriritBall, COL_OF_SPRIRIT, ROW_OF_SPRIRIT, TIME_ANIM_SPRIRIT);
 }
 
 void Item::Update(int Delta)
 {
 	for (int i = 0; i < listItem.size(); i++)
 	{
-		if (listItem[i].turn < 25)
-		{
-			listItem[i].turn++;
-			continue;
-		}
-		if (listItem[i].GetType() == SMALLHEART)
-		{
-			if (listItem[i].GetX() == listItem[i].index)
-				listItem[i].SetVec(1, 1);
-			if (listItem[i].GetX() >= listItem[i].index + 25)
-				listItem[i].SetVec(-1, 1);
-			if (listItem[i].GetX() <= listItem[i].index - 25)
-				listItem[i].SetVec(1, 1);
-		}
-		else
-		{
-			listItem[i].SetVy(listItem[i].GetBox().vy*1.12);
-		}
-		if (listItem[i].temp >= 0)
-		{
-			
-			if (listItem[i].temp >= 2500)
-			{
-				listItem.erase(listItem.begin() + i);
-				continue;
-			}
-			else
-			{
-				listItem[i].temp += Delta;
-			}		
-			
-		}
 		listItem[i].Update();
 	}
 }
@@ -147,6 +114,7 @@ void Item::Draw(int Delta)
 		case FIREBOMB:
 			boom->RenderTexture(listItem[i].GetX() + listItem[i].GetBox().w / 2, listItem[i].GetY() + listItem[i].GetBox().h / 2);
 			break;
+		case LARGEHEART_BIGCANDLE:
 		case LARGEHEART:
 			bigHeart->RenderTexture(listItem[i].GetX() + listItem[i].GetBox().w / 2, listItem[i].GetY() + listItem[i].GetBox().h / 2);
 			break;

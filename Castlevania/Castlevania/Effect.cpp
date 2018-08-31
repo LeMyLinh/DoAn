@@ -1,21 +1,22 @@
 #include "Effect.h"
+#include "Constant.h"
 
 Effect* Effect::pStaticObj = 0;
 
 
 Effect::Effect()
 {
-	
+
 }
 
 void Effect::Init()
 {
-	BaseObject::LoadResource(L"Resources/other/1.png", 3, 1, 1000/30);
+	BaseObject::LoadResource(EFFECT_IMAGE, COL_OF_EFFECT, ROW_OF_EFFECT, TIME_ANIM_EFFECT);
 }
 
 void Effect::Add(Object * obj)
 {
-	D3DXVECTOR3 temp{ obj->GetX() + obj->GetBox().w / 2,obj->GetY() + obj->GetBox().h / 2,0 };
+	D3DXVECTOR3 temp{ obj->GetX() + obj->GetBox().w / 2, obj->GetY() + obj->GetBox().h / 2, 0 };
 	listEffect.push_back(temp);
 }
 
@@ -40,9 +41,9 @@ void Effect::Draw()
 			return;
 		}
 		//draw
-		Sprite->Draw((int)listEffect[i].x, (int)listEffect[i].y, (int)(listEffect[i].z++)%3);
+		Sprite->Draw((int)listEffect[i].x, (int)listEffect[i].y, (int)(listEffect[i].z++) % 3);
 	}
-	
+
 }
 
 Effect::~Effect()

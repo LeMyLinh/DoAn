@@ -11,25 +11,31 @@ using namespace std;
 
 class BlackBoard
 {
-public:
-	long TimeValue, HeartValue;
-	BlackBoard();
-	~BlackBoard();
-	void RenderFrame(int t, int x, int y, int simonHP);
-	void PickUpItem(int itemID);
 private:
+	int x;
+	int y;
+	int Localtime;
+
 	CText * LabelScore, *LabelPlayer, *LabelEnemy, *LabelTime, *LabelStage;
 	CText *LabelHeart, *PValue;
 	GTexture* blackboard, *T_Heal;
 	GSprite* S_Heal;
-	int Localtime;
+
 	void LoadResources();
 	void DrawPlayerValue(float x, float y, int simonHP);
 	void DrawEnemyValue(float x, float y, int BossHP);
 	void UpdateTime(int t);
-	string ToString(long n);
 	void Convert(char* main, char* text, long val);
-	int x;
-	int y;
+	string ToString(long n);
+
+public:
+	long TimeValue, HeartValue;
+
+	BlackBoard();
+	void RenderFrame(int t, int x, int y, int simonHP);
+	void PickUpItem(int itemID);
+
+	~BlackBoard();
+
 };
 #endif

@@ -15,7 +15,7 @@ public:
 	static int HitTheWall(Box b1, Box b2);
 	~Collision();
 };
-#endif // !_COLLISION_H_
+#endif
 
 
 

@@ -6,6 +6,7 @@ using namespace std;
 
 class Effect :public BaseObject
 {
+private:
 	static Effect* pStaticObj;
 	vector<D3DXVECTOR3> listEffect;
 public:

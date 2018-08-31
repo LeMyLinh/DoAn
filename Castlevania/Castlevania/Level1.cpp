@@ -14,7 +14,7 @@ void Level1::LoadResources()
 {
 	Scene_Index = 1;
 	map = new Map();
-	simon = new Simon(STAGE3.left * 2 + 200, STAGE3.bottom * 2 - 200, 3);
+	simon = new Simon(STAGE3.left * 2 + 100, STAGE3.bottom * 2 - 200, 3);
 	objManager = new ObjManager();
 	blackBoard = new BlackBoard();
 
@@ -25,16 +25,18 @@ void Level1::LoadResources()
 	t->loadTextTureFromFile(L"Map/Level1Tile.png", D3DCOLOR_XRGB(255, 0, 255));
 	simon->LoadResource(L"Resources/simon.png", 8, 3, 0);
 	Font::GetFont()->Innit();
-	objManager->Init("Map/Level1Object - Copy.txt");
+	objManager->Init("Map/Level1Object.txt");
 
 	Tile::GetStaticObj()->Init();
 	SmallCandle::GetStaticObj()->Init();
+	BigCandle::GetStaticObj()->Init();
 	Stair::GetStaticObj()->Init();
 	TopStair::GetStaticObj()->Init();
 	Effect::GetStaticObj()->Init();
 	EnemyRender::GetStaticObj()->Init();
 	Item::GetStaticObj()->Init();
 	CGate::GetStaticObj()->Init();
+	BlockGate::GetStaticObj()->Init();
 	Weapon::GetStaticObj()->Init();
 }
 
@@ -49,10 +51,11 @@ void Level1::RenderFrame(int Delta)
 		camera->SetTransForm();
 		map->DrawMap();
 
-		objManager->Draw();
 		Effect::GetStaticObj()->Draw();
 		Weapon::GetStaticObj()->Draw();
 		simon->Draw(Delta);
+		objManager->Draw();
+
 		Item::GetStaticObj()->Draw(Delta);
 
 		char str[100];

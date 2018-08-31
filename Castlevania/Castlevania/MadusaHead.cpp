@@ -15,7 +15,7 @@ MadusaHead::MadusaHead(int _id, int _type, int _x, int _y, int _Width, int _Heig
 	turn = 1;
 	//Infomation
 	HP = 1;
-	Damege = 2;
+	Damage = 2;
 	Point = 200;
 	temp = index;
 	IsFight = false;

@@ -13,12 +13,13 @@
 #include "Font.h"
 #include <stdio.h>
 #include "SmallCandle.h"
+#include "BigCandle.h"
+#include "BlockGate.h"
 #include "Stair.h"
 #include "TopStair.h"
 #include <d3d9.h>
 #include "Collision.h"
 #include "EnemyRender.h"
-#include "SpearGuard.h"
 #include "Enemy.h"
 #include "Item.h"
 #include "Gate.h"
@@ -28,6 +29,11 @@
 #include "BonePillar.h"
 #include "Pleaman.h"
 #include "Skeleton.h"
+#include "RedSkeleton.h"
+#include "AxeKnight.h"
+#include "Zombie.h"
+#include "Panther.h"
+#include "BossLevel1.h"
 
 using namespace std;
 
@@ -137,15 +143,28 @@ public:
 			case BONEBILLAR:
 				obj = new BonePillar(t[0], t[1], t[2], t[3], t[4], t[5]);
 				break;
-				//đang đổi chỗ white skeletion vs bat
 			case WHITESKELETON:
-				obj = new Bat(t[0], t[1], t[2], t[3], t[4], t[5]);
+				obj = new Skeleton(t[0], t[1], t[2], t[3], t[4], t[5]);
 				break;
 			case PLEAMAN:
 				obj = new Pleaman(t[0], t[1], t[2], t[3], t[4], t[5]);
 				break;
 			case AXEKNIGHT:
-				obj = new SpearGuard(t[0], t[1], t[2], t[3], t[4], t[5]);
+				obj = new AxeKnight(t[0], t[1], t[2], t[3], t[4], t[5]);
+				break;
+			case ZOMBIE:
+				obj = new Zombie(t[0], t[1], t[2], t[3], t[4], t[5]);
+				break;
+			case REDSKELETON:
+				obj = new RedSkeleton(t[0], t[1], t[2], t[3], t[4], t[5]);
+				break;
+			case PANTHER:
+				obj=new Panther(t[0], t[1], t[2], t[3], t[4], t[5]);
+				break;
+			case PERMAN:
+				break;
+			case BOSSLEVEL1:
+				obj = new BossLevel1(t[0], t[1], t[2], t[3], t[4], t[5]);
 				break;
 			default:
 				break;
@@ -172,15 +191,15 @@ public:
 			RECT check{ t[2],t[3], t[2] + t[4],t[3] + t[5] };
 			if (Collision::CheckCollison(rect, check))
 			{
-				if ((t[1] >= GROUND && t[1] <= FIREBOMB ) || (t[1] >= LEFTSTAIR && t[1] <= HOLYWATER ))
-				{
-					Object* obj = new Object(t[0], t[1], t[2], t[3], t[4], t[5]);
-					listObj.push_back(obj);
-				}
-				else
+				if ( (t[1] >= WHITESKELETON && t[1] <= PERMAN) || t[1] == BOSSLEVEL1)
 				{
 					//Load id enemy
 					tempEnemy.push_back(InfoObj[i][0]);
+				}
+				else
+				{
+					Object* obj = new Object(t[0], t[1], t[2], t[3], t[4], t[5]);
+					listObj.push_back(obj);
 				}
 			}
 		}
@@ -265,9 +284,12 @@ public:
 
 	void Draw()
 	{
+		BigCandle::GetStaticObj()->Update();
 		SmallCandle::GetStaticObj()->Update();
 		//Draw gate
 		CGate::GetStaticObj()->Draw();
+		BlockGate::GetStaticObj()->Draw();
+
 		if (Isclear)
 		return;
 		Type _type;
@@ -281,8 +303,14 @@ public:
 			case DOOR:
 			case STAIR:
 			case LEFTSTAIR:
+				break;
+			case KNIFE_BIGCANDLE:
+			case MORNINGSTAR_BIGCANDLE:
+			case LARGEHEART_BIGCANDLE:
+				BigCandle::GetStaticObj()->Draw(listObj[i]->GetX(), listObj[i]->GetY());
+				break;
 			case BLOCKGATE:
-			case BIGCANDLE:
+				//BlockGate::GetStaticObj()->Draw();
 				break;
 			case DOUBLESHOT:
 				if (InfoObj[listObj[i]->GetID()][6] == 1)
@@ -305,7 +333,10 @@ public:
 			if (listEnemy[i]->IsDie)
 				continue;
 			switch (_type)
-			{			
+			{
+			case REDSKELETON:
+				listEnemy[i]->Draw();
+				break;
 			case WHITESKELETON:
 				listEnemy[i]->Draw();
 				break;
@@ -313,11 +344,27 @@ public:
 				listEnemy[i]->Draw();
 				break;
 			case AXEKNIGHT:
-				EnemyRender::GetStaticObj()->DrawSpearGuard(listEnemy[i]->GetX(), listEnemy[i]->GetY(), listEnemy[i]->GetIndex(), listEnemy[i]->GetDirect());
+				EnemyRender::GetStaticObj()->DrawAxeKnight(listEnemy[i]->GetX(), listEnemy[i]->GetY(), listEnemy[i]->GetIndex(), listEnemy[i]->GetDirect());
 				break;
 			case BAT:
 				EnemyRender::GetStaticObj()->DrawBat(listEnemy[i]->GetX(), listEnemy[i]->GetY(), listEnemy[i]->GetIndex(), listEnemy[i]->GetDirect());
 				break;
+			case ZOMBIE:
+				EnemyRender::GetStaticObj()->DrawZombie(listEnemy[i]->GetX(), listEnemy[i]->GetY(), listEnemy[i]->GetIndex(), listEnemy[i]->GetDirect());
+				break;
+			case PANTHER:
+				EnemyRender::GetStaticObj()->DrawPanther(listEnemy[i]->GetX(), listEnemy[i]->GetY(), listEnemy[i]->GetIndex(), listEnemy[i]->GetDirect());
+				break;
+			case BONEBILLAR:
+				EnemyRender::GetStaticObj()->DrawBonePillar(listEnemy[i]->GetX(), listEnemy[i]->GetY(), listEnemy[i]->GetIndex());
+				break;
+			case MEDUSAHEAD:
+				EnemyRender::GetStaticObj()->DrawMedusaHead(listEnemy[i]->GetX(), listEnemy[i]->GetY(), listEnemy[i]->GetIndex(), listEnemy[i]->GetDirect());
+				break;
+			case PERMAN:
+				break;
+			case BOSSLEVEL1:
+				EnemyRender::GetStaticObj()->DrawBossLv1(listEnemy[i]->GetX(), listEnemy[i]->GetY(), listEnemy[i]->GetIndex(), listEnemy[i]->GetDirect());
 			default:
 				break;
 			}
@@ -395,6 +442,24 @@ public:
 						break;
 					case PLEAMAN:
 						listEnemy[j]->CollisionWithObj(listObj[i]);
+						break;
+					case REDSKELETON:
+						listEnemy[j]->CollisionWithObj(listObj[i]);
+						break;
+					case ZOMBIE:
+						listEnemy[j]->CollisionWithObj(listObj[i]);
+						break;
+					case BAT:
+						break;
+					case BONEBILLAR:
+						listEnemy[j]->CollisionWithObj(listObj[i]);
+						break;
+					case PANTHER:
+						listEnemy[j]->CollisionWithObj(listObj[i]);
+						break;
+					case PERMAN:
+						break;
+					case MEDUSAHEAD:
 						break;
 					default:
 						break;

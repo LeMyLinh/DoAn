@@ -5,31 +5,32 @@ class Scene
 {
 public:
 	int Scene_Index;
-	bool IsEnd,Is_NextScene;
+	bool IsEnd, Is_NextScene;
 	int Localtime;
 
 	Scene()
 	{
-		IsEnd=false;
-		Is_NextScene=false;
-		Localtime=0;
+		IsEnd = false;
+		Is_NextScene = false;
+		Localtime = 0;
 	};
-	~Scene(){};
+	~Scene() {};
 
-	virtual void RenderFrame(int Delta){};
+	virtual void RenderFrame(int Delta) {};
 	virtual void UpdateGame(int Delta) {};
-	virtual void ProcessInput_UP(int Delta){};
-	virtual void ProcessInput_DOWN(int Delta){};
-	virtual void ProcessInput_RIGHT(int Delta){};
-	virtual void ProcessInput_LEFT(int Delta){};
-	virtual void ProcessInput(int Delta){};
-	virtual void LoadResources(){};
-	virtual void OnKeyDown(int KeyCode){};
+	virtual void ProcessInput_UP(int Delta) {};
+	virtual void ProcessInput_DOWN(int Delta) {};
+	virtual void ProcessInput_RIGHT(int Delta) {};
+	virtual void ProcessInput_LEFT(int Delta) {};
+	virtual void ProcessInput(int Delta) {};
+	virtual void LoadResources() {};
+	virtual void OnKeyDown(int KeyCode) {};
+
 	void Effect(int Delta)
 	{
 		if (!Is_NextScene) return;
-		Localtime+=Delta;
-		if (Localtime>=500) IsEnd=true;
+		Localtime += Delta;
+		if (Localtime >= 500) IsEnd = true;
 	}
 };
 

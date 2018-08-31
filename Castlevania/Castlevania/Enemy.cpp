@@ -3,7 +3,7 @@
 Enemy::Enemy()
 {
 	IsDie = false;
-	Damege = 0;
+	Damage = 0;
 	Point = 0;
 	delay = 20;
 }
@@ -11,7 +11,7 @@ Enemy::Enemy()
 Enemy::Enemy(int _id, int _type, int _x, int _y, int _Width, int _Height) :Object(_id, _type, _x, _y, _Width, _Height)
 {
 	IsDie = false;
-	Damege = 0;
+	Damage = 0;
 	Point = 0;
 	HP = 1;
 	delay = 20;

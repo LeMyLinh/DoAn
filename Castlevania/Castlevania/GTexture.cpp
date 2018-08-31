@@ -52,7 +52,7 @@ void GTexture::loadTextTureFromFile(LPCWSTR fileName, D3DXCOLOR ColorKey)
 		&info,
 		0,
 		&Texture
-		);
+	);
 	if (FAILED(hr))
 	{
 		MessageBox(G_hWnd, L"Failed to create texture", L"Error", MB_OK);
@@ -60,7 +60,7 @@ void GTexture::loadTextTureFromFile(LPCWSTR fileName, D3DXCOLOR ColorKey)
 	}
 }
 
-void GTexture::RenderTexture(int x,int y, RECT sourceRect)
+void GTexture::RenderTexture(int x, int y, RECT sourceRect)
 {
 	this->srcRect = sourceRect;
 	this->RenderTexture(x, y);
@@ -68,7 +68,7 @@ void GTexture::RenderTexture(int x,int y, RECT sourceRect)
 
 void GTexture::RenderTexture(int x, int y)
 {
-	
+
 	D3DXVECTOR3 currentPosition(x, y, deep);
 	//toa do trong the gioi thuc
 

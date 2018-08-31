@@ -6,7 +6,7 @@ BaseObject::BaseObject()
 {
 }
 
-BaseObject::BaseObject(int _id, int _type, int _x, int _y, int _Width, int _Height):Object(_id,_type,_x,_y,_Width,_Height)
+BaseObject::BaseObject(int _id, int _type, int _x, int _y, int _Width, int _Height) :Object(_id, _type, _x, _y, _Width, _Height)
 {
 	vecX = 0;
 	vecY = 0;
@@ -26,8 +26,6 @@ void BaseObject::Update()
 void BaseObject::Draw()
 {
 }
-
-
 
 BaseObject::~BaseObject()
 {

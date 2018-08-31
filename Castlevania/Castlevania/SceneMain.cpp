@@ -1,14 +1,15 @@
 #include "SceneMain.h"
-SceneMain::SceneMain(int _nCmdShow): CGame(_nCmdShow)
+
+SceneMain::SceneMain(int _nCmdShow) : CGame(_nCmdShow)
 {
 }
 void SceneMain::NextLevel()
 {
 	if (scene->IsEnd)
 	{
-		if (scene->Scene_Index==0) 
-		{ 
-			scene = new Level5(); return; 
+		if (scene->Scene_Index == 0)
+		{
+			scene = new Level1(); return;
 		}
 		if (scene->Scene_Index == 1)
 		{
@@ -19,7 +20,9 @@ void SceneMain::NextLevel()
 }
 void SceneMain::LoadResources(LPDIRECT3DDEVICE9 d3ddv)
 {
-	scene=new SceneMenu();
+	scene = new SceneMenu();
+	//scene = new Level1();
+	//scene = new Level5();
 }
 
 void SceneMain::UpdateGame(LPDIRECT3DDEVICE9 d3ddv, int Delta)

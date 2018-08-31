@@ -15,7 +15,7 @@ Skeleton::Skeleton(int _id, int _type, int _x, int _y, int _Width, int _Height) 
 	vecX = 0;
 	//Infomation
 	HP = 1;
-	Damege = 3;
+	Damage = 3;
 	Point = 300;
 	wait = 50;
 	fid = index;
@@ -37,7 +37,7 @@ void Skeleton::Update(Box RectCamera, Box simon, int Deltatime)
 		return;
 	Enemy::Update(RectCamera, simon, Deltatime);
 	UpdateBone(RectCamera);
-	
+
 	if (delay < 20)
 	{
 		delay++;
@@ -46,7 +46,7 @@ void Skeleton::Update(Box RectCamera, Box simon, int Deltatime)
 	UpdateSprite();
 
 	//is jump
-	if (abs(x - xold) <= bound && IsFalling &&!IsJump)
+	if (abs(x - xold) <= bound && IsFalling && !IsJump)
 	{
 		IsJump = true;
 		allowFalling = true;
@@ -70,7 +70,7 @@ void Skeleton::Update(Box RectCamera, Box simon, int Deltatime)
 			Bone.push_back(t);
 			numBone--;
 			wait = 0;
-		}	
+		}
 	}
 	else if (delayMove != 0)
 		localTime += Deltatime;
@@ -83,7 +83,7 @@ void Skeleton::Update(Box RectCamera, Box simon, int Deltatime)
 		UpdateMove(RectCamera, simon, Deltatime);
 	}
 	else
-	{		
+	{
 		if (step < 0 && numBone == 0)
 		{
 			srand(time(0));
@@ -93,7 +93,7 @@ void Skeleton::Update(Box RectCamera, Box simon, int Deltatime)
 			srand(time(0));
 			int r1 = rand() % 100;
 			if (r1 < 40)
-				numBone = 1;	
+				numBone = 1;
 			else if (r1 < 70)
 				numBone = 2;
 			else if (r1 < 90)
@@ -102,19 +102,19 @@ void Skeleton::Update(Box RectCamera, Box simon, int Deltatime)
 				numBone = 4;
 			wait = 0;
 		}
-		
+
 		//stop
 		if (x < simon.x)
 			turn = 1;
 		else
 			turn = -1;
-		direct = turn;		
+		direct = turn;
 		//bound
 		xold = x;
 		srand(time(0));
-		int r0 = rand() % 2 ;
+		int r0 = rand() % 2;
 		bound = 60 + r0 * 6;
-		
+
 	}
 
 	IsFalling = true;
@@ -136,7 +136,7 @@ void Skeleton::Draw()
 	for (int i = 0; i < Bone.size(); i++)
 	{
 		EnemyRender::GetStaticObj()->DrawBone(Bone[i].GetX(), Bone[i].GetY(), Bone[i].index);
-	}		
+	}
 	EnemyRender::GetStaticObj()->DrawSkeleton(x, y, index, direct);
 }
 
@@ -156,7 +156,7 @@ void Skeleton::CollisionWithObj(Object * obj)
 	if (Collision::HitTheWall(GetBox(), obj->GetBox()))
 	{
 	}
-		
+
 }
 
 void Skeleton::UpdateMove(Box RectCamera, Box simon, int deltatime)
@@ -175,10 +175,10 @@ void Skeleton::UpdateMove(Box RectCamera, Box simon, int deltatime)
 		}
 		else
 		{
-				if (vecY == 0)
-					vecY = -10;
-				else
-					vecY *= 0.9;
+			if (vecY == 0)
+				vecY = -10;
+			else
+				vecY *= 0.9;
 		}
 	}
 	else
@@ -198,8 +198,8 @@ void Skeleton::UpdateMove(Box RectCamera, Box simon, int deltatime)
 
 	//update X
 	if (abs(x - simon.x) <= 90 && !IsJump)
-		turn = - direct;
-		
+		turn = -direct;
+
 	if (abs(x - xold) >= bound && !IsJump)
 	{
 		delayMove = 120;
@@ -213,7 +213,7 @@ void Skeleton::UpdateMove(Box RectCamera, Box simon, int deltatime)
 }
 
 void Skeleton::UpdateBone(Box camera)
-{	
+{
 	double pi = acos(-1);
 	for (int i = 0; i < Bone.size(); i++)
 	{
@@ -233,7 +233,7 @@ void Skeleton::UpdateBone(Box camera)
 		{
 			Bone[i].SetVy((Bone[i].GetBox().vy + 2));
 		}
-		
+
 		Bone[i].SetY(Bone[i].GetY() + (Bone[i].GetBox().vy));
 		Bone[i].SetX(Bone[i].GetX() + 2.5 * direct);
 		if (!Collision::AABBCheck(Bone[i].GetBox(), camera))
@@ -244,7 +244,7 @@ void Skeleton::UpdateBone(Box camera)
 void Skeleton::checkFight(Box vk, int lv)
 {
 	Enemy::checkFight(vk, lv);
-	for (int i = 0; i < Bone.size();i++)
+	for (int i = 0; i < Bone.size(); i++)
 	{
 		if (Collision::AABBCheck(vk, Bone[i].GetBox()))
 		{
@@ -266,7 +266,7 @@ bool Skeleton::CheckCollision(Box simon)
 		{
 			return true;
 		}
-	}	
+	}
 	return false;
 }
 

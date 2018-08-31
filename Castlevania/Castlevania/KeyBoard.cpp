@@ -23,7 +23,7 @@ void KeyBoard::InitKeyboard()
 			GetModuleHandle(NULL),
 			DIRECTINPUT_VERSION,
 			IID_IDirectInput8, (VOID**)&G_DirectInput, NULL
-			);
+		);
 
 	// TO-DO: put in exception handling
 	if (FAILED(hr) == true)
@@ -94,7 +94,7 @@ void KeyBoard::ProcessKeyBoard()
 
 void KeyBoard::OnKeyUp(int KeyCode)
 {
-	
+
 }
 
 void KeyBoard::OnKeyDown(int KeyCode)

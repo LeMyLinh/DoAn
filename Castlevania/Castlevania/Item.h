@@ -8,6 +8,7 @@ using namespace std;
 
 class Item
 {
+private:
 	static Item* pStaticObj;
 	vector<Object> listItem;
 	
@@ -17,8 +18,6 @@ public:
 	GSprite* Bag;
 	GTexture* morningStar;
 	GTexture* rosary; // clear anemy
-	GTexture* treasureChest;//kho bao
-	GTexture* Invincible; //bao ve
 	GTexture* Hidden; //tang hinh
 	GTexture* doubleShot;
 	GTexture* tripleShot;

@@ -5,7 +5,7 @@
 
 SceneMenu::SceneMenu()
 {
-	Scene_Index=0;
+	Scene_Index = 0;
 	LoadResources();
 }
 SceneMenu::~SceneMenu()
@@ -15,8 +15,8 @@ SceneMenu::~SceneMenu()
 }
 void SceneMenu::LoadResources()
 {
-	Text=new CText("PUSH START KEY",24,G_ScreenWidth/2 - 70,300,D3DCOLOR_ARGB(255, 255, 255, 255));
-	BackGround=new GTexture();
+	Text = new CText("PUSH START KEY", 24, G_ScreenWidth / 2 - 70, 300, D3DCOLOR_ARGB(255, 255, 255, 255));
+	BackGround = new GTexture();
 	BackGround->loadTextTureFromFile(BACKGROUND_FILE);
 }
 void SceneMenu::RenderFrame(int Delta)
@@ -37,5 +37,5 @@ void SceneMenu::RenderFrame(int Delta)
 }
 void SceneMenu::OnKeyDown(int KeyCode)
 {
-	if (KeyCode==DIK_RETURN) Is_NextScene=true;
+	if (KeyCode == DIK_RETURN) Is_NextScene = true;
 }

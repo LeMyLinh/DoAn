@@ -3,6 +3,7 @@
 
 class Stair :public BaseObject
 {
+private:
 	static Stair* pStaticObj;
 public:
 	Stair();

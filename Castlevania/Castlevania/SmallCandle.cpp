@@ -1,4 +1,5 @@
 #include "SmallCandle.h"
+#include "Constant.h"
 
 SmallCandle* SmallCandle::pStaticObj = 0;
 
@@ -9,7 +10,7 @@ SmallCandle::SmallCandle()
 
 void SmallCandle::Init()
 {
-	BaseObject::LoadResource(L"Resources/ground/1.png", 2, 1, 0);
+	BaseObject::LoadResource(SMALLCANDLE_IMAGE, COL_OF_CANDLE_SPRITE, ROW_OF_CANDLE_SPRITE, 0);
 }
 
 SmallCandle * SmallCandle::GetStaticObj()

@@ -13,7 +13,7 @@ public:
 	GSurface();
 	int LoadSurfaceFromFile(char* filePath);
 	void DrawSurface();
-	void DrawSurface(RECT rourceRect ,RECT destRect);
+	void DrawSurface(RECT rourceRect, RECT destRect);
 	LPDIRECT3DSURFACE9 GetSurFace();
 	~GSurface();
 };

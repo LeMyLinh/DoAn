@@ -9,7 +9,7 @@ BonePillar::BonePillar(int _id, int _type, int _x, int _y, int _Width, int _Heig
 {
 	//Infomation
 	HP = 8;
-	Damege = 2;
+	Damage = 2;
 	Point = 400;
 	IsFight = false;
 	localTime = 0;
@@ -45,12 +45,12 @@ void BonePillar::Update(Box RectCamera, Box simon, int Deltatime)
 		t = ball1.GetX();
 		ball2.SetX(x);
 		IsFight = true;
-			
+
 	}
 	else
 	{
-		
-		if (((t > x + 172 &&turn==1) || (t < x - 140 && turn == -1))&& ball2.GetX() == x)
+
+		if (((t > x + 172 && turn == 1) || (t < x - 140 && turn == -1)) && ball2.GetX() == x)
 		{
 			ball2.SetObj(0, 0, (turn == -1) ? x - 1 : x + Width, y + 17, 14, 12);
 		}
@@ -70,7 +70,7 @@ void BonePillar::Update(Box RectCamera, Box simon, int Deltatime)
 					maxTime = 0;
 			}
 		}
-	}	
+	}
 }
 
 void BonePillar::Effect()
@@ -87,7 +87,7 @@ void BonePillar::checkFight(Box vk, int lv)
 			Object* obj = new Object();
 			obj->SetObj(-1, -1, ball1.GetX(), ball1.GetY(), 14, 12);
 			Effect::GetStaticObj()->Add(obj);
-			ball1.SetX(-1);		
+			ball1.SetX(-1);
 		}
 		if (Collision::AABBCheck(vk, ball2.GetBox()) && ball2.GetX() != x)
 		{
@@ -106,7 +106,7 @@ bool BonePillar::CheckCollision(Box simon)
 	vecX = turn;
 	if (Enemy::CheckCollision(simon))
 		return true;
-	 else if (IsFight)
+	else if (IsFight)
 	{
 		if (Collision::AABBCheck(simon, ball1.GetBox()))
 			return true;
@@ -119,13 +119,13 @@ bool BonePillar::CheckCollision(Box simon)
 void BonePillar::Draw()
 {
 	if (IsFight)
-	{ 
+	{
 		EnemyRender::GetStaticObj()->DrawFireBall(ball1.GetX(), ball1.GetY(), turn);
 		if (ball2.GetX() != x)
 			EnemyRender::GetStaticObj()->DrawFireBall(ball2.GetX(), ball2.GetY(), turn);
 	}
-		
-	EnemyRender::GetStaticObj()->DrawBonePillar(x, y,turn);
+
+	EnemyRender::GetStaticObj()->DrawBonePillar(x, y, turn);
 }
 
 

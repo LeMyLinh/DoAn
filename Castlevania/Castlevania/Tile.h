@@ -2,7 +2,7 @@
 #define _TILE_H_
 #include "BaseObject.h"
 
-class Tile:public BaseObject
+class Tile :public BaseObject
 {
 protected:
 	static Tile* pStaticObj;
